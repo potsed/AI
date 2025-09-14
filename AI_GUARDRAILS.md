@@ -2,214 +2,211 @@
 
 **General AI Guardrails for Code Generation & Collaboration**
 
-These guardrails define how AI assistants (e.g., Copilot, ChatGPT, Codex) must behave when **proposing or generating code** for this repository. The goals are **security**, **stability**, **maintainability**, and **alignment with the Subject Matter Expert (SME).**
+These guardrails define how AI assistants (e.g., Copilot, ChatGPT, Codex) must behave when **proposing or generating code**. The goal is to ensure all output is **secure, stable, legally compliant, maintainable, SME-aligned, and production-ready**.
 
----
+## 1) Principles
 
-## 1) Core Principles
+1. **Don’t reinvent the wheel** — prefer existing solutions.
+2. **Keep code DRY** — avoid duplication.
+3. **Understand full code context** before generating new code.
+4. **Use latest stable versions of libraries** and update for breaking changes.
+5. **Use TDD for business logic** — tests come first, code follows.
+6. **Use official documentation** (always up front) for libraries and APIs.
+7. **SME-led development** — but do not assume either SME or AI is correct. Ask clarifying questions, make suggestions, and confirm agreement before proceeding.
+8. **Follow security best practices** (OWASP-grade).
+9. **Use feature flags** to isolate new or risky features.
+10. **Follow QA best practices** (unit, integration, E2E, contract tests).
+11. **Custom code only for business logic** — libraries first for infrastructure.
+12. **Apply proven software design patterns** to keep code maintainable, extendable, stable.
+13. **Use sound architectural principles** — keep systems coherent and robust.
+14. **Use MCP tools** (Model Context Protocol) when available for integrations.
+15. **Maintain human-readable documentation** aligned with project and changes.
+16. **If you break it, you fix it** — all code must pass tests.
+17. **Investigate failing tests carefully** — distinguish test issues vs. code issues.
+18. **All tests must be green before completion** — no exceptions.
+19. **All code must be production-ready** — deployable and maintainable.
+20. **All code must be secure** — data, APIs, and infra included.
+21. **Databases must follow secure best practices** — migrations, access, encryption.
+22. **The SME must be able to run tests locally**.
+23. **The SME must have clear instructions** for running the application.
+24. **All code must follow legal and regulatory requirements** — including licensing, data protection, accessibility, financial compliance, and any applicable local laws.
 
-* **Libraries First** — Prefer standard runtime and well-maintained open-source libraries.
-* **Custom Code Only for Business Logic** — Write bespoke code only where it implements the project’s domain-specific behavior.
-* **TDD First** — Use Test-Driven Development for business logic and unit-level code.
-* **Docs First** — Read the **latest official documentation** before writing code that uses a library or API.
-* **Latest Versions** — Use the **most up-to-date stable versions of 3rd-party libraries** for all dependencies. and update code for breaking changes when needed.
-* **SME-Led** — The human providing requirements is the **Subject Matter Expert (SME)**. Ask clarifying questions; don’t assume intent or hallucinate.
+## 2) Guardrails for AI
 
----
+### ✅ Libraries First
 
-## 2) Guardrail Rules for AI
-
-### ✅ Prefer Existing Libraries
-
-* Use **standard libraries** first (e.g., Node.js `crypto`, Go `net/http`, PHP/Laravel first-party features).
-* Use **well-adopted OSS** second (e.g., recognized frameworks, database clients, job queues).
-* Choose libraries that are **actively maintained**, have **healthy adoption**, and use **permissive licenses**.
+* Use standard/runtime libraries first.
+* Use well-maintained, widely adopted OSS second.
+* Only write custom code for domain-specific business logic.
 
 ### 🛑 Do Not Reinvent
 
-Do **not** hand-roll:
+Avoid writing your own:
 
-* HTTP servers / routers
-* OAuth / OIDC flows
+* HTTP servers, routers, OAuth/OIDC flows
 * Cryptography (HMAC, JWT, AES, etc.)
-* Database clients / query builders
-* Queue systems
-* **Session management systems**
-* Common utilities (logging, retries, configuration, env parsing)
+* Database clients or query engines
+* Queueing or scheduling systems
+* Session management
+* Logging/config/retries
 
-### 🧠 Custom Code = Business Logic
+### 🧠 Business Logic Only
 
-Limit bespoke code to:
-
-* Project-specific workflows and domain transformations
-* Simple glue/adapters between libraries and domain logic
-* Sandboxing/guardrails (e.g., scoping data and access)
-* Lightweight, well-documented extensions where no solid library fits
-
----
+Custom code = business workflows, domain events, templates, glue logic, sandboxing.
 
 ## 3) TDD Guardrails
 
-* **Write tests before code** for all **business logic** and **unit-level** functions.
-* **Do not test third-party libraries**; assume they work as documented. Mock/stub their boundaries.
-* **Deterministic tests** only (no network, no external side effects).
-* **Gherkin features**: one feature per file describing behavior; **feature-flag** new behavior.
+* Write tests **before** code.
+* Test **business logic only** (not third-party libraries).
+* Keep tests deterministic (mock/stub external APIs).
+* One Gherkin feature per file; all features **feature-flagged**.
+* CI/CD must run all tests; failing tests block merges/deploys.
 
-**TDD Cycle (Red → Green → Refactor):**
+## 4) Workflow for AI
 
-1. Write a failing test that encodes the requirement.
-2. Implement the minimal code to pass.
-3. Refactor for clarity/performance without breaking tests.
+1. **Read and understand requirements carefully.**
 
-**CI/CD:** Run unit tests on every commit; failing tests block merges/deploys.
+   * Do **not assume** the SME is automatically correct.
+   * Do **not assume** the AI is automatically correct.
+   * **Ask clarifying questions** and **make suggestions** until there is clear agreement on how to proceed.
 
----
+2. **Check official docs** of chosen libraries/APIs.
 
-## 4) Documentation & Versions
+3. **Write a failing test first** (TDD).
 
-* **Official docs first.** Before using any library/API, consult its latest official documentation.
-* **Log decisions.** In PRs, note the version, links to docs, and any breaking changes addressed.
-* **Stay current.** Prefer latest stable versions; if upgrades break code, fix as part of the task (unless SME instructs otherwise).
+4. **Write minimal code** to make the test pass.
 
----
+5. **Refactor** for clarity, maintainability, and performance.
 
-## 5) SME Collaboration
+6. **Update documentation** to reflect changes.
 
-* Treat the human author as the **SME**.
-* Ask **targeted clarifying questions** when requirements are ambiguous.
-* Prefer **minimal, effective** changes over sweeping refactors.
-* Explain trade-offs succinctly (security, performance, complexity, cost).
-* Confirm acceptance criteria before implementation.
+7. **Run all tests** — everything must be green before completion.
 
----
+## 5) Documentation
 
-## 6) Responsibilities & Quality Bar
+* All changes must be reflected in `/docs`.
+* Include: setup, run instructions, routes, flags, commands, feature flags, architecture.
+* Provide clear instructions so the SME can run tests and the app locally.
 
-AI-assisted output must:
+## 6) Supply-Chain & Dependencies
 
-* Apply sound architecture; keep code **DRY**, **SOLID**, and **low cyclomatic complexity**.
-* Use **secure, maintained libraries**; avoid deprecated or unmaintained packages.
-* Meet **production-ready** expectations:
+* Commit lockfiles for reproducible builds.
+* Generate an SBOM (e.g., CycloneDX) in CI.
+* Run dependency scanning in CI; fail on high/critical CVEs unless explicitly waived.
+* Approve only permissive licenses; block copyleft/unknown licenses.
+* Update dependencies regularly; document and test all breaking changes.
 
-  * OWASP-aligned security posture
-  * Markdown docs in `/docs` (setup, commands, routes, flags, runbooks)
-  * Pen-test mindset and QA validation
-  * E2E and/or contract tests where applicable
-  * Feature-flagged releases
-  * All CI checks green
+## 7) Secrets & Configuration
 
----
+* No secrets in code or committed `.env` files.
+* Use a secure secrets manager; enforce rotation, least privilege, and encryption.
+* Follow 12-factor app config principles.
+* Separate config per environment; no environment-specific logic in code.
 
-## 7) Process Instructions (How to Work)
+## 8) Code Quality & Process
 
-1. Write **Gherkin** features (one per file). Feature-flag new behavior.
-2. **TDD** for each change:
+* Use formatters and linters consistently.
+* CI must fail on lint, type, or static analysis errors.
+* Follow Conventional Commits; PRs must describe risks, docs updates, and tests added.
+* Require peer review for merge.
+* APIs must be described with schemas; contract tests in CI.
 
-   * Write a failing unit test.
-   * Implement minimal code to pass.
-   * Refactor safely.
-3. Ensure no regressions; keep changes minimal.
-4. Re-run all tests; merge only when green.
+## 9) Observability & Error Policy
 
-**How to make tests fail initially:**
+* Use structured logs with correlation IDs; never log secrets or PII.
+* Expose metrics for latency, error, and throughput.
+* Provide runbooks in `/docs/runbooks` for deploy, rollback, and incident response.
+* Errors must be categorized; apply retries, backoff, and dead-letter queues where needed.
 
-* Reference a function/class that doesn’t exist yet.
-* Use asserts that encode the *new* requirement so they fail until implemented.
+## 10) Data & Privacy
 
----
+* Define data retention; implement deletion workflows.
+* Comply with privacy regulations (GDPR, CCPA, HIPAA, etc. as applicable).
+* Use RBAC/ABAC for access control; apply least privilege.
+* Maintain audit logs for sensitive operations.
 
-## 8) Examples
+## 11) Performance & Resilience
+
+* Define latency and error budgets per endpoint.
+* Add lightweight performance checks in CI.
+* Apply rate limiting; protect against abuse/bots.
+* Use timeouts, circuit breakers, retries, and idempotency keys.
+* Consider resilience/chaos testing where feasible.
+
+## 12) Release & Migration Safety
+
+* Use feature flags and kill switches for new features.
+* Prefer safe deployment strategies (blue/green, canary).
+* Database migrations must be backward compatible.
+* Always have roll-forward strategies; avoid destructive down migrations in production.
+
+## 13) Frontend / UX
+
+* Ensure accessibility (WCAG compliance).
+* Keep components small and testable.
+* Avoid CSS bloat; prefer utility classes.
+* Support i18n/l10n where applicable.
+
+## 14) Legal & Regulatory Compliance
+
+* Respect **open-source licenses**; only use libraries with compatible licensing.
+* Ensure compliance with **data protection laws** (GDPR, CCPA, HIPAA, etc.).
+* Follow **accessibility standards** (WCAG, ADA).
+* Meet **industry-specific regulations** where applicable (e.g., PCI-DSS for payments, SOC 2 for enterprise).
+* Ensure **logging and monitoring** meet audit and compliance requirements.
+* Document compliance considerations in `/docs/compliance`.
+
+## 15) Examples
 
 ### Example 1 — OAuth
 
-* ❌ **Wrong:** Roll your own OAuth handler.
-* ✅ **Correct:** Use framework routes + official OAuth guidance; use reputable HTTP client libs.
+❌ Wrong: Roll a raw OAuth handler.
+✅ Correct: Use framework routes + official OAuth guidance.
 
 ### Example 2 — Cryptography
 
-* ❌ **Wrong:** Manual base64 HMAC.
-* ✅ **Correct:** Use standard crypto libraries (e.g., Node `crypto.createHmac`, Go `crypto/hmac`, PHP `hash_hmac`).
+❌ Wrong: Manual base64 HMAC.
+✅ Correct: Use official crypto APIs/libraries.
 
 ### Example 3 — Queueing
 
-* ❌ **Wrong:** Custom Redis queue using `rpush/lpop`.
-* ✅ **Correct:** Use a proven job queue library (e.g., BullMQ, Laravel Queues, Asynq).
+❌ Wrong: Custom Redis queue using push/pop operations.
+✅ Correct: Use a proven, well-maintained job queue library.
 
 ### Example 4 — Business Logic
 
-* ✅ **Correct:** Write bespoke code that transforms incoming payloads into domain events and renders user-facing messages with token templates.
+✅ Correct: Custom code to normalize webhook payloads into domain events and render tokenized templates.
 
 ### Example 5 — Session Management
 
-* ❌ **Wrong:** DIY session stores/cookies or ad-hoc tokens.
-* ✅ **Correct:**
+❌ Wrong: DIY sessions/cookies or ad-hoc tokens.
+✅ Correct: Use an established session library or framework manager; configure cookies securely; apply expiry, rotation, and avoid storing sensitive data directly.
 
-  * **Node/TS:** `@fastify/session`, `iron-session`, or JWT (`jsonwebtoken`) with short expiries & rotation.
-  * **Go:** `gorilla/sessions`, `securecookie`, or framework built-ins.
-  * **PHP/Laravel:** Laravel session manager (file/DB/Redis) with secure cookies.
-  * Always set `Secure`, `HttpOnly`, `SameSite`, expiries/idle timeouts; avoid storing secrets/PII in session.
+## 16) Compliance Checklist (Before Merge)
 
----
+* [ ] Code follows **all principles**.
+* [ ] TDD followed; **tests added, passing, and green**.
+* [ ] Libraries at **latest stable versions**; breaking changes handled.
+* [ ] Official docs consulted and referenced.
+* [ ] Minimal, effective code; DRY, SOLID, low complexity.
+* [ ] Security considerations addressed.
+* [ ] Supply-chain scanning passes (no high/critical vulns).
+* [ ] `/docs` updated with commands, routes, instructions, runbooks, compliance notes.
+* [ ] SME has clear local run/test instructions.
+* [ ] All CI checks green.
+* [ ] Legal and regulatory requirements reviewed and satisfied.
 
-## 9) Language / Framework Notes (General)
-
-> Use these as general orientations—pick equivalents appropriate to the tech stack.
-
-* **Node.js / TypeScript / ECMAScript**: Prefer Fastify/Express, Zod/validation, reputable DB and queue clients, Node `crypto`.
-* **PHP / Laravel**: Prefer first-party features (Eloquent, Validation, Queues, Scheduler, Policies), Composer-managed deps, Pest/PHPUnit.
-* **Go**: Prefer stdlib/established routers (chi/echo), typed DB access (pgx/sqlc), established job libs, `crypto/*`.
-* **Frontend (Vue / Vite / Tailwind / CSS)**: Keep components small, accessible, and feature-flagged; test logic; avoid global CSS bloat.
-
----
-
-## 10) Documentation Requirements
-
-* Maintain `/docs` in Markdown:
-
-  * Architecture, endpoints, commands, flags, configuration
-  * Feature flags and release notes
-  * Security considerations / threat model
-  * Runbooks and setup
-
-Each PR updates relevant docs when behavior or configuration changes.
-
----
-
-## 11) Security & QA
-
-* Align with **OWASP** and secure-by-default practices.
-* Threat-model externally exposed surfaces.
-* Add contract tests for external integrations.
-* Keep QA suites **fast, resilient, and low-flake**.
-* Don’t log secrets or PII; encrypt sensitive data at rest/in transit.
-
----
-
-## 12) Compliance Checklist (Before Merge)
-
-* [ ] Behavior described in **Gherkin** and **feature-flagged**
-* [ ] **TDD unit tests** added & passing; no tests of third-party internals
-* [ ] Libraries at **latest stable versions**; breaking changes addressed
-* [ ] **Official docs** consulted; PR notes include versions & links
-* [ ] Minimal, well-factored changes; code is **DRY/SOLID** with low complexity
-* [ ] Security considerations addressed; no secret/PII leaks
-* [ ] `/docs` updated appropriately
-* [ ] All CI checks **green** (unit/integration/e2e/contract as applicable)
-
----
-
-## 13) Header Comments (Reference)
-
-Add a brief header in new files pointing back to this policy:
+## 17) Language-Specific Reference Headers
 
 **TypeScript / JavaScript**
 
 ```ts
 /**
- * AI Guardrails: See AI_GUARDRAILS.md for full rules.
+ * AI Guardrails: See AI_GUARDRAILS.md.
  * Libraries first; custom code only for business logic.
- * Use TDD; don’t test third-party internals; read official docs; use latest versions.
- * Ask the SME clarifying questions; justify choices.
+ * Use TDD, official docs, latest versions, and SME-led development.
+ * Do not assume SME or AI is correct — clarify first.
+ * Security, QA, legal, supply-chain, and documentation are mandatory.
  */
 ```
 
@@ -218,8 +215,9 @@ Add a brief header in new files pointing back to this policy:
 ```go
 // AI Guardrails: See AI_GUARDRAILS.md.
 // Libraries first; custom code only for business logic.
-// Use TDD; don’t test third-party internals; read official docs; use latest versions.
-// Ask the SME clarifying questions; justify choices.
+// Use TDD, official docs, latest versions, and SME-led development.
+// Do not assume SME or AI is correct — clarify first.
+// Security, QA, legal, supply-chain, and documentation are mandatory.
 ```
 
 **PHP / Laravel**
@@ -228,9 +226,10 @@ Add a brief header in new files pointing back to this policy:
 <?php
 /**
  * AI Guardrails: See AI_GUARDRAILS.md.
- * Prefer built-ins and maintained Composer packages; use Laravel first-party features.
- * Use TDD; don’t test third-party internals; read official docs; use latest versions.
- * Ask the SME clarifying questions; justify choices.
+ * Prefer built-ins and maintained packages; use Laravel first-party features.
+ * Use TDD, official docs, latest versions, and SME-led development.
+ * Do not assume SME or AI is correct — clarify first.
+ * Security, QA, legal, supply-chain, and documentation are mandatory.
  */
 ```
 
@@ -239,16 +238,20 @@ Add a brief header in new files pointing back to this policy:
 ```md
 > ⚠️ AI Guardrails: See AI_GUARDRAILS.md.  
 > Libraries first; custom code only for business logic.  
-> TDD for logic; official docs; latest versions; SME-led decisions.
+> Use TDD, official docs, SME-led development.  
+> Do not assume SME or AI is correct — clarify first.  
+> Security, QA, legal, supply-chain, and documentation are mandatory.
 ```
 
----
+## 18) Summary
 
-## 15) Summary
+* **Libraries first; custom code only for business logic.**
+* **TDD for business logic; don’t test third-party libraries.**
+* **Official docs first; always use latest stable versions.**
+* **Never assume SME or AI is correct — clarify and align before coding.**
+* **Security, QA, documentation, supply-chain checks, legal compliance, and feature flags are mandatory.**
+* **All tests must be green before completion.**
+* **All code must be production-ready, secure, legally compliant, and deployable.**
+* **SMEs must be able to run and test locally with clear instructions.**
 
-* **Libraries First**
-* **Custom Code = Business Logic Only**
-* **TDD for business logic; don’t test libraries**
-* **Official docs up front; latest versions**
-* **SME-led: clarify, then implement**
-* **Security, docs, QA, feature flags: non-negotiable**
+Would you like me to also draft a **`/docs/compliance` template** (with sections for GDPR, CCPA, PCI-DSS, etc.) so projects can fill it in to document their own regulatory obligations?

@@ -1,61 +1,110 @@
 # AI Guardrails
 
-[![AI Guardrails](https://img.shields.io/badge/🛡️%20AI_Guardrails-Applied-green)](https://github.com/potsed/AI/blob/main/AI_GUARDRAILS.md)
+[![AI Guardrails](https://img.shields.io/badge/🛡️%20AI_Guardrails-Applied-blueviolet)](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI_GUARDRAILS.md)
 
-I have created a set of publicly available good coding principles and guardrails that can be used as a set of default guardrails for AI assistants to follow and apply.
+This repository provides a set of **publicly available coding principles and guardrails** that can be applied to any project where AI-assisted code generation is used.
 
-The principles are:
+These guardrails help ensure code is **secure, stable, maintainable, and production-ready** — and that AI assistants work in alignment with the human **Subject Matter Expert (SME).**
 
-- Don't reinvent the wheel.
-- Keep things DRY
-- Read the full code context before generating code.
-- Use the latest stable versions of libraries.
-- Use TDD for business logic.
-- Use official documentation for libraries and APIs.
-- Use SME-led development.
-- Use security best practices.
-- Use feature flags for non-negotiable features so that they can be isolated.
-- Use QA best practices.
-- Use custom code only for business logic.
-- Use libraries first.
-- Use official documentation up front.
+## Principles
 
-## Usage
+* Don’t reinvent the wheel.
+* Keep things **DRY** (Don’t Repeat Yourself).
+* Understand the full code context before generating code.
+* Use the **latest stable versions** of libraries.
+* Use **TDD for business logic**; don’t test third-party libraries.
+* Use **official documentation** (always up front) for libraries and APIs.
+* Use **SME-led development**: ask clarifying questions, don’t assume.
+* Apply **security best practices** (OWASP-grade).
+* Use **feature flags** to isolate new or risky features.
+* Follow **QA best practices** (unit, integration, E2E, contract tests).
+* Write **custom code only for business logic**.
+* Use **libraries first** for infrastructure.
+* Apply **software design patterns** to keep code maintainable, extendable, and stable.
+* Apply **sound architectural principles**.
+* Use **MCP tools** when available.
+* Maintain **human-readable documentation** aligned with the project.
+* If you break it, you fix it — all code must pass tests.
+* Investigate failing tests (test issue vs. code issue).
+* All tests must be **green without exception**.
+* All code must be **production-ready** and deployable.
+* All code must be **secure**.
+* Databases must be **secure** and follow best practices.
+* The SME must be able to **run tests locally**.
+* The SME must have **clear run instructions** for the application.
 
-As a centralised public library, this repository is intended to be used as a source of standardised guardrails for AI-generated code.
+## How to Use in Your Project
 
-Usage is simple - copy and paste the following badge into the top of your README.md file:
+### 1. Add the Badge
+
+Copy and paste this badge markdown at the top of your project’s `README.md`:
 
 ```markdown
-[![AI Guardrails](https://img.shields.io/badge/🛡️%20AI_Guardrails-Enforced-blueviolet)](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI_GUARDRAILS.md)
+[![AI Guardrails](https://img.shields.io/badge/🛡️%20AI_Guardrails-Applied-blueviolet)](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI_GUARDRAILS.md)
 ```
 
-Then add the following markdown to the end of your README.md file:
+### 2. Add Guardrails Instructions
+
+Add this section to the end of your `README.md` so contributors know the rules:
 
 ```markdown
-## AI GUARDRAILS INSTRUCTIONS
+## AI GUARDRAILS
 
 **[Always read the the linked url to AI_GUARDRAILS.md to deeply comprehend and apply the guardrails to this project](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI_GUARDRAILS.md)** 
 
 ### Guardrail Summary
 
-* **Libraries First**
-* **Custom Code = Business Logic Only**
-* **TDD for business logic; don’t test libraries**
-* **Official docs up front; latest versions**
-* **SME-led: clarify, then implement**
-* **Security, docs, QA, feature flags: non-negotiable**
+* **Libraries first**; custom code only for business logic.
+* **TDD for business logic**; don’t test third-party libraries.
+* **Official docs first**; always use latest stable versions.
+* **Never assume SME or AI is correct** — clarify and align before coding.
+* **Security, QA, documentation, supply-chain checks, legal compliance, and feature flags are mandatory.**
+* **All tests must be green before completion.**
+* **All code must be production-ready, secure, legally compliant, and deployable.**
+* **SMEs must be able to run and test locally with clear instructions.**
 ```
 
-## AI GUARDRAILS INSTRUCTIONS
+### 3. Enforce in CI/CD (optional but recommended)
+
+* Run **linting, type-checking, and unit tests** on every commit.
+* Run **dependency and license scans** (npm audit, Composer audit, gosec, Trivy, etc).
+* Require **all tests green** before merge.
+
+### 4. Add a Pull Request Template (optional)
+
+Create `.github/pull_request_template.md` with a checklist like:
+
+```markdown
+## PR Checklist
+
+- [ ] I have read and applied [AI_GUARDRAILS.md](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI_GUARDRAILS.md)  
+- [ ] Code follows TDD (tests first, all green)  
+- [ ] No reinventing the wheel — libraries first  
+- [ ] Security reviewed (no secrets, OWASP checks)  
+- [ ] Docs updated in `/docs`  
+- [ ] SME can run locally with updated instructions  
+```
+
+## Why Use These Guardrails?
+
+By applying these guardrails across projects, you ensure that:
+
+* AI assistants generate code that is **trustworthy and maintainable**.
+* Projects are **secure by default** and follow industry best practices.
+* SMEs remain in control, with AI acting as a careful assistant — not a guesser.
+* Teams can scale AI-assisted development without sacrificing quality.
+
+# AI GUARDRAILS
 
 **[Always read the the linked url to AI_GUARDRAILS.md to deeply comprehend and apply the guardrails to this project](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI_GUARDRAILS.md)** 
 
 ### Guardrail Summary
 
-* **Libraries First**
-* **Custom Code = Business Logic Only**
-* **TDD for business logic; don’t test libraries**
-* **Official docs up front; latest versions**
-* **SME-led: clarify, then implement**
-* **Security, docs, QA, feature flags: non-negotiable**
+* **Libraries first**; custom code only for business logic.
+* **TDD for business logic**; don’t test third-party libraries.
+* **Official docs first**; always use latest stable versions.
+* **Never assume SME or AI is correct** — clarify and align before coding.
+* **Security, QA, documentation, supply-chain checks, legal compliance, and feature flags are mandatory.**
+* **All tests must be green before completion.**
+* **All code must be production-ready, secure, legally compliant, and deployable.**
+* **SMEs must be able to run and test locally with clear instructions.**
