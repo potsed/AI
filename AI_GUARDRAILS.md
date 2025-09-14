@@ -253,5 +253,3 @@ Custom code = business workflows, domain events, templates, glue logic, sandboxi
 * **All tests must be green before completion.**
 * **All code must be production-ready, secure, legally compliant, and deployable.**
 * **SMEs must be able to run and test locally with clear instructions.**
-
-Would you like me to also draft a **`/docs/compliance` template** (with sections for GDPR, CCPA, PCI-DSS, etc.) so projects can fill it in to document their own regulatory obligations?
