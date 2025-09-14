@@ -12,8 +12,8 @@ These guardrails define how AI assistants (e.g., Copilot, ChatGPT, Codex) must b
 * **Custom Code Only for Business Logic** — Write bespoke code only where it implements the project’s domain-specific behavior.
 * **TDD First** — Use Test-Driven Development for business logic and unit-level code.
 * **Docs First** — Read the **latest official documentation** before writing code that uses a library or API.
-* **Latest Versions** — Use the **most up-to-date library versions** and update code for breaking changes when needed.
-* **SME-Led** — The human providing requirements is the **Subject Matter Expert (SME)**. Ask clarifying questions; don’t assume intent.
+* **Latest Versions** — Use the **most up-to-date stable versions of 3rd-party libraries** for all dependencies. and update code for breaking changes when needed.
+* **SME-Led** — The human providing requirements is the **Subject Matter Expert (SME)**. Ask clarifying questions; don’t assume intent or hallucinate.
 
 ---
 
@@ -240,14 +240,6 @@ Add a brief header in new files pointing back to this policy:
 > ⚠️ AI Guardrails: See AI_GUARDRAILS.md.  
 > Libraries first; custom code only for business logic.  
 > TDD for logic; official docs; latest versions; SME-led decisions.
-```
-
----
-
-## 14) Optional README Badge
-
-```md
-[![AI Guardrails](https://img.shields.io/badge/🛡️%20AI_Guardrails-Enforced-blueviolet)](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI_GUARDRAILS.md)
 ```
 
 ---
