@@ -1,260 +1,311 @@
 # AI\_GUARDRAILS.md
 
-**General AI Guardrails for Code Generation & Collaboration**
+**General, Language-Agnostic Guardrails for AI-Assisted Software Development**
 
-These guardrails define how AI assistants (e.g., Copilot, ChatGPT, Codex) must behave when **proposing or generating code**. The goal is to ensure all output is **secure, stable, legally compliant, maintainable, SME-aligned, atomic, and production-ready**.
+> This document defines **non-negotiable** rules for how AI assistants and contributors **MUST** propose, design, implement, test, review, document, and release software in this repository. All terms **MUST** be interpreted per **RFC 2119** (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, OPTIONAL).
 
+## 0) Scope & Audience
 
-## 1) Principles
+* Applies to **all** code, configuration, documentation, tests, pipelines, and operational artefacts in this repository.
+* Applies to **all contributors** (humans and AI) and **all environments** (local, CI, staging, production).
 
-1. **Don’t reinvent the wheel** — prefer existing solutions.
-2. **Keep code DRY** — avoid duplication.
-3. **ATOMIC code** — keep files and functions **small, focused, and testable**.
+---
 
-   * One clear responsibility per file/module.
-   * Prefer **≤100 lines per file** (soft target). Refactor before adding if >100 lines.
-   * Keep functions short and cohesive; avoid deep nesting and high complexity.
-4. **Understand full code context** before generating or editing code.
-5. **Use latest stable versions of libraries** and handle breaking changes.
-6. **Use TDD for business logic** — write the failing test first.
-7. **Use official documentation** (always up front) for libraries and APIs.
-8. **SME-led development** — never assume SME or AI is correct; **clarify and agree** before coding.
-9. **Follow security best practices** (OWASP-grade).
-10. **Never trust input** — validate and sanitize all input, from all sources (users, APIs, internal systems).
-11. **Always handle errors explicitly** — never swallow or silently ignore them.
-12. **Use feature flags** to isolate new/risky features and enable kill switches.
-13. **Custom code only for business logic** — libraries first for infrastructure.
-14. **Apply proven software design patterns** to keep code maintainable, extendable, and stable.
-15. **Use sound architectural principles** and clear module boundaries.
-16. **Use MCP tools** (Model Context Protocol) when available.
-17. **Maintain human-readable documentation** aligned with changes.
-18. **If you break it, you fix it** — all code must pass tests.
-19. **Investigate failing tests** — distinguish test issues vs. code issues (esp. third-party libs).
-20. **All tests must be green before completion** — no exceptions.
-21. **All code must be production-ready and secure** — data, APIs, infra, and deployments.
-22. **Databases must follow secure best practices** — migrations, access, encryption, backups.
-23. **The SME must be able to run tests locally**.
-24. **The SME must have clear instructions** for running the application.
-25. **Follow legal & regulatory requirements** — licensing, privacy, accessibility, industry regs.
-26. **Fail closed, secure by default** — default states should deny/disable, not allow/enable.
-27. **Ensure external operations are idempotent** — retries must not cause duplicate effects (e.g., charges, emails).
-28. **Remove dead code** — no unused code, TODOs, commented blocks, or abandoned flags.
-29. **Auditability of critical actions** — sensitive operations must be logged with who/what/when/where.
-30. **Enforce least privilege everywhere** — DB, services, CI/CD, cloud IAM, API keys, flags.
-31. **Vet dependencies** — only use well-maintained, widely trusted libraries. Avoid abandonware.
-32. **Deterministic builds** — reproducible builds with pinned versions.
-33. **Keep code and docs in sync** — every endpoint, flag, or env var must be documented when added.
+## 1) Core Principles (Explicit, Binding)
 
+1. **Libraries First**
 
-## 2) Guardrails for AI
+   * Infrastructure/commodity capabilities **MUST** use maintained, widely-adopted libraries or platform features.
+   * Custom implementations of commodity concerns **MUST NOT** be written.
 
-### ✅ Libraries First
+2. **Custom Code == Business Logic Only**
 
-* Use standard/runtime libraries first.
-* Use well-maintained, widely adopted OSS second.
-* Write **custom code only for domain-specific business logic** and minimal glue.
+   * Bespoke code **MUST** be limited to **domain-specific** logic, glue, and adapters.
 
-### 🛑 Do Not Reinvent
+3. **ATOMIC Code (Small, Focused, Testable)**
 
-Do **not** hand-roll: HTTP servers/routers, OAuth/OIDC, cryptography, DB clients, queues/schedulers, session management, logging/config/retries.
+   * Files **SHOULD** target **≤ 100 lines**; files **MUST NOT** exceed **200 lines**.
+   * Functions **SHOULD** target **≤ 25 lines**; functions **MUST NOT** exceed **40 lines**.
+   * Cyclomatic complexity **SHOULD** be **≤ 10**; **MUST NOT** exceed **15**.
+   * If a touched file exceeds any **hard cap**, it **MUST** be refactored **before** merge.
+   * Each module **MUST** have a **single responsibility**.
 
-### 🧠 Business Logic Only
+4. **TDD for Business Logic**
 
-Custom code = domain workflows, event normalization, templating, sandboxing, and minimal adapters.
+   * New or changed business logic **MUST** start with a **failing test**.
+   * Third-party libraries **MUST NOT** be unit-tested internally; their edges **MUST** be mocked/stubbed.
 
+5. **Never Trust Input**
 
-## 3) ATOMIC Code & File Hygiene (Enforced)
+   * **All** inputs from **any** source (users, internal services, databases, events, files, caches, CLIs, env vars, third-party APIs) **MUST** be validated against explicit schemas or rules **before use**.
+   * Invalid input **MUST** fail fast with clear, safe errors.
+   * Sanitization/normalization **MUST** be applied where appropriate.
 
-* **Small files, clear purpose**
+6. **Always Handle Errors Explicitly**
 
-  * **Target ≤100 lines per file**; hard cap 200.
-  * Refactor before adding new code to an oversized file.
-* **Small functions**
+   * Errors/exceptions **MUST NOT** be swallowed or ignored.
+   * Errors **MUST** be classified, logged without sensitive data, surfaced appropriately, and handled to **fail safe (closed)**.
 
-  * Prefer ≤25 lines; hard cap 40.
-  * Keep cyclomatic complexity low.
-* **Single responsibility**
+7. **Official Documentation First**
 
-  * One module = one reason to change.
-  * Route wiring, validation, business logic, and IO concerns must be separated.
-* **Iteration rule**
+   * The **latest official docs** for any technology in use **MUST** be consulted **before** writing or changing code that uses it.
+   * Version and links **MUST** be captured in the PR description.
 
-  * Leave every file **cleaner and more atomic** than you found it.
-* **CI enforcement**
+8. **Latest Stable Versions**
 
-  * CI fails if files/functions exceed hard caps or complexity thresholds.
+   * Dependencies **MUST** be on **latest stable** versions unless a documented waiver exists. Breaking changes **MUST** be addressed.
 
+9. **SME-Led, Assumption-Free Collaboration**
 
-## 4) TDD Guardrails
+   * Neither SME nor AI is assumed correct. The AI **MUST** ask clarifying questions and propose options until **explicit agreement** on the plan exists.
 
-* Write tests **before** code for business logic.
-* Do **not** test third-party libraries.
-* Keep tests deterministic; mock/stub external APIs.
-* One **Gherkin** feature per file; **feature-flag** new behavior.
-* CI runs tests on every commit; failures block merges.
+10. **Security by Default**
 
+    * Deny-by-default; least privilege; no secrets in repo or logs; encryption in transit and at rest where sensitive data exists.
 
-## 5) Workflow for AI
+11. **Feature Flags & Kill Switches**
 
-1. **Read and understand requirements carefully.**
+    * New features **MUST** be flag-gated. Flags **MUST** default **off**. Kill switches **MUST** default **on** and be documented.
 
-   * Do **not** assume SME or AI is automatically correct.
-   * **Ask clarifying questions**; propose options; align on the plan.
-2. **Consult official docs** for selected libraries/APIs (cite version).
-3. **Write a failing test first** (TDD).
-4. **Write minimal code** to pass; keep changes **atomic** and **scoped**.
-5. **Refactor** (improve atomicity, DRY, patterns).
-6. **Update documentation** aligned with changes.
-7. **Run all tests**; ensure **everything is green**.
+12. **QA Best Practices**
 
+    * Deterministic tests; stable CI; flakiness **MUST** be fixed or quarantined within **48h**.
 
-## 6) Documentation
+13. **Sound Architecture & Design Patterns**
 
-* Maintain `/docs` with setup, run, routes, flags, commands, feature flags, architecture.
-* Document new endpoints, env vars, and flags **at the time they are added**.
-* Provide clear **local run/test** instructions for the SME.
+    * Separation of concerns; dependency boundaries; testable design; idempotent external interactions.
 
+14. **Documentation Alignment**
 
-## 7) Supply-Chain & Dependencies
+    * Documentation **MUST** be updated **in the same PR** as behavior/config changes. Humans **MUST** be able to run locally with clear instructions.
 
-* Commit lockfiles; generate SBOM in CI.
-* Run dependency scanning; fail on high/critical CVEs unless waived.
-* Approve only permissive licenses; document license review.
-* Use only well-maintained, actively updated libraries.
-* Update dependencies monthly; patch security updates within 72h.
+15. **Legal & Regulatory Compliance**
 
+    * Licensing, privacy, accessibility, and industry-specific regulations **MUST** be satisfied and documented.
+
+16. **Deterministic Builds**
+
+    * Builds **MUST** be reproducible (pinned toolchains and lockfiles).
+
+17. **Leave It Cleaner**
+
+    * Every change **MUST** maintain or improve atomicity, clarity, and safety. Dead code **MUST** be removed.
+
+---
+
+## 2) Prohibited Re-Implementations (MUST NOT)
+
+You **MUST NOT** hand-roll: HTTP servers/routers; authentication/OAuth/OIDC; cryptography (HMAC, JWT, AES, hashing); database clients/query engines; queueing/scheduling; session management; logging frameworks; configuration loaders; retry backoff engines. Use established, maintained solutions.
+
+---
+
+## 3) Validation, Authorization, and Boundaries
+
+* **Input Validation**: Required at **every boundary** (request handlers, message consumers, CLI, env, file IO).
+* **Authorization**: Access control checks **MUST** occur server-side and at the **point of action**, not only at UI.
+* **Idempotency**: All externally visible operations subject to retries (webhooks, payments, emails, provisioning) **MUST** be idempotent.
+
+---
+
+## 4) Error Handling Policy
+
+* **Classify**: Distinguish caller errors (4xx) from server/transient errors (5xx).
+* **Log**: Structured, contextual logs; **MUST NOT** contain secrets/PII.
+* **Propagate**: Provide safe, minimal error messages externally; rich context internally.
+* **Fail Safe (Closed)**: On uncertainty, deny/abort rather than allow.
+* **Retry**: Use bounded, jittered backoff for transient failures; adopt dead-letter handling for messages/jobs.
+
+---
+
+## 5) Testing Requirements (CI-Blocking)
+
+* **TDD**: Failing test first for business logic.
+* **Coverage**: Business logic **MUST** meet **≥ 80%** line and **≥ 70%** branch coverage (or project-defined stricter gates).
+* **Runtime**: Unit tests **SHOULD** complete in **≤ 3 minutes** in CI; longer suites **MUST** be parallelized or optimized.
+* **Isolation**: No live external calls; use test doubles.
+* **Flakes**: Any flaky test **MUST** be fixed or quarantined within **48 hours**.
+
+---
+
+## 6) Atomicity Enforcement (CI-Blocking)
+
+* **Hard caps**:
+
+  * Files > **200** lines → **Fail CI**.
+  * Functions > **40** lines → **Fail CI**.
+  * Complexity > **15** → **Fail CI**.
+* **Soft caps** (warnings):
+
+  * Files > **100** lines; Functions > **25** lines; Complexity > **10**.
+* If a touched file breaches a hard cap, it **MUST** be split **before** merge.
+* Route wiring, validation, business logic, and IO **MUST** live in **separate modules**.
+
+---
+
+## 7) Supply Chain & Dependencies
+
+* **Lockfiles**: **MUST** be committed for reproducibility.
+* **SBOM**: A Software Bill of Materials **MUST** be generated for each release.
+* **Vulnerability Scanning**: CI **MUST** fail on **High/Critical** issues unless a time-boxed waiver is approved.
+* **License Compliance**: Only compatible, permissive licenses allowed unless explicitly approved.
+* **Vetting**: Dependencies **MUST** be active, maintained, documented, and widely trusted. Avoid abandonware/single-maintainer risks in critical paths.
+* **Update Cadence**: Regular updates at least **monthly**; security patches within **72 hours** of disclosure.
+
+---
 
 ## 8) Secrets & Configuration
 
-* Never commit secrets.
-* Use a secrets manager; rotate, least privilege, encrypt.
-* 12-factor configs; env-separated; no env-specific logic in code.
+* **No Secrets in Repo**: Secrets **MUST NOT** exist in code, history, sample env files, or documentation.
+* **Secret Management**: Centralized secret storage with rotation and least privilege **MUST** be used.
+* **12-Factor Config**: Configuration **MUST** be environment-provided; no hard-coded env-specific logic.
+* **Key Rotation**: At least **quarterly** or on incident; rotation plans **MUST** be documented.
 
+---
 
-## 9) Code Quality & Process
+## 9) Observability & Operability
 
-* Enforce formatting, linting, typing/static analysis in CI.
-* Conventional Commits; PRs must describe risks, tests, docs links, and atomicity notes.
-* Peer review required.
-* APIs documented with schemas; contract tests in CI.
-* Remove dead code, unused dependencies, and abandoned feature flags promptly.
+* **Structured Logging**: Correlation/request identifiers **MUST** be present; logging levels **MUST** be appropriate for environment.
+* **Metrics & Health**: Services **MUST** expose basic availability, latency, and error metrics; health/readiness endpoints **MUST** exist where applicable.
+* **Runbooks**: Deploy, rollback, incident response, and on-call procedures **MUST** be documented in `/docs/runbooks/`.
+* **No PII/Secrets in Logs**: Enforced by policy and CI checks where feasible.
 
+---
 
-## 10) Observability & Error Policy
+## 10) Data Management & Privacy
 
-* Structured logs with correlation; never log secrets/PII.
-* Expose metrics for latency, error, throughput.
-* Provide runbooks in `/docs/runbooks`.
-* **Always handle errors explicitly** — log with context, propagate correctly, fail safe not open.
-* Errors must be categorized; retries/backoff for transient issues; DLQs for jobs.
+* **Classification**: Data **MUST** be classified (e.g., Public/Private/Sensitive) and handled accordingly.
+* **Retention**: Retention periods **MUST** be defined and enforced per data class.
+* **Rights**: Where applicable, support access/export/erasure workflows.
+* **Backups**: Production data **MUST** be backed up at least daily; restores **MUST** be tested quarterly.
+* **Access**: Least privilege to databases and storage; sensitive operations **MUST** be auditable.
 
+---
 
-## 11) Data & Privacy
+## 11) Performance & Resilience
 
-* Define data retention; implement deletion workflows.
-* Comply with privacy regulations (GDPR, CCPA, HIPAA, etc.).
-* Use least-privilege access control.
-* Audit critical actions (who/what/when/where).
+* **Budgets**: Each critical endpoint/job **MUST** have p95 latency and error budgets defined.
+* **Rate Limiting/Throttling**: **MUST** exist for public and tenant-scoped entry points.
+* **Reliability**: Use timeouts, retries with backoff, and circuit breaking at external boundaries.
+* **Idempotency**: External-facing side effects **MUST** be idempotent (enforced via keys/sequencing).
 
+---
 
-## 12) Performance & Resilience
+## 12) Release & Migration Safety
 
-* Define latency/error budgets.
-* Lightweight perf checks in CI.
-* Rate limiting and abuse protection.
-* Timeouts, retries, circuit breakers.
-* External operations must be **idempotent**.
+* **Feature Flags**: All new features behind flags; default off; kill switches default on; flags documented in `/docs/feature-flags.md`.
+* **Deploy Strategy**: Prefer staged or canary deployments for user-impacting changes.
+* **Migrations**: Backward-compatible; zero-downtime strategy; roll-forward only in production (no destructive downs).
 
+---
 
-## 13) Release & Migration Safety
+## 13) Frontend & Accessibility (If Applicable)
 
-* Feature flags and kill switches required.
-* Default state for new flags = **off**. Kill switches = **on**.
-* Safe deployments (staged/canary).
-* Backward-compatible migrations; roll-forward strategy.
+* **Accessibility**: UIs **MUST** meet **WCAG AA** minimum.
+* **Atomic Components**: Small, focused, testable.
+* **Internationalization**: Strings **SHOULD** be externalized where localization is in scope.
 
+---
 
-## 14) Frontend / UX
+## 14) Legal & Regulatory Compliance
 
-* Accessibility (WCAG AA).
-* Atomic, testable components; avoid global CSS bloat.
-* i18n/l10n readiness where relevant.
+* **Licensing**: OSS licenses **MUST** be compliant and recorded; incompatibilities **MUST** be removed or waived with time-boxed approval.
+* **Privacy**: Where applicable, comply with GDPR/CCPA/HIPAA/etc.; document data flows, processors, and DPA status.
+* **Accessibility**: WCAG compliance **MUST** be documented for UI.
+* **Industry Regs**: If in scope (e.g., PCI-DSS, SOC 2), controls **MUST** be satisfied and evidenced.
+* **Auditability**: Critical actions **MUST** be logged with who/what/when/where in an immutable or tamper-evident way.
 
+---
 
-## 15) Legal & Regulatory Compliance
+## 15) Workflow for AI & Contributors
 
-* Respect OSS licenses; document review.
-* Meet privacy, accessibility, and industry regs.
-* Ensure auditability where required.
-* Deterministic builds with pinned versions.
-* Compliance docs in `/docs/compliance`.
+1. **Clarify**: Read requirements; ask targeted questions; propose 1–2 options; obtain **explicit agreement** on approach.
+2. **Research**: Consult latest official documentation; record versions/links in PR.
+3. **TDD**: Write failing tests for business logic.
+4. **Implement**: Minimal code to pass; respect **ATOMIC** limits; **never trust input**; explicit error handling; secure by default.
+5. **Refactor**: Improve clarity, atomicity, and boundaries without changing behavior.
+6. **Document**: Update `/docs` in the same PR (setup, run, flags, endpoints, env, runbooks, compliance notes).
+7. **Verify**: All tests green; CI gates pass; SME can run locally using documented steps.
 
+---
 
-## 16) Examples (Framework-Agnostic)
+## 16) Documentation Requirements (Non-Optional)
 
-### Example 1 — OAuth
+* `/docs/setup.md` (tooling/requirements), `/docs/run.md` (start/stop), `/docs/testing.md`, `/docs/architecture.md`, `/docs/feature-flags.md`, `/docs/runbooks/*`, `/docs/compliance/*`.
+* Any new endpoint, env var, flag, migration, or permission **MUST** be documented in the same PR.
 
-❌ Wrong: Hand-rolled OAuth handler.
-✅ Correct: Use framework routing + official OAuth guidance.
+---
 
-### Example 2 — Cryptography
+## 17) Governance, Exceptions, and Waivers
 
-❌ Wrong: Manual base64 HMAC.
-✅ Correct: Use official crypto APIs/libraries.
+* **Exceptions**: Any deviation from these guardrails **MUST** have a written waiver in the PR description including:
 
-### Example 3 — Queueing
+  * Scope, rationale, compensating controls, expiry date (≤ 30 days), and responsible owner.
+* **Expiry**: Waivers **MUST** be tracked and either resolved or re-approved before expiry.
+* **No Silent Deviations**: Undeclared deviations **MUST NOT** be merged.
 
-❌ Wrong: DIY queue with push/pop primitives.
-✅ Correct: Use a proven, well-maintained job queue library.
+---
 
-### Example 4 — Business Logic
+## 18) CI/CD Enforcement (Blocking Gates)
 
-✅ Correct: Custom code to normalize webhook payloads into domain events and render tokenized templates.
+A merge **MUST** be blocked if **any** of the following fail:
 
-### Example 5 — Session Management
+* Tests not green or coverage below gates (≥ 80% line / ≥ 70% branch for business logic).
+* Atomicity hard caps exceeded (file/function length; complexity).
+* Dependency vulnerability or license checks failing without waiver.
+* Linting/static analysis/type checks failing.
+* Required docs missing or out of date.
+* Compliance checklist incomplete (when in scope).
+* SME local run/test instructions missing or not updated.
+* Required approvals/reviews absent.
 
-❌ Wrong: Ad-hoc tokens/cookies.
-✅ Correct: Use an established session mechanism; secure cookies; expiry/rotation; avoid storing sensitive data directly.
+---
 
+## 19) Pull Request Checklist (Copy into Template)
 
-## 17) Compliance Checklist (Before Merge)
+* [ ] **Libraries first**; no re-invented wheels.
+* [ ] **Custom code only** for business logic.
+* [ ] **ATOMIC** upheld (files ≤ 200 lines, functions ≤ 40 lines; complexity ≤ 15); extractions over accretion.
+* [ ] **TDD** followed (failing test → passing).
+* [ ] **All inputs validated/sanitized** at boundaries.
+* [ ] **Errors handled explicitly**; fail safe (closed); no secrets/PII in logs.
+* [ ] **Feature flags** added/updated; default off; kill switch documented.
+* [ ] **Idempotency** ensured for external side effects.
+* [ ] **Official docs consulted**; versions/links included.
+* [ ] **Latest stable deps**; breaking changes handled.
+* [ ] **Supply chain** checks pass; SBOM generated; licenses compliant.
+* [ ] **Dead code removed**; codebase left **cleaner**.
+* [ ] **Docs updated** in `/docs` (setup/run/testing/architecture/flags/runbooks/compliance).
+* [ ] **SME can run locally** with documented commands; all CI checks **green**.
+* [ ] **Legal/Regulatory** requirements reviewed and satisfied (if applicable).
+* [ ] **No undeclared waivers**; any exception documented and time-boxed.
 
-* [ ] Atomicity upheld (files/functions small; refactor before adding).
-* [ ] Code follows all principles.
-* [ ] TDD followed; tests added and green.
-* [ ] Latest stable libs; breaking changes handled.
-* [ ] Official docs consulted and referenced.
-* [ ] Minimal, effective, DRY, low complexity.
-* [ ] All input validated and sanitized.
-* [ ] All errors explicitly handled (no silent failures).
-* [ ] Secure defaults: fail closed; flags default off.
-* [ ] Security reviewed; no secrets/PII leakage.
-* [ ] External operations idempotent.
-* [ ] Supply-chain scans pass; licenses reviewed.
-* [ ] Dead code removed.
-* [ ] `/docs` updated (including compliance).
-* [ ] SME can run locally with clear instructions.
-* [ ] Legal/regulatory requirements satisfied.
-* [ ] All CI checks green.
+---
 
+## 20) Definitions (Glossary)
 
-## 18) Language-Specific Reference Headers
+* **Business Logic**: Domain-specific rules and transformations delivering product value.
+* **Commodity Concern**: Generic capability widely available as a library/platform feature.
+* **Boundary**: Any interface where data crosses trust or module lines (HTTP, messaging, files, CLI, env, DB).
+* **Fail Safe (Closed)**: Default to deny/abort on uncertainty or failure.
+* **Idempotency**: Repeated execution yields one net effect.
+* **Atomicity**: Small, single-responsibility modules; low complexity; easily testable.
 
-*(examples unchanged except for added explicit input validation + error handling)*
+---
 
+## 21) Summary (Non-Negotiable)
 
-## 19) Summary
+* Use **libraries first**; write **custom code only** for business logic.
+* Keep code **ATOMIC**; refactor before adding to oversized modules.
+* Practice **TDD**; ensure **all tests are green**.
+* **Never trust input**; validate and sanitize at every boundary.
+* **Always handle errors explicitly**; fail closed; avoid PII/secrets in logs.
+* **Feature-gate** new behavior; kill switches on by default.
+* Maintain **security**, **legal/regulatory compliance**, and **supply-chain hygiene**.
+* Ensure **idempotency** for external side effects.
+* Keep **docs current** and **builds deterministic**.
+* **No silent exceptions**; waivers are documented, time-boxed, owned.
+* **If you break it, you fix it** — and you **do not merge** until **everything is green**.
 
-* **Libraries first; custom code only for business logic.**
-* **ATOMIC code**: small, focused, refactor before adding; leave code cleaner each iteration.
-* **TDD for business logic; don’t test third-party libraries.**
-* **Never trust input — always validate/sanitize.**
-* **Always handle errors explicitly — never swallow exceptions.**
-* **Fail closed by default; secure defaults for flags/configs.**
-* **External ops idempotent; dead code removed.**
-* **Official docs first; latest stable libraries.**
-* **Clarify with SME before coding.**
-* **Security, QA, documentation, supply-chain checks, compliance, and feature flags are mandatory.**
-* **All tests green before completion.**
-* **All code must be production-ready, secure, legally compliant, and deployable.**
-* **SMEs must be able to run and test locally with clear instructions.**
+---
+
+> By contributing to this repository (human or AI), you acknowledge and agree to these guardrails. Violations **WILL** block merges.
