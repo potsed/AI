@@ -19,4 +19,7 @@ Each risk should be documented with the following information:
 
 | Risk ID | Title | Impact | Likelihood | Status |
 |---------|-------|--------|------------|--------|
-|         |       |        |            |        |
+| RISK-001 | Instruction set may be unclear or ambiguous | High | Medium | Open |
+| RISK-002 | Instruction set may not cover important scenarios | High | Medium | Open |
+| RISK-003 | Instruction set may become outdated | Medium | High | Open |
+| RISK-004 | Adoption of instruction set may be low | Medium | High | Open |

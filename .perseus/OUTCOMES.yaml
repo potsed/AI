@@ -16,12 +16,27 @@ Format per outcome:
 ## Outcomes
 
 ```yaml
-# Example outcome:
 - id: O1
-  statement: "When a user visits the homepage, they can quickly understand the product value."
-  metric: % of users who stay on homepage > 10 seconds
-  baseline: 45%
-  target: 75% by 2025-12-31
-  owner: Product Manager
+  statement: "When AI contributors use this instruction set, they can follow a defined Human-AI collaboration process."
+  metric: % of AI contributors who successfully follow the defined process
+  baseline: 0%
+  target: 90% by 2025-12-31
+  owner: AI Development Team
+  progress: 0%
+
+- id: O2
+  statement: "When AI contributors use this framework, they produce secure and quality code."
+  metric: % of AI contributions that pass all CI checks on first attempt
+  baseline: 0%
+  target: 90% by 2025-12-31
+  owner: AI Development Team
+  progress: 0%
+
+- id: O3
+  statement: "When developers adopt this instruction set, they can produce maintainable code."
+  metric: Adoption rate of the instruction set among development teams
+  baseline: 0%
+  target: 50% by 2025-12-31
+  owner: AI Development Team
   progress: 0%
 ```

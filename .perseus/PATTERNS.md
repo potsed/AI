@@ -1,6 +1,6 @@
 # Patterns and Anti-Patterns
 
-This document captures successful implementation patterns and anti-patterns to avoid.
+This document captures successful patterns and anti-patterns in creating instruction sets for Human-AI collaboration.
 
 ## Pattern Format
 
@@ -25,10 +25,14 @@ Each anti-pattern should include:
 
 | Name | Context | Status |
 |------|---------|--------|
-|      |         |        |
+| Explicit Agreement Process | When defining collaboration between human and AI | Proposed |
+| Example-Driven Documentation | When explaining complex processes | Proposed |
+| Layered Documentation | When providing guidance at different levels of detail | Proposed |
 
 ## Anti-Patterns
 
 | Name | Context | Status |
 |------|---------|--------|
-|      |         |        |
+| Vague Instructions | When trying to be concise | Proposed |
+| Overly Complex Language | When writing for a broad audience | Proposed |
+| Inconsistent Terminology | When multiple authors contribute | Proposed |
