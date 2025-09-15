@@ -283,7 +283,17 @@ A merge **MUST** be blocked if **any** of the following fail:
 
 ---
 
-## 19) Pull Request Checklist (Copy into Template)
+## 19) Code Quality Standards
+
+* All code **MUST** adhere to language-specific style guides and best practices.
+* Type systems **MUST** be fully utilized in typed languages (e.g., TypeScript, Rust, Haskell).
+* Linting tools **MUST** be run on all code; failures **MUST** be addressed before merge.
+* Language-specific formatting tools **MUST** be used (e.g., Prettier for JavaScript/TypeScript, Laravel Pint for PHP, gofmt for Go).
+* Code **MUST** be reviewed for idiomatic usage of the language and frameworks.
+
+---
+
+## 20) Pull Request Checklist (Copy into Template)
 
 * [ ] **Libraries first**; no re-invented wheels.
 * [ ] **Custom code only** for business logic.
@@ -304,10 +314,11 @@ A merge **MUST** be blocked if **any** of the following fail:
 * [ ] **Key decisions documented** in ADRs.
 * [ ] **Risks identified and mitigated**.
 * [ ] **Human-AI collaboration** followed explicit agreement process.
+* [ ] **Code quality standards** met; linting and formatting tools run; type systems fully utilized.
 
 ---
 
-## 20) Summary (Non-Negotiable)
+## 21) Summary (Non-Negotiable)
 
 * Use **libraries first**; write **custom code only** for business logic.
 * Keep code **ATOMIC**; refactor before adding to oversized modules.
@@ -323,6 +334,7 @@ A merge **MUST** be blocked if **any** of the following fail:
 * **Document key decisions** in ADRs.
 * **Identify and mitigate risks** proactively.
 * **Follow Human-AI collaboration framework** with explicit agreements.
+* **Adhere to code quality standards**; use linting and formatting tools; fully utilize type systems.
 
 ---
 
