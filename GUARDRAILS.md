@@ -281,18 +281,7 @@ A merge **MUST** be blocked if **any** of the following fail:
 
 ---
 
-## 20) Definitions (Glossary)
-
-* **Business Logic**: Domain-specific rules and transformations delivering product value.
-* **Commodity Concern**: Generic capability widely available as a library/platform feature.
-* **Boundary**: Any interface where data crosses trust or module lines (HTTP, messaging, files, CLI, env, DB).
-* **Fail Safe (Closed)**: Default to deny/abort on uncertainty or failure.
-* **Idempotency**: Repeated execution yields one net effect.
-* **Atomicity**: Small, single-responsibility modules; low complexity; easily testable.
-
----
-
-## 21) Summary (Non-Negotiable)
+## 20) Summary (Non-Negotiable)
 
 * Use **libraries first**; write **custom code only** for business logic.
 * Keep code **ATOMIC**; refactor before adding to oversized modules.
@@ -305,6 +294,22 @@ A merge **MUST** be blocked if **any** of the following fail:
 * Keep **docs current** and **builds deterministic**.
 * **No silent exceptions**; waivers are documented, time-boxed, owned.
 * **If you break it, you fix it** — and you **do not merge** until **everything is green**.
+
+---
+
+## Definitions
+
+- **Business Logic**: Domain-specific rules and transformations delivering product value.
+- **Commodity Concern**: Generic capability widely available as a library/platform feature.
+- **Boundary**: Any interface where data crosses trust or module lines (HTTP, messaging, files, CLI, env, DB).
+- **Fail Safe (Closed)**: Default to deny/abort on uncertainty or failure.
+- **Idempotency**: Repeated execution yields one net effect.
+- **Atomicity**: Small, single-responsibility modules; low complexity; easily testable.
+- **TDD (Test-Driven Development)**: A software development approach where tests are written before implementation code.
+- **CI/CD (Continuous Integration/Continuous Deployment)**: Automated processes that integrate code changes and deploy them to production environments.
+- **SBOM (Software Bill of Materials)**: A complete list of components, libraries, and modules in a software application.
+- **Feature Flag**: A mechanism that allows enabling or disabling features without deploying new code.
+- **Kill Switch**: A mechanism that allows immediate disabling of a feature or service in case of problems.
 
 ---
 

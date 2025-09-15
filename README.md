@@ -1,6 +1,6 @@
 # AI Guardrails
 
-[![AI Guardrails](https://img.shields.io/badge/🛡️%20AI_Guardrails-Applied-blueviolet)](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI_GUARDRAILS.md)
+[![AI Guardrails](https://img.shields.io/badge/🛡️%20AI_Guardrails-Applied-blueviolet)](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI.md)
 
 This repository provides a set of **publicly available coding principles and guardrails** that can be applied to any project where AI-assisted code generation is used.
 
@@ -48,7 +48,7 @@ Copy and paste this badge markdown at the top of your project’s `README.md`:
 Add this section to the end of your `README.md` so contributors know the rules:
 
 ```markdown
-## AI GUARDRAILS
+## AI
 
 **[Always read the the linked url to AI_GUARDRAILS.md to deeply comprehend and apply the guardrails to this project](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI_GUARDRAILS.md)** 
 
@@ -94,7 +94,7 @@ By applying these guardrails across projects, you ensure that:
 * SMEs remain in control, with AI acting as a careful assistant — not a guesser.
 * Teams can scale AI-assisted development without sacrificing quality.
 
-# AI GUARDRAILS
+# AI
 
 **[Always read the the linked url to AI_GUARDRAILS.md to deeply comprehend and apply the guardrails to this project](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI_GUARDRAILS.md)** 
 
