@@ -30,49 +30,20 @@ Copy and paste this badge markdown at the top of your project's `README.md`:
 [![HI/AI Policies](https://img.shields.io/badge/🛡️_HI/AI_POLICIES-STRICT-success)](https://github.com/potsed/AI)
 ```
 
-### 2. Add AI Framework Instructions
+### 2. Add AI Instructions
 
-Add this section to the end of your `README.md` so contributors know the rules:
+Add this section to the end of your `README.md` so AI contributors know the rules:
 
 ```markdown
-## [AI Framework](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI.md)
+## [AI Instructions](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.1/AI.md)
 
-**REQUIRED FOR ALL CONTRIBUTORS: You MUST read and strictly adhere to the AI framework before making any contributions. FAILURE TO COMPLY WILL RESULT IN REJECTED PULL REQUESTS.**
+THIS SECTION DEFINES **MANDATORY REQUIREMENTS** FOR ALL AI CONTRIBUTORS. FAILURE TO COMPLY WITH THESE REQUIREMENTS WILL RESULT IN REJECTED CONTRIBUTIONS. A **FAILURE TO COMPLY IS NOT PERMITTED**.
 
-### [PROCESS.md](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/PROCESS.md) - Human-AI Software Delivery Process
+All terms **MUST** be interpreted per **RFC 2119** (**MUST**, **MUST NOT**, **REQUIRED**, **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **RECOMMENDED**, **MAY**, **OPTIONAL**).
 
-**[Always read the linked url to PROCESS.md to deeply comprehend and apply the process to this project](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/PROCESS.md)**
+**ALL AI CONTRIBUTORS MUST:**
 
-* **Iterative Human-AI Co-development**: Follow the defined workflow from initialization through release
-* **Purpose & Outcomes First**: Clearly define one-sentence purpose with success metrics
-* **Vertical Slices**: Decompose work into 3-7 day cross-functional pieces
-* **Slice Loop**: Follow the iterative process - clarify, test, implement, refactor, document, integrate, demo
-* **Feature Flags**: All new features must be behind flags for safe deployment
-
-### [GUARDRAILS.md](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/GUARDRAILS.md) - AI Guardrails
-
-**[Always read the linked url to GUARDRAILS.md to deeply comprehend and apply the guardrails to this project](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/GUARDRAILS.md)**
-
-* **Libraries first**; custom code only for business logic.
-* **TDD for business logic**; don't test third-party libraries.
-* **Official docs first**; always use latest stable versions.
-* **Never assume SME or AI is correct** — clarify and align before coding.
-* **Security, QA, documentation, supply-chain checks, legal compliance, and feature flags are mandatory.**
-* **All tests must be green before completion.**
-* **All code must be production-ready, secure, legally compliant, and deployable.**
-* **SMEs must be able to run and test locally with clear instructions.**
-
-### Perseus Directory Structure
-
-All project artifacts are stored in the `.perseus` directory:
-- `.perseus/OUTCOMES.yaml` - Measurable outcomes
-- `.perseus/PLAN.md` - Vertical slice plan
-- `.perseus/ADRs/` - Architecture Decision Records
-- `.perseus/RUNBOOK.md` - Operational procedures
-- `.perseus/PROMPTS/` - Saved prompts and model parameters
-- `.perseus/RISKS.md` - Risk register
-- `.perseus/PATTERNS.md` - Implementation patterns
-- `.perseus/ANTI-PATTERNS.md` - Anti-patterns to avoid
+READ the full instructions found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.1/AI.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.1/AI.md) in it's entirety before any contribution.
 ```
 
 ### 3. Enforce in CI/CD (optional but recommended)
@@ -88,7 +59,7 @@ Create `.github/pull_request_template.md` with a checklist like:
 ```markdown
 ## PR Checklist
 
-- [ ] I have read and applied the AI framework from [AI.md](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI.md)  
+- [ ] I have read and applied the AI Instructions from [AI.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.1/AI.md)  
 - [ ] Code follows TDD (tests first, all green)  
 - [ ] No reinventing the wheel — libraries first  
 - [ ] Security reviewed (no secrets, OWASP checks)  
@@ -109,41 +80,12 @@ By applying these guardrails across projects, you ensure that:
 * SMEs remain in control, with AI acting as a careful assistant — not a guesser.
 * Teams can scale AI-assisted development without sacrificing quality.
 
-## [AI Framework](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/AI.md)
+## [AI Instructions](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.1/AI.md)
 
-**REQUIRED FOR ALL CONTRIBUTORS: You MUST read and strictly adhere to the AI framework before making any contributions. FAILURE TO COMPLY WILL RESULT IN REJECTED PULL REQUESTS.**
+THIS SECTION DEFINES **MANDATORY REQUIREMENTS** FOR ALL AI CONTRIBUTORS and AGENTS. FAILURE TO COMPLY WITH THESE REQUIREMENTS WILL RESULT IN REJECTED CONTRIBUTIONS. A **FAILURE TO COMPLY IS NOT PERMITTED**.
 
-### [PROCESS.md](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/PROCESS.md) - Human-AI Software Delivery Process
+All terms **MUST** be interpreted per **RFC 2119** (**MUST**, **MUST NOT**, **REQUIRED**, **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **RECOMMENDED**, **MAY**, **OPTIONAL**).
 
-**[Always read the linked url to PROCESS.md to deeply comprehend and apply the process to this project](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/PROCESS.md)**
+### ALL AI CONTRIBUTORS and AGENTS
 
-* **Iterative Human-AI Co-development**: Follow the defined workflow from initialization through release
-* **Purpose & Outcomes First**: Clearly define one-sentence purpose with success metrics
-* **Vertical Slices**: Decompose work into 3-7 day cross-functional pieces
-* **Slice Loop**: Follow the iterative process - clarify, test, implement, refactor, document, integrate, demo
-* **Feature Flags**: All new features must be behind flags for safe deployment
-
-### [GUARDRAILS.md](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/GUARDRAILS.md) - AI Guardrails
-
-**[Always read the linked url to GUARDRAILS.md to deeply comprehend and apply the guardrails to this project](https://raw.githubusercontent.com/potsed/AI/refs/heads/main/GUARDRAILS.md)**
-
-* **Libraries first**; custom code only for business logic.
-* **TDD for business logic**; don't test third-party libraries.
-* **Official docs first**; always use latest stable versions.
-* **Never assume SME or AI is correct** — clarify and align before coding.
-* **Security, QA, documentation, supply-chain checks, legal compliance, and feature flags are mandatory.**
-* **All tests must be green before completion.**
-* **All code must be production-ready, secure, legally compliant, and deployable.**
-* **SMEs must be able to run and test locally with clear instructions.**
-
-### Perseus Directory Structure
-
-All project artifacts are stored in the `.perseus` directory:
-- `.perseus/OUTCOMES.yaml` - Measurable outcomes
-- `.perseus/PLAN.md` - Vertical slice plan
-- `.perseus/ADRs/` - Architecture Decision Records
-- `.perseus/RUNBOOK.md` - Operational procedures
-- `.perseus/PROMPTS/` - Saved prompts and model parameters
-- `.perseus/RISKS.md` - Risk register
-- `.perseus/PATTERNS.md` - Implementation patterns
-- `.perseus/ANTI-PATTERNS.md` - Anti-patterns to avoid
+**MUST** READ the DOCUMENT found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.1/AI.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.1/AI.md) in it's entirety before any contribution.

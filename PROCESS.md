@@ -1,7 +1,7 @@
 # Human–AI Software Delivery Process
 
 This document defines the **iterative process** for Human–AI co-development.  
-It complements `GUARDRAILS.md` (standards and boundaries).
+It complements `GUARDRAILS.md` and `RFC2119.md` (standards and boundaries).
 
 > ## AI Mandatory Compliance
 >
