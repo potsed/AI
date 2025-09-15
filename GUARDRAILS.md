@@ -1,8 +1,12 @@
-# AI\_GUARDRAILS.md
+# GUARDRAILS.md
 
 **General, Language-Agnostic Guardrails for AI-Assisted Software Development**
 
-> This document defines **non-negotiable** rules for how AI assistants and contributors **MUST** propose, design, implement, test, review, document, and release software in this repository. All terms **MUST** be interpreted per **RFC 2119** (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, OPTIONAL).
+> ## AI Mandatory Compliance
+>
+> THIS DOCUMENT DEFINES **MANDATORY REQUIREMENTS** FOR ALL AI CONTRIBUTORS. FAILURE TO COMPLY WITH THESE REQUIREMENTS WILL RESULT IN REJECTED CONTRIBUTIONS. **FAILURE TO COMPLY IS NOT PERMITTED**.
+> 
+> All terms MUST be interpreted per RFC 2119 (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, OPTIONAL).
 
 ## 0) Scope & Audience
 
@@ -91,6 +95,19 @@
 
     * Every change **MUST** maintain or improve atomicity, clarity, and safety. Dead code **MUST** be removed.
 
+18. **Knowledge Management**
+
+    * Key decisions **MUST** be documented in Architecture Decision Records (ADRs).
+    * Successful patterns and anti-patterns **MUST** be captured for future reference.
+    * Risks and mitigations **MUST** be identified and documented.
+
+19. **Human-AI Collaboration Framework**
+
+    * AI **MUST** defer to human expertise when uncertain or when human knowledge is explicitly required.
+    * AI **MUST** provide confidence levels with recommendations.
+    * Humans and AI **MUST** engage in explicit agreement processes before implementation.
+    * AI **MUST** document its limitations and knowledge gaps.
+
 ---
 
 ## 2) Prohibited Re-Implementations (MUST NOT)
@@ -124,6 +141,7 @@ You **MUST NOT** hand-roll: HTTP servers/routers; authentication/OAuth/OIDC; cry
 * **Runtime**: Unit tests **SHOULD** complete in **≤ 3 minutes** in CI; longer suites **MUST** be parallelized or optimized.
 * **Isolation**: No live external calls; use test doubles.
 * **Flakes**: Any flaky test **MUST** be fixed or quarantined within **48 hours**.
+* **Performance**: Critical paths **SHOULD** have performance benchmarks.
 
 ---
 
@@ -168,6 +186,7 @@ You **MUST NOT** hand-roll: HTTP servers/routers; authentication/OAuth/OIDC; cry
 * **Metrics & Health**: Services **MUST** expose basic availability, latency, and error metrics; health/readiness endpoints **MUST** exist where applicable.
 * **Runbooks**: Deploy, rollback, incident response, and on-call procedures **MUST** be documented in `/docs/runbooks/`.
 * **No PII/Secrets in Logs**: Enforced by policy and CI checks where feasible.
+* **Chaos Engineering**: Safe, small-scale chaos experiments **SHOULD** be conducted for critical services.
 
 ---
 
@@ -195,6 +214,7 @@ You **MUST NOT** hand-roll: HTTP servers/routers; authentication/OAuth/OIDC; cry
 * **Feature Flags**: All new features behind flags; default off; kill switches default on; flags documented in `/docs/feature-flags.md`.
 * **Deploy Strategy**: Prefer staged or canary deployments for user-impacting changes.
 * **Migrations**: Backward-compatible; zero-downtime strategy; roll-forward only in production (no destructive downs).
+* **Chaos Engineering**: Conduct safe, small-scale chaos experiments as part of release validation.
 
 ---
 
@@ -203,6 +223,7 @@ You **MUST NOT** hand-roll: HTTP servers/routers; authentication/OAuth/OIDC; cry
 * **Accessibility**: UIs **MUST** meet **WCAG AA** minimum.
 * **Atomic Components**: Small, focused, testable.
 * **Internationalization**: Strings **SHOULD** be externalized where localization is in scope.
+* **Performance**: Core user journeys **MUST** meet performance benchmarks.
 
 ---
 
@@ -232,6 +253,8 @@ You **MUST NOT** hand-roll: HTTP servers/routers; authentication/OAuth/OIDC; cry
 
 * `/docs/setup.md` (tooling/requirements), `/docs/run.md` (start/stop), `/docs/testing.md`, `/docs/architecture.md`, `/docs/feature-flags.md`, `/docs/runbooks/*`, `/docs/compliance/*`.
 * Any new endpoint, env var, flag, migration, or permission **MUST** be documented in the same PR.
+* Key decisions **MUST** be documented in ADRs.
+* Risks and mitigations **MUST** be documented.
 
 ---
 
@@ -278,6 +301,9 @@ A merge **MUST** be blocked if **any** of the following fail:
 * [ ] **SME can run locally** with documented commands; all CI checks **green**.
 * [ ] **Legal/Regulatory** requirements reviewed and satisfied (if applicable).
 * [ ] **No undeclared waivers**; any exception documented and time-boxed.
+* [ ] **Key decisions documented** in ADRs.
+* [ ] **Risks identified and mitigated**.
+* [ ] **Human-AI collaboration** followed explicit agreement process.
 
 ---
 
@@ -294,6 +320,9 @@ A merge **MUST** be blocked if **any** of the following fail:
 * Keep **docs current** and **builds deterministic**.
 * **No silent exceptions**; waivers are documented, time-boxed, owned.
 * **If you break it, you fix it** — and you **do not merge** until **everything is green**.
+* **Document key decisions** in ADRs.
+* **Identify and mitigate risks** proactively.
+* **Follow Human-AI collaboration framework** with explicit agreements.
 
 ---
 
@@ -310,6 +339,8 @@ A merge **MUST** be blocked if **any** of the following fail:
 - **SBOM (Software Bill of Materials)**: A complete list of components, libraries, and modules in a software application.
 - **Feature Flag**: A mechanism that allows enabling or disabling features without deploying new code.
 - **Kill Switch**: A mechanism that allows immediate disabling of a feature or service in case of problems.
+- **ADR (Architecture Decision Record)**: A document that captures an important architectural decision made along with its context and consequences.
+- **Chaos Engineering**: The discipline of experimenting on a system to build confidence in the system's capability to withstand turbulent conditions in production.
 
 ---
 

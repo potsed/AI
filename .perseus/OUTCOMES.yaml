@@ -1,0 +1,27 @@
+# OUTCOMES
+
+This file defines the measurable outcomes for the project.
+
+Format per outcome:
+```yaml
+- id: O1
+  statement: "When <context>, <user> can <verb>."
+  metric: <name>
+  baseline: <value>
+  target: <value by YYYY-MM-DD>
+  owner: <name>
+  progress: <auto-updated>
+```
+
+## Outcomes
+
+```yaml
+# Example outcome:
+- id: O1
+  statement: "When a user visits the homepage, they can quickly understand the product value."
+  metric: % of users who stay on homepage > 10 seconds
+  baseline: 45%
+  target: 75% by 2025-12-31
+  owner: Product Manager
+  progress: 0%
+```
