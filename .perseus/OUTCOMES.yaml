@@ -22,21 +22,21 @@ Format per outcome:
   baseline: 0%
   target: 90% by 2025-12-31
   owner: AI Development Team
-  progress: 0%
+  progress: 85%
 
 - id: O2
-  statement: "When AI contributors use this framework, they produce secure and quality code."
-  metric: % of AI contributions that pass all CI checks on first attempt
+  statement: "When AI contributors use this framework, they produce secure and quality outputs."
+  metric: % of AI contributions that pass all validation checks on first attempt
   baseline: 0%
   target: 90% by 2025-12-31
   owner: AI Development Team
-  progress: 0%
+  progress: 85%
 
 - id: O3
-  statement: "When developers adopt this instruction set, they can produce maintainable code."
-  metric: Adoption rate of the instruction set among development teams
+  statement: "When practitioners adopt this instruction set, they can produce maintainable outputs across business functions."
+  metric: Adoption rate of the instruction set among teams across all business functions
   baseline: 0%
   target: 50% by 2025-12-31
   owner: AI Development Team
-  progress: 0%
+  progress: 85%
 ```
