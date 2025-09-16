@@ -21,9 +21,9 @@ All terms **MUST** be interpreted per RFC 2119 (**MUST**, **MUST NOT**, **REQUIR
 
 ## CORE DOCUMENTS - **MUST** READ AND FOLLOW EXACTLY
 
-* **[GUARDRAILS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.2/GUARDRAILS.md)** - Non-negotiable rules for all contributions
-* **[PROCESS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.2/PROCESS.md)** - Human-AI software delivery process
-* **[RFC2119.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.2/RFC2119.md)** - RFC 2119 formated requirements
+* **[GUARDRAILS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/GUARDRAILS.md)** - Non-negotiable rules for all contributions
+* **[PROCESS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/PROCESS.md)** - Human-AI software delivery process
+* **[RFC2119.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/RFC2119.md)** - RFC 2119 formated requirements
 
 ## Enforcement
 

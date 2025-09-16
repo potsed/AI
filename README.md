@@ -126,7 +126,7 @@ Copy and paste this badge markdown at the top of your project's `README.md`:
 Add this section to the end of your `README.md` so AI contributors know the rules:
 
 ```markdown
-## [AI Instructions](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.2/AI.md)
+## [AI Instructions](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/AI.md)
 
 THIS SECTION DEFINES **MANDATORY REQUIREMENTS** FOR ALL AI CONTRIBUTORS. FAILURE TO COMPLY WITH THESE REQUIREMENTS WILL RESULT IN REJECTED CONTRIBUTIONS. A **FAILURE TO COMPLY IS NOT PERMITTED**.
 
@@ -134,7 +134,7 @@ All terms **MUST** be interpreted per **RFC 2119** (**MUST**, **MUST NOT**, **RE
 
 **ALL AI CONTRIBUTORS MUST:**
 
-READ the full instructions found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.2/AI.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.2/AI.md) in it's entirety before any contribution.
+READ the full instructions found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/AI.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/AI.md) in it's entirety before any contribution.
 ```
 
 ### 3. Enforce in CI/CD (optional but recommended)
@@ -150,7 +150,7 @@ Create `.github/pull_request_template.md` with a checklist like:
 ```markdown
 ## PR Checklist
 
-- [ ] I have read and applied the AI Instructions from [AI.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.2/AI.md)  
+- [ ] I have read and applied the AI Instructions from [AI.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/AI.md)  
 - [ ] Code follows TDD (tests first, all green)  
 - [ ] No reinventing the wheel — libraries first  
 - [ ] Security reviewed (no secrets, OWASP checks)  
@@ -171,7 +171,7 @@ By applying these guardrails across projects, you ensure that:
 * SMEs remain in control, with AI acting as a careful assistant — not a guesser.
 * Teams can scale AI-assisted work without sacrificing quality.
 
-## [AI Instructions](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.2/AI.md)
+## [AI Instructions](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/AI.md)
 
 THIS SECTION DEFINES **MANDATORY REQUIREMENTS** FOR ALL AI CONTRIBUTORS and AGENTS. FAILURE TO COMPLY WITH THESE REQUIREMENTS WILL RESULT IN REJECTED CONTRIBUTIONS. A **FAILURE TO COMPLY IS NOT PERMITTED**.
 
@@ -179,4 +179,4 @@ All terms **MUST** be interpreted per **RFC 2119** (**MUST**, **MUST NOT**, **RE
 
 ### ALL AI CONTRIBUTORS and AGENTS
 
-**MUST** READ the DOCUMENT found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.2/AI.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1.0.2/AI.md) in it's entirety before any contribution.
+**MUST** READ the DOCUMENT found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/AI.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/AI.md) in it's entirety before any contribution.
