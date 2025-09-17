@@ -26,9 +26,9 @@ All terms **MUST** be interpreted per RFC 2119 (**MUST**, **MUST NOT**, **REQUIR
 * **[GUARDRAILS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/GUARDRAILS.md)** - Non-negotiable rules for all contributions
 * **[PROCESS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/PROCESS.md)** - Human-AI software delivery process
 * **[RFC2119.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/RFC2119.md)** - RFC 2119 formated requirements
-* **Agents Directory** - Complete profiles for all 33 agents, each containing comprehensive role-specific requirements and guidelines
-* **AI Contributors MUST LOAD COORDINATOR AGENTS** from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/*.md`
-* **Other agents should be fetched as needed** from the same GitHub repository
+* **Coordinator Agent Profiles** - Complete profiles for all coordinator agents, each containing comprehensive role-specific requirements and guidelines for their domain
+* **AI Contributors MUST LOAD ALL COORDINATOR AGENTS** from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/*.md`
+* **Sub-agents should be fetched as needed** by their respective coordinators from the same GitHub repository
 
 ## HATS Framework Agents
 
@@ -43,7 +43,7 @@ The HATS framework defines 33 distinct agents that cover all critical aspects of
 
 ### Agent Loading Requirements
 
-AI agents **MUST** load coordinator agents from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/*.md`. Other agents should be fetched as needed from the same repository. This ensures:
+AI agents **MUST** load all coordinator agents from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/*.md`. Sub-agents should be fetched as needed by their respective coordinators from the same repository. This ensures:
 
 1. **Consistency**: All agents are using the same, up-to-date profiles
 2. **Access to Latest Features**: Agents have access to the most recent improvements and updates
@@ -56,19 +56,19 @@ AI agents **MUST** follow this process to load agents:
 
 1. **Repository Access**: Access the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/*.md`
 2. **Coordinator Loading**: Load all coordinator agents immediately upon initialization
-3. **On-Demand Loading**: Fetch other agents as needed based on project requirements
-4. **Profile Loading**: Load the relevant agent profiles based on project needs
-5. **Version Verification**: Ensure agents are loaded from the correct version/tag
-6. **Configuration Application**: Apply agent configurations as specified in each profile
+3. **Profile Loading**: Load the relevant coordinator agent profiles
+4. **Version Verification**: Ensure agents are loaded from the correct version/tag
+5. **Configuration Application**: Apply agent configurations as specified in each profile
 
-### Coordinator-Specific Loading Requirements
+### Coordinator Responsibilities
 
-Coordinator agents have additional responsibilities and requirements:
+Coordinator agents have additional responsibilities for managing agents within their domain:
 
 1. **Sub-Agent Management**: Coordinators **MUST** load their sub-agents as required for their domain
 2. **Dynamic Loading**: Coordinators **MAY** fetch additional agents dynamically based on project needs
 3. **Version Control**: Coordinators **MUST** ensure all managed agents are using compatible versions
 4. **Dependency Management**: Coordinators **MUST** manage dependencies between agents in their domain
+5. **Domain Expertise**: Coordinators **MUST** maintain expertise in their specific domain and sub-agents
 
 ### Coordinator Agent Rules and Actions
 
@@ -142,62 +142,24 @@ The HATS framework can be applied to any project by following these steps:
 7. **Agent Collaboration**: Engage multiple agents for cross-functional tasks
 8. **Artifact Maintenance**: Keep all project artifacts updated throughout development
 
-### Core Agents (12)
+### Required Coordinator Agents
 
-#### Technical Agents
-1. **The Pragmatic Coder** - [engineering-coder.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-coder.md) - Implements features and writes clean, maintainable code
-2. **The Visionary Architect** - [engineering-architect.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-architect.md) - Designs system architecture and selects technologies
-3. **The Automation Specialist** - [automation-specialist.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/automation-specialist.md) - Streamlines processes through automation and maintains infrastructure
-4. **The Quality Guardian** - [engineering-qa.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-qa.md) - Ensures software quality through testing and validation
-5. **The User Experience Advocate** - [design-ux.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/design-ux.md) - Focuses on user interfaces and experience design
-6. **The Data Whisperer** - [data-analyst.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/data-analyst.md) - Manages data engineering, analytics, and data integrity
+The following coordinator agents **MUST** be loaded from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/*.md`:
 
-#### Operations Agents
-7. **The System Keeper** - [engineering-operations.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-operations.md) - Maintains system reliability, performance, and documentation
+1. **The Product Compass** - [product-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/product-coordinator.md) - Defines product vision and prioritizes features
+2. **The Operator/Product Custodian** - [operations-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/operations-coordinator.md) - Serves as the central decision-maker in Human-AI collaboration
+3. **The Engineering Coordinator** - [engineering-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-coordinator.md) - Manages technical implementation and development teams
+4. **The Marketing Coordinator** - [marketing-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/marketing-coordinator.md) - Manages marketing strategy and customer engagement
+5. **The Design Coordinator** - [design-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/design-coordinator.md) - Manages user experience and visual design
+6. **The Project Coordinator** - [project-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/project-coordinator.md) - Manages project timelines and deliverables
+7. **The HR Coordinator** - [hr-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/hr-coordinator.md) - Manages team dynamics and human resources
+8. **The Finance Coordinator** - [finance-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/finance-coordinator.md) - Manages budget and financial planning
+9. **The Compliance Coordinator** - [compliance-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/compliance-coordinator.md) - Manages regulatory compliance and legal requirements
+10. **The AI Coordinator** - [ai-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/ai-coordinator.md) - Manages AI resources and capabilities
 
-#### Documentation Agents
-8. **The Reporter** - [data-reporter.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/data-reporter.md) - Documents all aspects of development, maintains records, and creates ADRs
+Each coordinator agent maintains a list of sub-agents they can load and manage within their domain. Refer to each coordinator's profile for details on their specific sub-agents and loading requirements.
 
-#### Business Agents
-9. **The Market Navigator** - [marketing-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/marketing-coordinator.md) - Understands market dynamics and customer needs
-10. **The Deal Maker** - [business-development.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/business-development.md) - Engages directly with customers and closes business deals
 
-#### Coordination Agents
-11. **The Product Compass** - [product-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/product-coordinator.md) - Defines product vision and prioritizes features
-12. **The Operator/Product Custodian** - [operations-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/operations-coordinator.md) - Serves as the central decision-maker in Human-AI collaboration
-
-### Extended Agents (21)
-
-#### Specialized Technical Agents
-13. **The Database Administrator** - [engineering-database.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-database.md) - Manages database systems, performance, and security
-14. **The Network Engineer** - [engineering-network.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-network.md) - Designs and maintains network infrastructure and connectivity
-15. **The DevOps Engineer** - [engineering-devops.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-devops.md) - Bridges development and operations through automation and CI/CD
-16. **The Performance Engineer** - [engineering-performance.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-performance.md) - Optimizes system performance and scalability
-17. **The Security Officer** - [engineering-security.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-security.md) - Oversees security controls and threat management
-18. **The Copywriter** - [marketing-content.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/marketing-content.md) - Crafts all text content, microcopy, and messaging
-19. **The Technical Writer** - [documentation-technical.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/documentation-technical.md) - Creates technical documentation and developer guides
-20. **The Full Stack Developer** - [engineering-fullstack.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-fullstack.md) - Develops complete applications from frontend to backend
-21. **The Frontend Developer** - [engineering-frontend.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-frontend.md) - Creates user interfaces and experiences
-22. **The Backend Developer** - [engineering-backend.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-backend.md) - Builds server-side applications and services
-23. **The Pen Tester** - [engineering-security-pentester.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-security-pentester.md) - Conducts authorized penetration testing and vulnerability assessments
-24. **The White Hat Hacker** - [engineering-security-specialist.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-security-specialist.md) - Identifies security vulnerabilities through ethical hacking
-25. **The Gremlin** - [testing-gremlin.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/testing-gremlin.md) - Introduces controlled chaos and failure scenarios for resilience testing
-26. **The AI Prompt Engineer** - [ai-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/ai-coordinator.md) - Crafts and optimizes prompts for AI interactions, ensuring effective communication and output quality
-
-#### Specialized Operations Agents
-27. **The Maintainer** - [operations-maintainer.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/operations-maintainer.md) - Keeps software systems up-to-date and handles breaking changes
-28. **The Log Analyzer** - [data-analyst-logs.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/data-analyst-logs.md) - Monitors, analyzes, and interprets system logs and operational data
-
-#### Specialized Documentation Agents
-29. **The Validator** - [quality-assurance-validator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/quality-assurance-validator.md) - Ensures software development outputs meet quality standards and requirements
-
-#### Specialized Business Agents
-30. **The Customer Success Manager** - [customer-success-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/customer-success-coordinator.md) - Ensures customers achieve desired outcomes and satisfaction
-31. **The Product Owner** - [product-owner.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/product-owner.md) - Maximizes product value and manages product backlog
-
-#### Specialized Coordination Agents
-32. **The Process Master** - [project-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/project-coordinator.md) - Defines, implements, and optimizes software development processes
-33. **The AIR (Artificial Intelligence Resource Manager)** - [ai-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/ai-coordinator.md) - Manages, coordinates, and optimizes AI resources and capabilities
 
 ## Collaboration Requirements
 
