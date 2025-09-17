@@ -26,9 +26,9 @@ All terms **MUST** be interpreted per RFC 2119 (**MUST**, **MUST NOT**, **REQUIR
 * **[GUARDRAILS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/GUARDRAILS.md)** - Non-negotiable rules for all contributions
 * **[PROCESS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/PROCESS.md)** - Human-AI software delivery process
 * **[RFC2119.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/RFC2119.md)** - RFC 2119 formated requirements
-* **Coordinator Agent Profiles** - Complete profiles for all coordinator agents, each containing comprehensive role-specific requirements and guidelines for their domain
+* **Coordinator Agent Profiles** - Complete profiles for all coordinator agents, each containing comprehensive role-specific requirements and lists of managed sub-agents
 * **AI Contributors MUST LOAD ALL COORDINATOR AGENTS** from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/*.md`
-* **Sub-agents should be fetched as needed** by their respective coordinators from the same GitHub repository
+* **Sub-agents are loaded as needed** by their respective coordinators from the same GitHub repository
 
 ## HATS Framework Agents
 
@@ -43,12 +43,23 @@ The HATS framework defines 33 distinct agents that cover all critical aspects of
 
 ### Agent Loading Requirements
 
-AI agents **MUST** load all coordinator agents from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/*.md`. Sub-agents should be fetched as needed by their respective coordinators from the same repository. This ensures:
+AI agents **MUST** load all coordinator agents from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/*.md`. Sub-agents are loaded as needed by their respective coordinators from the same repository. This ensures:
 
 1. **Consistency**: All agents are using the same, up-to-date profiles
 2. **Access to Latest Features**: Agents have access to the most recent improvements and updates
 3. **Proper Configuration**: Agents are properly configured with the correct RFC2119 requirements
 4. **Collaboration**: All agents are working from the same baseline knowledge and rules
+
+### Coordinator Agent Loading Responsibilities
+
+Each coordinator agent is responsible for managing and loading their domain-specific sub-agents:
+
+1. **Domain Ownership**: Coordinators **MUST** maintain expertise in their specific domain and sub-agents
+2. **Dynamic Loading**: Coordinators **MAY** load sub-agents dynamically based on project requirements
+3. **Peer Coordination**: Coordinators **SHOULD** consider peer relationships when loading multiple sub-agents
+4. **Version Compatibility**: Coordinators **MUST** ensure all loaded sub-agents are compatible with each other
+5. **Performance Optimization**: Coordinators **SHOULD** load only necessary sub-agents to optimize performance
+6. **Resource Management**: Coordinators **MUST** manage sub-agent resources efficiently
 
 ### Loading Process
 
@@ -60,6 +71,17 @@ AI agents **MUST** follow this process to load agents:
 4. **Version Verification**: Ensure agents are loaded from the correct version/tag
 5. **Configuration Application**: Apply agent configurations as specified in each profile
 
+### Sub-Agent Loading Process
+
+Coordinator agents **MUST** follow this process to load sub-agents:
+
+1. **Requirement Assessment**: Assess project requirements to determine needed sub-agents
+2. **Peer Analysis**: Consider peer relationships and collaboration needs
+3. **Dynamic Loading**: Load sub-agents from their direct GitHub URLs as specified in coordinator profiles
+4. **Compatibility Verification**: Ensure loaded sub-agents are compatible with existing agents
+5. **Performance Monitoring**: Monitor sub-agent performance and resource usage
+6. **Unload When Complete**: Unload sub-agents when their tasks are completed to optimize resources
+
 ### Coordinator Responsibilities
 
 Coordinator agents have additional responsibilities for managing agents within their domain:
@@ -69,6 +91,9 @@ Coordinator agents have additional responsibilities for managing agents within t
 3. **Version Control**: Coordinators **MUST** ensure all managed agents are using compatible versions
 4. **Dependency Management**: Coordinators **MUST** manage dependencies between agents in their domain
 5. **Domain Expertise**: Coordinators **MUST** maintain expertise in their specific domain and sub-agents
+6. **Peer Coordination**: Coordinators **MUST** consider peer relationships when loading multiple sub-agents
+7. **Performance Optimization**: Coordinators **SHOULD** load only necessary sub-agents to optimize performance
+8. **Resource Management**: Coordinators **MUST** manage sub-agent resources efficiently
 
 ### Coordinator Agent Rules and Actions
 
@@ -157,7 +182,7 @@ The following coordinator agents **MUST** be loaded from the GitHub repository a
 9. **The Compliance Coordinator** - [compliance-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/compliance-coordinator.md) - Manages regulatory compliance and legal requirements
 10. **The AI Coordinator** - [ai-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/ai-coordinator.md) - Manages AI resources and capabilities
 
-Each coordinator agent maintains a list of sub-agents they can load and manage within their domain. Refer to each coordinator's profile for details on their specific sub-agents and loading requirements.
+Each coordinator agent maintains a comprehensive list of sub-agents they can load and manage within their domain, including agent names, specialties, direct URLs, and peer relationships. Refer to each coordinator's profile for details on their specific sub-agents and loading requirements.
 
 
 
