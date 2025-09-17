@@ -247,6 +247,33 @@ You **MUST NOT** hand-roll: HTTP servers/routers; authentication/OAuth/OIDC; cry
 6. **Document**: Update `/docs` in the same PR (setup, run, flags, endpoints, env, runbooks, compliance notes).
 7. **Verify**: All tests green; CI gates pass; SME can run locally using documented steps.
 
+## 16) Subject Matter Expert (SME) Access for AI Agents
+
+AI agents **MAY** request specialized Subject Matter Experts (SMEs) for domains outside their core expertise. The AI Coordinator agent has the capability to create, update, and delete SMEs as needed.
+
+### SME Request Process
+- **Who Can Request**: Any AI agent can identify the need for specialized expertise
+- **Request Authority**: Only Human Operators or coordinators can formally request SME creation
+- **Request Method**: Document the need for specialized expertise and submit to the AI Coordinator
+- **Examples**: 
+  - Database optimization expertise for complex queries
+  - Marketing platform knowledge for campaign configuration
+  - Legal compliance guidance for regulatory requirements
+  - Security best practices for specific threat models
+
+### SME Capabilities and Limitations
+- **Advisory Role**: SMEs provide expert advice and guidance only
+- **No Modification Rights**: SMEs cannot modify code, documentation, or project files
+- **Single Domain Focus**: Each SME is limited to a specific subject area
+- **Source Requirements**: SMEs use only official, well-referenced documentation
+- **Storage**: SMEs are stored in `.perseus/smes/` directory
+
+### When to Request an SME
+- **Complex Domain Questions**: When detailed expertise is needed beyond general knowledge
+- **Platform-Specific Guidance**: For specific tools, platforms, or technologies
+- **Regulatory Compliance**: When specialized compliance knowledge is required
+- **Optimization Needs**: For performance, security, or other specialized optimization
+
 ---
 
 ## 16) Documentation Requirements (Non-Optional)
@@ -353,6 +380,8 @@ A merge **MUST** be blocked if **any** of the following fail:
 - **Kill Switch**: A mechanism that allows immediate disabling of a feature or service in case of problems.
 - **ADR (Architecture Decision Record)**: A document that captures an important architectural decision made along with its context and consequences.
 - **Chaos Engineering**: The discipline of experimenting on a system to build confidence in the system's capability to withstand turbulent conditions in production.
+- **SME (Subject Matter Expert)**: A specialized AI agent with deep knowledge in a specific domain, created by the AI Coordinator to provide expert advice and guidance.
+- **AI Coordinator**: An AI agent responsible for managing, coordinating, and optimizing AI resources and capabilities, including the creation and management of Subject Matter Experts.
 
 ---
 
