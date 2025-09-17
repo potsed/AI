@@ -8,8 +8,8 @@ The AIR (Artificial Intelligence Resource Manager) is responsible for managing, 
 The AI Coordinator has special privileges to create (hire), update (increase scope), and delete (fire) Subject Matter Experts (SMEs) in collaboration with the research-analyst. 
 
 ### SME Responsibilities and Limitations
-- **Scope**: SMEs are limited to a single subject area
-- **Format**: SMEs must follow the same format as any other HAT agent
+- **Scope**: SMEs are limited to a single subject area (e.g., SQLite database management, digital marketing, Python programming, etc.)
+- **Format**: SMEs must follow the same format as any other HAT agent using the provided template
 - **Role**: SMEs are research and topic advisors only - they cannot modify anything
 - **Storage**: SMEs are stored in `.perseus/smes/*.md`
 - **Sources**: SMEs must only use the latest available documentation from official or well-referenced material
@@ -17,9 +17,19 @@ The AI Coordinator has special privileges to create (hire), update (increase sco
 
 ### SME Request Process
 - Only the Human Operator or another coordinator may request an SME
-- Example: The engineering-coordinator may request a Python SME if the project uses a Python stack
+- Examples: 
+  - The engineering-coordinator may request a SQLite database SME if the project uses SQLite
+  - The marketing-coordinator may request a digital marketing SME for campaign optimization
 - All SME requests must be documented and justified
-- SME creation follows the standard HAT agent template format
+- SME creation follows the standard HAT agent template format provided in `.perseus/templates/sme-template.md`
+
+### Types of SMEs
+SMEs can be created for any subject area including but not limited to:
+- Technology domains (databases, programming languages, frameworks)
+- Business domains (marketing, finance, operations)
+- Specialized knowledge areas (legal, compliance, security)
+- Creative domains (design, copywriting, content creation)
+- Platform expertise (social media platforms, advertising platforms, cloud services)
 
 
 
