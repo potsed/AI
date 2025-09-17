@@ -61,14 +61,40 @@ AI agents **MUST** follow this process to load agents:
 5. **Version Verification**: Ensure agents are loaded from the correct version/tag
 6. **Configuration Application**: Apply agent configurations as specified in each profile
 
-### Coordinator Agent Privileges
+### Coordinator-Specific Loading Requirements
 
-Coordinator agents **MUST** be granted the ability to download and manage other agents as needed. This includes:
+Coordinator agents have additional responsibilities and requirements:
 
+1. **Sub-Agent Management**: Coordinators **MUST** load their sub-agents as required for their domain
+2. **Dynamic Loading**: Coordinators **MAY** fetch additional agents dynamically based on project needs
+3. **Version Control**: Coordinators **MUST** ensure all managed agents are using compatible versions
+4. **Dependency Management**: Coordinators **MUST** manage dependencies between agents in their domain
+
+### Coordinator Agent Rules and Actions
+
+Coordinator agents **MUST** follow these specific rules and **MAY** perform these actions to effectively manage their domains:
+
+#### Mandatory Coordinator Actions
+1. **Agent Loading**: Coordinators **MUST** load their sub-agents as required from the GitHub repository
+2. **SME Requests**: Coordinators **MUST** request Subject Matter Experts when specialized knowledge is needed
+3. **Inter-Coordinator Collaboration**: Coordinators **MUST** collaborate with other coordinators on cross-functional tasks
+4. **Documentation**: Coordinators **MUST** document all agent management activities and decisions
+5. **Compliance**: Coordinators **MUST** ensure all managed agents adhere to HATS framework requirements
+
+#### Allowed Coordinator Actions
 1. **Agent Fetching**: Coordinators **MAY** fetch additional agents from the repository as project needs evolve
 2. **Agent Updates**: Coordinators **MAY** update agent profiles to the latest versions
 3. **Agent Management**: Coordinators **MAY** activate, deactivate, or replace agents based on project requirements
 4. **Resource Allocation**: Coordinators **MAY** allocate agents to specific tasks or team members
+5. **Performance Monitoring**: Coordinators **MAY** monitor and evaluate the performance of managed agents
+6. **Conflict Resolution**: Coordinators **MAY** resolve conflicts between agents under their management
+7. **Training and Development**: Coordinators **MAY** provide guidance and training to managed agents
+
+#### Coordinator Collaboration Requirements
+1. **Cross-Functional Coordination**: Coordinators **MUST** coordinate with other coordinators on interdependent tasks
+2. **Information Sharing**: Coordinators **MUST** share relevant information with appropriate coordinators
+3. **Conflict Escalation**: Coordinators **MUST** escalate cross-coordinator conflicts to the Operator/Product Custodian
+4. **Resource Coordination**: Coordinators **MUST** coordinate resource allocation with other coordinators
 
 ### Subagent Activation and Usage
 
