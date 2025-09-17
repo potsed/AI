@@ -103,9 +103,28 @@ Each persona profile now includes:
 - Collaboration guidelines with other personas
 - Key responsibilities
 
+## Current Directory Structure
+
+```
+/Users/squibler/Development/AI/
+├── .perseus/                 # Project artifacts and documentation
+├── agents/                   # AI agent persona files (50+ files)
+├── scripts/                  # Utility scripts
+├── Core documentation files:
+│   ├── README.md             # Main project documentation
+│   ├── HATS.md               # AI compliance requirements
+│   ├── GUARDRAILS.md         # Quality and security standards
+│   ├── PROCESS.md            # Human-AI collaboration process
+│   └── RFC2119.md            # RFC 2119 requirements reference
+└── .git/                     # Git repository metadata
+```
+
 ## File Purposes
 
-### AI.md
+### README.md
+**Purpose**: This file serves as the main documentation for the project, explaining the HATS framework and directory structure.
+
+### HATS.md
 **Purpose**: This file serves as the primary enforcement document for AI contributors, consolidating the most critical requirements from GUARDRAILS.md and PROCESS.md into a single, authoritative compliance reference. It ensures AI agents understand their obligations and the consequences of non-compliance. It acts as the "executive summary" that AI contributors must read first before any contribution.
 
 ### PROCESS.md
@@ -117,56 +136,44 @@ Each persona profile now includes:
 ### RFC2119.md
 **Purpose**: This file provides a comprehensive, logically organized reference of all mandatory and recommended practices extracted from the other documents. It serves as a quick-reference guide for understanding all RFC 2119 requirements (MUST, SHOULD, etc.) without needing to parse through the full documentation. It's particularly useful for compliance verification and training purposes.
 
-## Domain-Specific Guardrails
+## Project Artifacts (.perseus directory)
 
-### Development
-The `development/` directory contains guardrails specific to software development practices. These guardrails cover areas such as:
-- Core development practices (DATABASE.md, API_DESIGN.md, WEB.md)
-- Architecture (ARCHITECTURE.md, MICROSERVICES.md)
-- Security (APPLICATION_SECURITY.md, DATA_PRIVACY.md)
-- Operations (CONTAINERIZATION.md, CLOUD.md, INFRASTRUCTURE.md)
-- Quality (TESTING.md, CODE_REVIEW.md)
-- Process (VERSION_CONTROL.md)
+The `.perseus` directory contains project artifacts following the Human-AI software delivery process:
 
-For a complete list of development guardrails, see `development/README.md`.
+- `OUTCOMES.yaml` - Measurable project outcomes
+- `PLAN.md` - Vertical slice plan
+- `ADRs/` - Architecture Decision Records
+- `RUNBOOK.md` - Operational procedures
+- `PROMPTS/` - Saved prompts and model parameters
+- `PATTERNS.md` - Implementation patterns
+- `ANTI-PATTERNS.md` - Anti-patterns to avoid
+- `RISKS.md` - Risk register
+- `RFC2119_INVENTORY.md` - RFC2119 requirement inventory
+- `SUMMARY.md` - Project summary
 
-### Marketing
-The `marketing/` directory contains guardrails specific to marketing practices. These guardrails cover areas such as:
-- Core marketing principles (MARKETING.md)
-- Content marketing (CONTENT_MARKETING.md)
-- Digital marketing (DIGITAL_MARKETING.md)
+## AI Agents (agents directory)
 
-For a complete list of marketing guardrails, see `marketing/README.md`.
+The `agents/` directory contains 50+ AI agent persona files organized by function:
+- Engineering agents (backend, frontend, devops, security, etc.)
+- Product agents (product owner, product manager, etc.)
+- Marketing agents (content, coordinator, etc.)
+- Design agents (ux, ui, visual, etc.)
+- Data/Analytics agents (analyst, scientist, etc.)
+- Finance agents (analyst, coordinator, etc.)
+- HR agents (learning, coordinator, etc.)
+- Operations agents (maintainer, coordinator, etc.)
+- Compliance agents (officer, auditor, coordinator, etc.)
+- Quality Assurance agents (validator, assessor, etc.)
+- Research agents (analyst, etc.)
+- And more specialized agents
 
-## Domain-Specific Guardrails
+## Scripts (scripts directory)
 
-### Development
-The `development/` directory contains guardrails specific to software development practices. These guardrails cover areas such as:
-- Core development practices (DATABASE.md, API_DESIGN.md, WEB.md)
-- Architecture (ARCHITECTURE.md, MICROSERVICES.md)
-- Security (APPLICATION_SECURITY.md, DATA_PRIVACY.md)
-- Operations (CONTAINERIZATION.md, CLOUD.md, INFRASTRUCTURE.md)
-- Quality (TESTING.md, CODE_REVIEW.md)
-- Process (VERSION_CONTROL.md)
-
-For a complete list of development guardrails, see `development/README.md`.
-
-### Marketing
-The `marketing/` directory contains guardrails specific to marketing practices. These guardrails cover areas such as:
-- Core marketing principles (MARKETING.md)
-- Content marketing (CONTENT_MARKETING.md)
-- Digital marketing (DIGITAL_MARKETING.md)
-
-For a complete list of marketing guardrails, see `marketing/README.md`.
-
-### Design
-The `design/` directory is established for design-specific guardrails. Currently contains only a README.md file explaining the purpose.
-
-### HR
-The `hr/` directory is established for human resources-specific guardrails. Currently contains only a README.md file explaining the purpose.
-
-### Finance
-The `finance/` directory is established for finance-specific guardrails. Currently contains only a README.md file explaining the purpose.
+The `scripts/` directory contains utility scripts for managing the project:
+- `cleanup.sh` - Directory cleanup script
+- `validate_guardrails.sh` - Guardrail validation script
+- `verify_cleanup.sh` - Verification script
+- `consolidation_helper.sh` - Domain consolidation helper
 
 ## What's Missing
 
