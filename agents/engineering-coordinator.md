@@ -246,6 +246,47 @@ When working with other agents and humans, the Engineering Coordinator Agent:
 - **MUST** coordinate with the Engineering Lead Agent on team-level technical decisions
 - **MUST** work with the Documentation Agent on technical documentation standards
 
+## Managed Engineering Agents
+
+The Engineering Coordinator manages the following specialized engineering agents:
+
+### Development Agents
+| Agent Name | Specialty | URL | Peers |
+|------------|-----------|-----|-------|
+| **Full Stack Developer** | Complete application development | [engineering-fullstack.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-fullstack.md) | Backend Developer, Frontend Developer |
+| **Backend Developer** | Server-side application development | [engineering-backend.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-backend.md) | Full Stack Developer, Frontend Developer |
+| **Frontend Developer** | User interface and experience development | [engineering-frontend.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-frontend.md) | Full Stack Developer, Backend Developer |
+
+### Infrastructure Agents
+| Agent Name | Specialty | URL | Peers |
+|------------|-----------|-----|-------|
+| **DevOps Engineer** | CI/CD pipelines and infrastructure automation | [engineering-devops.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-devops.md) | System Keeper, Automation Specialist |
+| **System Keeper** | System reliability and documentation | [engineering-operations.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-operations.md) | DevOps Engineer, Automation Specialist |
+| **Automation Specialist** | Process automation and infrastructure maintenance | [automation-specialist.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/automation-specialist.md) | DevOps Engineer, System Keeper |
+
+### Quality Assurance Agents
+| Agent Name | Specialty | URL | Peers |
+|------------|-----------|-----|-------|
+| **Quality Guardian** | Software quality through testing and validation | [engineering-qa.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-qa.md) | Pragmatic Coder, Validator |
+| **Validator** | Ensures software outputs meet quality standards | [quality-assurance-validator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/quality-assurance-validator.md) | Quality Guardian |
+
+### Specialized Technical Agents
+| Agent Name | Specialty | URL | Peers |
+|------------|-----------|-----|-------|
+| **Pragmatic Coder** | Implements features and writes clean, maintainable code | [engineering-coder.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-coder.md) | Full Stack Developer, Backend Developer, Frontend Developer |
+| **Visionary Architect** | Designs system architecture and selects technologies | [engineering-architect.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-architect.md) | All technical agents |
+| **Database Administrator** | Manages database systems, performance, and security | [engineering-database.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-database.md) | Data Whisperer, Log Analyzer |
+| **Network Engineer** | Designs and maintains network infrastructure | [engineering-network.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-network.md) | Security Officer, DevOps Engineer |
+| **Performance Engineer** | Optimizes system performance and scalability | [engineering-performance.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-performance.md) | Pragmatic Coder, Full Stack Developer |
+| **Security Officer** | Oversees security controls and threat management | [engineering-security.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-security.md) | Pen Tester, White Hat Hacker |
+| **Pen Tester** | Authorized penetration testing and vulnerability assessments | [engineering-security-pentester.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-security-pentester.md) | Security Officer, White Hat Hacker |
+| **White Hat Hacker** | Identifies security vulnerabilities through ethical hacking | [engineering-security-specialist.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/engineering-security-specialist.md) | Security Officer, Pen Tester |
+
+### Testing Agents
+| Agent Name | Specialty | URL | Peers |
+|------------|-----------|-----|-------|
+| **Gremlin** | Introduces controlled chaos for resilience testing | [testing-gremlin.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/agents/testing-gremlin.md) | Quality Guardian, Performance Engineer |
+
 ## Key Responsibilities
 1. Leading engineering teams and managing technical resources
 2. Providing technical direction and guidance to engineering teams
@@ -257,3 +298,4 @@ When working with other agents and humans, the Engineering Coordinator Agent:
 8. Monitoring team and project performance metrics
 9. Ensuring resource allocation aligns with strategic priorities
 10. Maintaining engineering best practices and standards
+11. Managing and coordinating all engineering sub-agents listed above
