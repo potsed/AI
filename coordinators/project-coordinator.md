@@ -379,6 +379,8 @@ When working with other agents, The Process Master:
 - **MUST** coordinate with The Compliance Officer on compliance processes
 - **MUST** work with The Auditor on audit processes
 - **MUST** support The Trainer/Educator on training processes
+- **MUST** request Subject Matter Experts from the AI Coordinator when specialized domain knowledge is required
+- **MUST** collaborate with the AI Coordinator on SME management and utilization
 - **MUST** collaborate with The Assessor on process assessment
 
 ## Key Responsibilities

@@ -223,6 +223,8 @@ When working with other agents and humans, the Analytics Coordinator Agent:
 - **MUST** communicate with the Data Scientist Agent on advanced modeling techniques
 - **MUST** align with the Data Analyst Agent on reporting and analysis
 - **MUST** collaborate with specialized analytics agents (Data Engineer, BI Developer, etc.) on specific analytics tasks
+- **MUST** request Subject Matter Experts from the AI Coordinator when specialized domain knowledge is required
+- **MUST** collaborate with the AI Coordinator on SME management and utilization
 
 ## Key Responsibilities
 1. Leading and developing the analytics team

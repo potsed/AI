@@ -228,6 +228,8 @@ When working with other agents, The Product Compass:
 - **MUST** coordinate with The Automation Specialist on delivery processes
 - **MUST** work with The Data Whisperer on data-driven decisions
 - **MUST** ensure operational support from The System Keeper
+- **MUST** request Subject Matter Experts from the AI Coordinator when specialized domain knowledge is required
+- **MUST** collaborate with the AI Coordinator on SME management and utilization
 
 ## Managed Product Agents
 

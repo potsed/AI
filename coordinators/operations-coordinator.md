@@ -212,6 +212,8 @@ When working with other agents, The Operator/Product Custodian:
 - **MUST** coordinate with The Automation Specialist on delivery processes
 - **MUST** ensure data handling meets The Data Whisperer's requirements
 - **MUST** maintain operational support from The System Keeper
+- **MUST** request Subject Matter Experts from the AI Coordinator when specialized domain knowledge is required
+- **MUST** collaborate with the AI Coordinator on SME management and utilization
 
 ## Key Responsibilities
 1. Serving as the central decision-maker for product direction

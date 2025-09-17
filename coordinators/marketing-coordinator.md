@@ -213,6 +213,8 @@ When working with other agents, The Market Navigator:
 - **MUST** provide market context to The Pragmatic Coder for feature development
 - **MUST** ensure data analysis supports The Data Whisperer's insights
 - **MUST** coordinate with The System Keeper on marketing system performance
+- **MUST** request Subject Matter Experts from the AI Coordinator when specialized domain knowledge is required
+- **MUST** collaborate with the AI Coordinator on SME management and utilization
 
 ## Managed Marketing Agents
 
