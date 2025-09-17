@@ -7,8 +7,33 @@ This document describes the current correct structure of the AI directory.
 ```
 /Users/squibler/Development/AI/
 ├── .perseus/                 # Project artifacts and documentation
-│   ├── ADRs/                 # Architecture Decision Records
-│   ├── PROMPTS/              # Saved prompts and model parameters
+│   ├── adr/                  # Architecture Decision Records
+│   ├── data/                 # Data-related files
+│   │   └── README.md         # Data directory documentation
+│   ├── patterns/             # Standardized patterns and anti-patterns
+│   │   ├── SOFTWARE.md       # Software design patterns
+│   │   ├── UX.md             # User experience patterns
+│   │   ├── UI.md             # User interface patterns
+│   │   ├── ARCHITECTURE.md   # Architecture patterns
+│   │   ├── ANTI-PATTERNS/    # Anti-patterns directory
+│   │   └── README.md         # Patterns directory documentation
+│   ├── PROMPTS/              # Reused prompts for AI agents
+│   │   └── README.md         # PROMPTS directory documentation
+│   ├── STACKS/               # Technology stack information
+│   │   └── README.md         # STACKS directory documentation
+│   ├── smes/                 # Subject Matter Experts created by AI Coordinator
+│   │   └── README.md         # SMEs directory documentation
+│   ├── templates/            # Reusable templates
+│   │   ├── social-media/     # Social media templates
+│   │   │   ├── LINKEDIN.md   # LinkedIn template
+│   │   │   └── README.md     # Social media templates documentation
+│   │   ├── adr.md            # ADR template
+│   │   ├── risk.md           # Risk template
+│   │   └── README.md         # Templates directory documentation
+│   ├── risk-register/        # Risk documentation
+│   │   └── README.md         # Risk register documentation
+│   ├── perseus.sqlite.db     # Project database
+│   ├── product.md            # Product information
 │   ├── OUTCOMES.yaml         # Measurable project outcomes
 │   ├── PLAN.md               # Vertical slice plan
 │   ├── RUNBOOK.md            # Operational procedures
@@ -17,8 +42,7 @@ This document describes the current correct structure of the AI directory.
 │   ├── RFC2119_INVENTORY.md  # RFC2119 requirement inventory
 │   ├── RISKS.md              # Risk register
 │   ├── SUMMARY.md            # Project summary
-│   ├── COMPLETE_DESIGN_PATTERNS.md
-│   ├── DESIGN_PATTERNS_SUMMARY.md
+│   ├── STRUCTURE.md          # .perseus directory structure documentation
 │   └── consolidation_helper.sh
 ├── agents/                   # AI agent persona files (50+ files)
 │   ├── engineering-*.md      # Engineering agents

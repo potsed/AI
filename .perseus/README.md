@@ -4,14 +4,39 @@ This directory contains the core artifacts for the Human-AI software delivery pr
 
 ## Structure
 
-- `OUTCOMES.yaml` - Measurable outcomes for the project
-- `PLAN.md` - Vertical slice plan
-- `ADRs/` - Architecture Decision Records
-- `RUNBOOK.md` - Operational procedures
-- `PROMPTS/` - Saved prompts and model parameters
-- `RISKS.md` - Risk register
-- `PATTERNS.md` - Implementation patterns
-- `ANTI-PATTERNS.md` - Anti-patterns to avoid
+```tree
+.perseus
+├── product.md
+├── data
+|   |── README.md
+|   └──  perseus.sqlite.db
+├── templates
+|   |── README.md
+│   ├── adr.md
+│   ├── risk.md
+|   └── social-media
+|       |── README.md
+|       └── LINKEDIN.md
+├── adr
+│   └── README.md
+├── risk-register
+│   └── README.md
+├── patterns
+|   |── README.md
+│   ├── SOFTWARE.md
+│   ├── UX.md
+│   ├── UI.md
+│   ├── ARCHITECTURE.md
+|   └── ANTI-PATTERNS
+├── STRUCTURE.md
+├── PROMPTS
+│   └── README.md
+├── STACKS
+│   └── README.md
+├── smes
+│   └── README.md
+├── README.md
+```
 
 ## Purpose
 

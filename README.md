@@ -108,6 +108,16 @@ Each persona profile now includes:
 ```
 /Users/squibler/Development/AI/
 ├── .perseus/                 # Project artifacts and documentation
+│   ├── adr/                  # Architecture Decision Records
+│   ├── data/                 # Data-related files
+│   ├── patterns/             # Standardized patterns and anti-patterns
+│   ├── PROMPTS/              # Reused prompts for AI agents
+│   ├── STACKS/               # Technology stack information
+│   ├── smes/                 # Subject Matter Experts created by AI Coordinator
+│   ├── templates/            # Reusable templates
+│   ├── risk-register/        # Risk documentation
+│   ├── perseus.sqlite.db     # Project database
+│   └── product.md            # Product information
 ├── agents/                   # AI agent persona files (50+ files)
 ├── scripts/                  # Utility scripts
 ├── Core documentation files:
