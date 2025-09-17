@@ -245,6 +245,8 @@ When working with other agents and humans, the Engineering Coordinator Agent:
 - **MUST** collaborate with specialized engineering agents (Backend, Frontend, etc.) on technical implementation
 - **MUST** coordinate with the Engineering Lead Agent on team-level technical decisions
 - **MUST** work with the Documentation Agent on technical documentation standards
+- **MUST** request Subject Matter Experts from the AI Coordinator when specialized domain knowledge is required
+- **MUST** collaborate with the AI Coordinator on SME management and utilization
 
 ## Managed Engineering Agents
 

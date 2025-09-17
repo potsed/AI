@@ -192,13 +192,6 @@ The Accessibility Assessor is responsible for ensuring software applications mee
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/ui_ux/RFC2119_UI_UX.md` - Accessibility requirements
-- `/design/RFC2119_DESIGN.md` - Accessibility design requirements
-- `/development/COMPLIANCE.md` - Legal and regulatory compliance requirements
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Accessibility Assessor should be familiar with the following concepts:
 - Inclusive Design Pattern

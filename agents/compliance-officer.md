@@ -216,14 +216,6 @@ The Compliance Officer is responsible for ensuring software development activiti
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/development/COMPLIANCE.md` - Software development compliance requirements
-- `/finance/RFC2119_FINANCE.md` - Financial compliance requirements
-- `/hr/RFC2119_HR.md` - HR compliance requirements
-- `/marketing/RFC2119_MARKETING.md` - Marketing compliance requirements
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Compliance Officer should be familiar with the following concepts:
 - Compliance Management Pattern

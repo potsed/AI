@@ -196,13 +196,6 @@ The Product Compass is responsible for defining product vision, prioritizing fea
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This agent draws from requirements in the following documents:
-- `/development/PRODUCT_MANAGEMENT.md` - Core product management requirements (if exists)
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-- `/marketing/RFC2119_MARKETING.md` - Customer and market requirements
-- `/hr/RFC2119_HR.md` - Team coordination and communication requirements
-
 ## Related Design Patterns
 The Product Compass should be familiar with the following concepts:
 - Product Discovery Framework

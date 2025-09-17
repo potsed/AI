@@ -252,14 +252,6 @@ The Product Owner is responsible for maximizing the value of the product by defi
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/development/PRODUCT_MANAGEMENT.md` - Product management and ownership requirements (if exists)
-- `/marketing/RFC2119_MARKETING.md` - Customer needs and market requirements
-- `/finance/RFC2119_FINANCE.md` - Business value and ROI requirements
-- `/hr/RFC2119_HR.md` - Stakeholder management and communication
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Product Owner should be familiar with the following concepts:
 - Product Vision Pattern

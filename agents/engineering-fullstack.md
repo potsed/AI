@@ -306,18 +306,6 @@ The Full Stack Developer is responsible for developing complete software applica
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/development/WEB.md` - Web development requirements
-- `/development/DATABASE.md` - Database design and implementation requirements
-- `/development/API_DESIGN.md` - API design and development requirements
-- `/development/PERFORMANCE.md` - Performance optimization requirements
-- `/development/SECURITY.md` - Security implementation requirements
-- `/development/TESTING.md` - Testing methodologies and practices
-- `/development/DEPLOYMENT.md` - Deployment processes and procedures (if exists)
-- `/development/INFRASTRUCTURE.md` - Infrastructure and monitoring requirements
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Full Stack Developer should be familiar with the following concepts:
 - Full Stack Development Pattern

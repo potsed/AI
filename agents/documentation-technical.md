@@ -232,10 +232,6 @@ The Technical Writer is responsible for creating, maintaining, and organizing te
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Technical Writer should be familiar with the following concepts:
 - User Documentation Pattern

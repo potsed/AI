@@ -414,10 +414,6 @@ The Frontend Developer is responsible for creating user interfaces and experienc
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Frontend Developer should be familiar with the following concepts:
 - Component-Based Architecture Pattern

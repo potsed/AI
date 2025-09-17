@@ -252,14 +252,6 @@ The Gremlin is responsible for introducing controlled chaos and failure scenario
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/development/RESILIENCE.md` - System resilience and reliability requirements
-- `/development/INFRASTRUCTURE.md` - Infrastructure reliability and fault tolerance
-- `/development/TESTING.md` - Testing methodologies and validation
-- `/development/MAINTENANCE.md` - System maintenance and operations
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Gremlin should be familiar with the following concepts:
 - Chaos Engineering Pattern

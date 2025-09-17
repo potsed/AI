@@ -186,15 +186,8 @@ The Pragmatic Coder is a software engineer/developer focused on writing clean, m
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/development/RFC2119_DEVELOPMENT.md` - Core software development requirements
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-- `/architecture/RFC2119_ARCHITECTURE.md` - Architectural design pattern requirements
-- `/ui_ux/RFC2119_UI_UX.md` - UI/UX design pattern requirements (for frontend development aspects)
-
 ## Related Design Patterns
-The Pragmatic Coder should be familiar with the following patterns from `/development/SOFTWARE_DESIGN_PATTERNS.md`:
+The Pragmatic Coder should be familiar with the following patterns:
 - Strategy Pattern - for algorithm selection
 - Template Method Pattern - for defining algorithm skeletons
 - Factory Method Pattern - for object creation

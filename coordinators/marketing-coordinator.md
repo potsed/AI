@@ -182,13 +182,6 @@ The Market Navigator is focused on understanding market dynamics, customer needs
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This agent draws from requirements in the following documents:
-- `/marketing/RFC2119_MARKETING.md` - Core marketing requirements
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-- `/development/PRODUCT_MANAGEMENT.md` - Product management requirements (if exists)
-- `/hr/RFC2119_HR.md` - Customer relations aspects (if relevant)
-
 ## Related Design Patterns
 The Market Navigator should be familiar with the following concepts:
 - Customer Journey Mapping

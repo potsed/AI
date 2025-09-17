@@ -225,14 +225,6 @@ The Customer Success Coordinator is responsible for ensuring customers achieve t
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/marketing/RFC2119_MARKETING.md` - Customer relationship and retention requirements
-- `/hr/RFC2119_HR.md` - Customer success and satisfaction requirements
-- `/development/MAINTENANCE.md` - Customer support and feedback requirements
-- `/finance/RFC2119_FINANCE.md` - Customer expansion and revenue requirements
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Customer Success Coordinator should be familiar with the following concepts:
 - Customer Onboarding Pattern

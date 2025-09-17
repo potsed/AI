@@ -509,10 +509,6 @@ The Backend Developer is responsible for creating and maintaining server-side ap
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This agent draws from requirements in the following documents:
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Backend Developer should be familiar with the following concepts:
 - Server-Side Architecture Pattern

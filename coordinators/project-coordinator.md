@@ -332,16 +332,6 @@ The Process Master is responsible for defining, implementing, and optimizing sof
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/development/PROCESS_MANAGEMENT.md` - Process management and optimization requirements (if exists)
-- `/development/PROJECT_MANAGEMENT.md` - Project management and methodology requirements
-- `/development/AGILE.md` - Agile methodology and practices (if exists)
-- `/development/QUALITY_ASSURANCE.md` - Quality assurance and process compliance
-- `/development/COMPLIANCE.md` - Process compliance and regulatory requirements
-- `/hr/RFC2119_HR.md` - Training and enablement requirements
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Process Master should be familiar with the following concepts:
 - Process Definition Pattern

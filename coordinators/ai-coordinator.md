@@ -362,14 +362,6 @@ SMEs can be created for any subject area including but not limited to:
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/hr/RFC2119_HR.md` - Human resource management and personnel requirements
-- `/development/COMPLIANCE.md` - AI governance and compliance requirements
-- `/development/SECURITY.md` - AI security and risk management
-- `/development/QUALITY_ASSURANCE.md` - AI quality assurance and validation
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The AIR should be familiar with the following concepts:
 - AI Resource Management Pattern

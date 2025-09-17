@@ -180,13 +180,6 @@ The Operator/Product Custodian serves as the central decision-maker and prioriti
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-- `/development/PRODUCT_MANAGEMENT.md` - Product management requirements (if exists)
-- `/hr/RFC2119_HR.md` - Leadership and decision-making requirements
-- `/process/RFC2119_PROCESS.md` - Process management requirements (if exists)
-
 ## Related Design Patterns
 The Operator/Product Custodian should be familiar with the following concepts:
 - Decision Matrix Framework

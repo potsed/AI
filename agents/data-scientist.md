@@ -372,15 +372,6 @@ The Data Scientist is responsible for extracting insights, building predictive m
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/development/DATA_ENGINEERING.md` - Data engineering and pipeline requirements
-- `/development/DATA_PRIVACY.md` - Data privacy and governance requirements
-- `/development/ANALYTICS.md` - Analytics and reporting requirements (if exists)
-- `/development/MACHINE_LEARNING.md` - Machine learning and AI requirements (if exists)
-- `/development/STATISTICS.md` - Statistical analysis requirements (if exists)
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Data Scientist should be familiar with the following concepts:
 - Exploratory Data Analysis Pattern

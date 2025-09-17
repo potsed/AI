@@ -212,15 +212,6 @@ The Assessor is responsible for conducting comprehensive evaluations of software
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/development/QUALITY_ASSURANCE.md` - Quality assessment requirements (if exists)
-- `/development/SECURITY.md` - Security assessment requirements (if exists)
-- `/development/PERFORMANCE.md` - Performance assessment requirements
-- `/development/COMPLIANCE.md` - Compliance assessment requirements
-- `/ui_ux/RFC2119_UI_UX.md` - Usability assessment requirements
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Assessor should be familiar with the following concepts:
 - Quality Assessment Pattern

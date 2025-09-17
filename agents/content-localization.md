@@ -192,15 +192,6 @@ The Linguist/Translator is responsible for internationalization, localization, a
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/development/INTERNATIONALIZATION.md` - Internationalization requirements (if exists)
-- `/ui_ux/RFC2119_UI_UX.md` - Internationalization and localization requirements
-- `/marketing/RFC2119_MARKETING.md` - International marketing requirements
-- `/design/RFC2119_DESIGN.md` - International design requirements
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-- `/development/COMPLIANCE.md` - Legal and regulatory compliance requirements
-
 ## Related Design Patterns
 The Linguist/Translator should be familiar with the following concepts:
 - Internationalization Pattern

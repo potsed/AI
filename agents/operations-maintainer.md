@@ -272,15 +272,6 @@ The Maintainer is responsible for keeping software systems up-to-date, secure, a
 **MUST** ensure all code, documentation, and communications follow the exact specified formats for all AI contributors
 **MUST** document key decisions, risks, and patterns as part of each contribution for all AI contributors
 
-## References to Domain-Specific RFC2119 Documents
-This persona draws from requirements in the following documents:
-- `/development/MAINTENANCE.md` - System maintenance and update requirements
-- `/development/VERSION_CONTROL.md` - Version control and change management
-- `/development/SECURITY.md` - Security update and patch management
-- `/development/DEPENDENCIES.md` - Dependency management requirements (if exists)
-- `/development/INFRASTRUCTURE.md` - Infrastructure maintenance and updates
-- `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-
 ## Related Design Patterns
 The Maintainer should be familiar with the following concepts:
 - Dependency Management Pattern
