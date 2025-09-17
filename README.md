@@ -251,20 +251,60 @@ All terms **MUST** be interpreted per **RFC 2119** (**MUST**, **MUST NOT**, **RE
 **MUST** READ the DOCUMENT and any sub-documents found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/HATS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/HATS.md) in it's entirety before any contribution.
 ```
 
-### 3. Enforce in CI/CD (optional but recommended)
+### 3. Initialize HATS Framework Structure
+
+When starting a new project, AI agents **MUST** initialize the HATS framework structure by:
+
+1. **Creating the .perseus directory structure** as defined in `PROCESS.md`
+2. **Identifying and activating relevant personas** from the agents directory based on project needs
+3. **Setting up core documentation files** (PURPOSE.md, OUTCOMES.yaml, PLAN.md)
+
+### 4. Personas and Subagents
+
+The HATS framework includes over 50 specialized AI personas (subagents) organized by function:
+
+- **Engineering agents** for technical implementation (coder, architect, devops, security, etc.)
+- **Product agents** for product management and vision (product owner, product compass, etc.)
+- **Business agents** for market and customer focus (market navigator, deal maker, customer success, etc.)
+- **Design agents** for user experience and interface design (ux, ui, visual design, etc.)
+- **Operations agents** for system maintenance and reliability (system keeper, maintainer, etc.)
+- **Documentation agents** for recording and knowledge management (reporter, technical writer, validator, etc.)
+- **Specialized agents** for specific domains (pen tester, gremlin, copywriter, etc.)
+
+Each persona acts as a subagent with specific responsibilities and **MUST** be consulted for their area of expertise.
+
+### 5. Internet Access Requirements
+
+AI agents **MUST** have internet access to retrieve official documentation and resources. If the AI environment does not have direct internet access:
+
+#### CURL MCP Installation
+For AI agents that cannot access the internet directly, install the CURL MCP tool:
+
+```bash
+# Install curl if not available
+sudo apt-get install curl  # Ubuntu/Debian
+brew install curl          # macOS
+
+# Verify curl installation
+curl --version
+```
+
+The CURL MCP allows AI agents to fetch official documentation, API specifications, and other required resources during development.
+
+### 6. Enforce in CI/CD (optional but recommended)
 
 * Run **linting, type-checking, and unit tests** on every commit.
 * Run **dependency and license scans** (npm audit, Composer audit, gosec, Trivy, etc).
 * Require **all tests green** before merge.
 
-### 4. Add a Pull Request Template (optional)
+### 7. Add a Pull Request Template (optional)
 
 Create `.github/pull_request_template.md` with a checklist like:
 
 ```markdown
 ## PR Checklist
 
-- [ ] I have read and applied the AI Instructions from [AI.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/AI.md)  
+- [ ] I have read and applied the AI Instructions from [HATS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v2.0.0/HATS.md)  
 - [ ] Code follows TDD (tests first, all green)  
 - [ ] No reinventing the wheel — libraries first  
 - [ ] Security reviewed (no secrets, OWASP checks)  
@@ -274,7 +314,21 @@ Create `.github/pull_request_template.md` with a checklist like:
 - [ ] Key decisions documented in ADRs  
 - [ ] Risks identified and mitigated  
 - [ ] Performance benchmarks included where applicable
+- [ ] Relevant HATS personas consulted and their input considered
 ```
+
+### 8. Project Initialization Workflow
+
+When applying HATS to a new project, AI agents **MUST** follow this initialization workflow:
+
+1. **Read All Core Documents**: HATS.md, GUARDRAILS.md, PROCESS.md, RFC2119.md
+2. **Identify Required Personas**: Select relevant personas from the agents directory
+3. **Initialize .perseus Structure**: Create the project artifact directory structure
+4. **Define Project Purpose**: Create PURPOSE.md with clear objectives
+5. **Set Outcomes**: Define measurable outcomes in OUTCOMES.yaml
+6. **Plan Implementation**: Create PLAN.md with vertical slices
+7. **Engage Personas**: Activate relevant subagents for each project phase
+8. **Maintain Documentation**: Keep all artifacts updated throughout development
 
 ## Why Use These Guardrails?
 

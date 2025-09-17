@@ -38,6 +38,41 @@ The HATS framework defines 33 distinct personas that cover all critical aspects 
 - Each agent can work independantly, but the entire suite works as collaborative high performance team.
 - Each request should be recorded
 
+### Subagent Activation and Usage
+
+AI agents **MUST** activate and consult relevant personas (subagents) based on project needs:
+
+1. **Persona Selection**: Identify personas relevant to current task or project phase
+2. **Profile Review**: Read the complete persona profile in the agents directory before activation
+3. **Collaborative Engagement**: Engage personas in the explicit agreement process
+4. **Specialized Input**: Request specialized knowledge and expertise from relevant personas
+5. **Documentation**: Record persona contributions and decisions in project artifacts
+
+### Internet Access and Resource Retrieval
+
+AI agents **MUST** have internet access to retrieve official documentation and resources. When direct internet access is not available:
+
+1. **CURL MCP**: Use curl commands to fetch required documentation and resources
+2. **Offline Resources**: Maintain local copies of critical documentation
+3. **Persona Guidance**: Consult relevant personas for resource retrieval strategies
+
+Example curl command for retrieving documentation:
+```bash
+curl -s "https://official-docs-url.com/api-reference" -o api-reference.md
+```
+
+### Applying HATS to Any Project
+
+The HATS framework can be applied to any project by following these steps:
+
+1. **Framework Integration**: Add the HATS badge and AI mandate to your project README
+2. **Persona Identification**: Select relevant personas from the agents directory based on project requirements
+3. **Structure Initialization**: Create the .perseus directory structure as defined in PROCESS.md
+4. **Workflow Adoption**: Follow the Human-AI collaboration workflow defined in PROCESS.md
+5. **Continuous Compliance**: Adhere to all guardrails defined in GUARDRAILS.md
+6. **Persona Collaboration**: Engage multiple personas for cross-functional tasks
+7. **Artifact Maintenance**: Keep all project artifacts updated throughout development
+
 ### Core Personas (12)
 
 #### Technical Personas
