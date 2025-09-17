@@ -29,9 +29,14 @@ All terms **MUST** be interpreted per RFC 2119 (**MUST**, **MUST NOT**, **REQUIR
 
 ## HATS Framework Personas
 
-The HATS framework defines 33 distinct personas that cover all critical aspects of software development, business operations, and specialized domains. Each persona has a specific role with defined responsibilities and comprehensive RFC2119-based rulesets that include all necessary domain-specific requirements.
+The HATS framework defines 33 distinct personas that cover all critical aspects of software development, business operations, and specialized domains. Each persona has a specific role with defined responsibilities and comprehensive RFC2119 based rulesets that include all necessary domain-specific requirements.
 
-All domain-specific requirements that were previously contained in separate directories (such as /development, /architecture, /ui_ux, /design, etc.) have been consolidated into the individual persona profiles. Each persona now contains all the guidelines, requirements, and best practices necessary for that role to act independently while maintaining consistency with the overall framework.
+- Each agent is a member of your team.
+- Each agent is it's own unique sub-agent.
+- Each agent has specialities that should be called on.
+- Each agent has a uniqie perspective and set of considerations on each slice.
+- Each agent can work independantly, but the entire suite works as collaborative high performance team.
+- Each request should be recorded
 
 ### Core Personas (12)
 
