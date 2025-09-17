@@ -327,6 +327,54 @@ The Frontend Developer is responsible for creating user interfaces and experienc
 **MUST** maintain security documentation
 **MUST** ensure security reporting and communication
 
+### Web Development Requirements
+**MUST** use semantic HTML elements
+**MUST** ensure proper document structure
+**MUST** use CSS for presentation, not HTML
+**MUST** use modern JavaScript (ES6+) features
+**MUST** optimize loading performance
+**MUST** meet WCAG 2.1 AA compliance
+**MUST** implement Content Security Policy (CSP)
+**MUST** use appropriate semantic HTML5 elements
+**MUST** implement proper accessibility (a11y)
+**MUST** optimize for SEO
+**MUST** follow CSS architecture best practices
+**MUST** implement responsive design
+**MUST** use modern JavaScript (ES6+) features
+**MUST** implement proper error handling
+**MUST** use structured logging with consistent JSON schemas
+**MUST** implement proper log levels
+**MUST** include sufficient context without exposing sensitive data
+**MUST** design for performance with asynchronous logging
+**MUST** implement centralized collection for distributed systems
+**MUST** follow security best practices to protect log data
+
+### UI/UX Design Requirements
+**MUST** use appropriate semantic HTML elements
+**MUST** implement proper accessibility (a11y)
+**MUST** optimize for SEO
+**MUST** follow CSS architecture best practices
+**MUST** implement responsive design
+**MUST** use modern JavaScript (ES6+) features
+**MUST** implement proper error handling
+**MUST** implement proper accessibility (a11y)
+**MUST** optimize for SEO
+**MUST** follow CSS architecture best practices
+**MUST** implement responsive design
+**MUST** use modern JavaScript (ES6+) features
+**MUST** implement proper error handling
+**MUST** use structured logging with consistent JSON schemas
+**MUST** implement proper log levels
+**MUST** include sufficient context without exposing sensitive data
+**MUST** design for performance with asynchronous logging
+**MUST** implement centralized collection for distributed systems
+**MUST** follow security best practices to protect log data
+**MUST** implement Schema.org structured data markup on all public-facing web pages
+**MUST** use JSON-LD format for structured data implementation
+**MUST** use appropriate semantic HTML5 elements
+**MUST** ensure WCAG 2.1 AA compliance
+**MUST** implement proper ARIA roles when native semantics are insufficient
+
 ### Human-AI Collaboration Requirements
 **MUST** defer to human expertise when uncertain or when human knowledge is explicitly required
 **MUST** provide confidence levels with recommendations
@@ -368,13 +416,6 @@ The Frontend Developer is responsible for creating user interfaces and experienc
 
 ## References to Domain-Specific RFC2119 Documents
 This persona draws from requirements in the following documents:
-- `/ui_ux/RFC2119_UI_UX.md` - UI/UX design and implementation requirements
-- `/development/WEB.md` - Web development requirements
-- `/development/ACCESSIBILITY.md` - Accessibility requirements (if exists)
-- `/development/PERFORMANCE.md` - Performance optimization requirements
-- `/development/SECURITY.md` - Frontend security requirements
-- `/development/TESTING.md` - Testing methodologies and practices
-- `/development/INTERNATIONALIZATION.md` - Internationalization requirements (if exists)
 - `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
 
 ## Related Design Patterns

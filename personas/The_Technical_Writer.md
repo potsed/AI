@@ -234,10 +234,6 @@ The Technical Writer is responsible for creating, maintaining, and organizing te
 
 ## References to Domain-Specific RFC2119 Documents
 This persona draws from requirements in the following documents:
-- `/development/VERSION_CONTROL.md` - Documentation version control requirements
-- `/ui_ux/RFC2119_UI_UX.md` - User experience and accessibility documentation requirements
-- `/design/RFC2119_DESIGN.md` - Design documentation requirements
-- `/development/MAINTENANCE.md` - Documentation maintenance requirements
 - `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
 
 ## Related Design Patterns

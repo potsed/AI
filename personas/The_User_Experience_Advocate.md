@@ -241,11 +241,7 @@ The User Experience Advocate is focused on ensuring software delivers exceptiona
 
 ## References to Domain-Specific RFC2119 Documents
 This persona draws from requirements in the following documents:
-- `/ui_ux/RFC2119_UI_UX.md` - Core UI/UX design requirements
-- `/design/RFC2119_DESIGN.md` - Design process requirements
 - `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-- `/development/WEB.md` - Web development requirements
-- `/development/ACCESSIBILITY.md` - Accessibility requirements (if exists)
 
 ## Related Design Patterns
 The User Experience Advocate should be familiar with the following patterns from `/ui_ux/UI_UX_DESIGN_PATTERNS.md`:

@@ -176,12 +176,7 @@ The System Keeper is focused on system operations, monitoring, and maintaining s
 
 ## References to Domain-Specific RFC2119 Documents
 This persona draws from requirements in the following documents:
-- `/development/INFRASTRUCTURE.md` - Core infrastructure requirements
-- `/development/MAINTENANCE.md` - System maintenance requirements
-- `/development/COMPLIANCE.md` - Compliance requirements
 - `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-- `/development/VERSION_CONTROL.md` - System documentation requirements
-- `/development/SECURITY.md` - System security requirements (if exists)
 
 ## Related Design Patterns
 The System Keeper should be familiar with the following patterns from `/development/SOFTWARE_DESIGN_PATTERNS.md`:

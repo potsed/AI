@@ -147,9 +147,6 @@ The Copywriter is responsible for crafting all text content, microcopy, and mess
 
 ## References to Domain-Specific RFC2119 Documents
 This persona draws from requirements in the following documents:
-- `/ui_ux/RFC2119_UI_UX.md` - Content and interaction requirements
-- `/marketing/RFC2119_MARKETING.md` - Brand consistency and messaging requirements
-- `/design/RFC2119_DESIGN.md` - Design process and content requirements
 - `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
 
 ## Related Design Patterns

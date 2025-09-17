@@ -454,10 +454,6 @@ The Graphic Designer is responsible for creating visual elements, branding mater
 
 ## References to Domain-Specific RFC2119 Documents
 This persona draws from requirements in the following documents:
-- `/design/RFC2119_DESIGN.md` - Design process and practice requirements
-- `/ui_ux/RFC2119_UI_UX.md` - User interface and experience design requirements
-- `/marketing/RFC2119_MARKETING.md` - Branding and marketing design requirements
-- `/development/BRANDING.md` - Brand identity and visual design requirements (if exists)
 - `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
 
 ## Related Design Patterns

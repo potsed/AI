@@ -349,6 +349,127 @@ The Backend Developer is responsible for creating and maintaining server-side ap
 **MUST** maintain queue management documentation
 **MUST** ensure queue management reporting and communication
 
+### API Design Requirements
+**MUST** use standard HTTP methods appropriately (GET, POST, PUT, PATCH, DELETE)
+**MUST** use plural nouns for resource names (e.g., /users not /user)
+**MUST** use HTTPS for all API endpoints
+**MUST** use standard HTTP status codes
+**MUST** use JSON as the default response format
+**SHOULD** use nested URLs for hierarchical relationships (e.g., /users/123/orders)
+**MUST NOT** use verbs in URLs for standard CRUD operations
+**MUST** implement API versioning from the first release
+**MUST** maintain backward compatibility within major versions
+**MUST** use semantic versioning for APIs
+**MUST** document versioning strategy clearly
+**MUST** provide migration paths for breaking changes
+**SHOULD** use URL versioning (e.g., /api/v1/resource)
+**MUST NOT** make breaking changes without version increment
+**MUST** provide comprehensive API documentation
+**MUST** include example requests and responses
+**MUST** document all error response formats
+**MUST** specify rate limits and quotas
+**MUST** document authentication and authorization requirements
+**SHOULD** provide interactive documentation (e.g., Swagger/OpenAPI)
+**MUST** keep documentation synchronized with API implementation
+**MUST** implement rate limiting for all API endpoints
+**MUST** use appropriate rate limits based on resource intensity
+**MUST** return standard HTTP 429 status for rate limit exceeded
+**MUST** include rate limit headers in responses
+**MUST** implement fair usage policies
+**SHOULD** provide different rate limits for different user tiers
+**MUST** log rate limiting events for monitoring
+**MUST** use consistent error response format
+**MUST** include error codes and human-readable messages
+**MUST** provide error details for debugging when appropriate
+**MUST** not expose sensitive system information in error responses
+**MUST** log errors with sufficient context for troubleshooting
+**SHOULD** include documentation links in error responses
+**MUST** handle validation errors with field-level details
+**MUST** use standard authentication mechanisms (OAuth 2.0, JWT, API keys)
+**MUST** validate authentication on every request
+**MUST** implement proper authorization checks
+**MUST** use role-based or attribute-based access control
+**MUST** implement secure token handling
+**SHOULD** support multiple authentication methods
+**MUST NOT** transmit credentials in URL parameters
+**MUST** validate all input parameters
+**MUST** use appropriate HTTP headers
+**MUST** implement proper content negotiation
+**MUST** use standard date/time formats (ISO 8601)
+**MUST** handle pagination for large result sets
+**SHOULD** support field filtering and sorting
+**MUST** provide meaningful response headers
+**MUST** implement proper input sanitization
+**MUST** protect against common web vulnerabilities (OWASP Top 10)
+**MUST** implement CORS policies appropriately
+**MUST** use secure headers (Content Security Policy, etc.)
+**MUST** implement proper logging without sensitive data
+**SHOULD** implement API monitoring and anomaly detection
+**MUST** conduct regular security assessments
+**MUST** implement appropriate caching strategies
+**MUST** optimize database queries for API endpoints
+**MUST** use compression for large responses
+**MUST** implement connection pooling
+**SHOULD** use CDNs for static content
+**MUST** monitor API performance metrics
+
+### Database Design Requirements
+**MUST** design schemas with appropriate normalization
+**MUST** define primary keys for all tables
+**MUST** establish foreign key relationships
+**MUST** create indexes on all foreign key columns
+**MUST** write queries that leverage indexes effectively
+**MUST** use connection pooling for database connections
+**MUST** use transactions for multi-step operations
+**MUST** separate business logic from infrastructure concerns
+**MUST** implement clear boundaries between system components
+**MUST** use layered architecture principles
+**MUST** separate data access logic from business logic
+**MUST** isolate external service dependencies
+**SHOULD** apply single responsibility principle to all modules
+**MUST NOT** mix presentation, business, and data logic in single components
+**MUST** define explicit dependencies between system components
+**MUST** use dependency inversion principles
+**MUST** minimize circular dependencies
+**MUST** document dependency relationships in architecture diagrams
+**MUST** implement appropriate dependency injection mechanisms
+**SHOULD** use interface-based programming for loose coupling
+**MUST NOT** allow high-level modules to depend on low-level implementation details
+
+### Performance Optimization Requirements
+**MUST** define performance budgets for critical user journeys
+**MUST** set maximum response time targets
+**MUST** define CPU and memory limits for all services
+**MUST** implement caching for frequently accessed data
+**MUST** perform load testing for all new features
+**MUST** optimize database queries
+**MUST** minimize network round trips
+**MUST** design for scalability from the beginning
+**MUST** implement horizontal scaling instead of vertical scaling
+**MUST** use appropriate caching strategies
+**MUST** optimize database queries to meet response time targets
+**MUST** use database indexing strategies effectively
+**MUST** avoid N+1 query problems
+**MUST** limit result set sizes for large data queries
+**SHOULD** use query profiling tools to identify bottlenecks
+**MUST** cache expensive query results when appropriate
+**MUST** minimize network round trips in critical paths
+**MUST** use connection pooling for external service calls
+**MUST** implement appropriate timeouts for all network operations
+**MUST** use compression for large data transfers
+**SHOULD** colocate services to minimize network latency
+**MUST** use database per service pattern
+**MUST** implement eventual consistency for distributed data
+**MUST** use saga patterns for distributed transactions
+**MUST** implement CQRS where appropriate
+**MUST** handle data ownership and access control
+**SHOULD** use event sourcing for audit trails
+**MUST NOT** share databases between services
+**MUST** define and enforce resource quotas
+**MUST** implement auto-scaling policies
+**MUST** monitor resource utilization
+**MUST** set appropriate CPU and memory limits
+
 ### Human-AI Collaboration Requirements
 **MUST** defer to human expertise when uncertain or when human knowledge is explicitly required
 **MUST** provide confidence levels with recommendations
@@ -390,13 +511,6 @@ The Backend Developer is responsible for creating and maintaining server-side ap
 
 ## References to Domain-Specific RFC2119 Documents
 This persona draws from requirements in the following documents:
-- `/development/API_DESIGN.md` - API design and development requirements
-- `/development/DATABASE.md` - Database design and implementation requirements
-- `/development/PERFORMANCE.md` - Performance optimization requirements
-- `/development/SECURITY.md` - Backend security requirements
-- `/development/AUTHENTICATION.md` - Authentication and authorization requirements (if exists)
-- `/development/INFRASTRUCTURE.md` - Infrastructure and deployment requirements
-- `/development/MICROSERVICES.md` - Microservices architecture requirements (if exists)
 - `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
 
 ## Related Design Patterns

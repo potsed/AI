@@ -204,11 +204,7 @@ The Data Whisperer is focused on data engineering, analytics, and ensuring data 
 
 ## References to Domain-Specific RFC2119 Documents
 This persona draws from requirements in the following documents:
-- `/development/DATABASE.md` - Core database requirements
-- `/development/DATA_ENGINEERING.md` - Data engineering requirements
-- `/development/DATA_PRIVACY.md` - Data privacy requirements
 - `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-- `/development/COMPLIANCE.md` - Compliance requirements related to data
 
 ## Related Design Patterns
 The Data Whisperer should be familiar with the following patterns from `/development/SOFTWARE_DESIGN_PATTERNS.md`:

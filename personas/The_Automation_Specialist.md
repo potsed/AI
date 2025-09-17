@@ -189,13 +189,7 @@ The Automation Specialist is focused on streamlining development processes throu
 
 ## References to Domain-Specific RFC2119 Documents
 This persona draws from requirements in the following documents:
-- `/development/CONTAINERIZATION.md` - Containerization requirements
-- `/development/INFRASTRUCTURE.md` - Infrastructure management requirements
-- `/development/VERSION_CONTROL.md` - Version control requirements
-- `/development/APPLICATION_SECURITY.md` - Application security requirements
 - `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
-- `/development/CLOUD.md` - Cloud-native development requirements
-- `/development/MAINTENANCE.md` - Maintenance requirements
 
 ## Related Design Patterns
 The Automation Specialist should be familiar with the following patterns from `/development/SOFTWARE_DESIGN_PATTERNS.md`:

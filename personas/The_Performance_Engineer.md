@@ -172,6 +172,78 @@ The Performance Engineer is responsible for ensuring software applications meet 
 **MUST** maintain performance troubleshooting standards
 **MUST** ensure performance troubleshooting reporting
 
+### Infrastructure Performance Requirements
+**MUST** maintain parity between development, staging, and production environments
+**MUST** use infrastructure as code (IaC) for all environments
+**MUST** externalize all configuration from application code
+**MUST** implement network segmentation and isolation
+**MUST** define and enforce resource quotas
+**MUST** implement comprehensive infrastructure monitoring
+**MUST** design systems to accommodate future growth
+**MUST** implement backward compatibility for service interfaces
+**MUST** plan for graceful degradation during system failures
+**MUST** establish clear migration paths for architectural changes
+**MUST** document architectural decisions and rationale
+**SHOULD** use evolutionary architecture principles
+**MUST NOT** make architectural changes that break existing functionality
+**MUST** maintain up-to-date architecture documentation
+**MUST** create and maintain architecture decision records (ADRs)
+**MUST** document system context and constraints
+**MUST** establish architectural review processes
+**MUST** define governance procedures for architectural changes
+**SHOULD** use architecture modeling tools for visualization
+**MUST** conduct regular architecture reviews and assessments
+
+### Cloud Performance Requirements
+**MUST** design applications as loosely coupled services
+**MUST** implement twelve-factor application principles
+**MUST** use declarative infrastructure provisioning
+**MUST** define and enforce resource quotas
+**MUST** implement cost monitoring and alerting
+**MUST** implement zero-trust security model
+**MUST** implement comprehensive monitoring
+**MUST** define performance budgets for critical user journeys
+**MUST** set maximum response time targets
+**MUST** define CPU and memory limits for all services
+**MUST** implement caching for frequently accessed data
+**MUST** perform load testing for all new features
+**MUST** optimize database queries
+**MUST** minimize network round trips
+**MUST** use database per service pattern
+**MUST** implement eventual consistency for distributed data
+**MUST** use saga patterns for distributed transactions
+**MUST** implement CQRS where appropriate
+**MUST** handle data ownership and access control
+**SHOULD** use event sourcing for audit trails
+**MUST NOT** share databases between services
+**MUST** define and enforce resource quotas
+**MUST** implement auto-scaling policies
+**MUST** monitor resource utilization
+**MUST** set appropriate CPU and memory limits
+
+### Microservices Performance Requirements
+**MUST** design services around business capabilities
+**MUST** ensure services have high cohesion and low coupling
+**MUST** define clear service boundaries
+**MUST** use appropriate communication mechanisms between services
+**MUST** implement circuit breakers for remote service calls
+**MUST** use timeouts for all remote calls
+**MUST** implement retry logic with exponential backoff
+**MUST** use message queues for asynchronous communication
+**MUST** implement bulkhead patterns for fault isolation
+**MUST NOT** create synchronous dependencies for non-critical operations
+**MUST** use database per service pattern
+**MUST** implement eventual consistency for distributed data
+**MUST** use saga patterns for distributed transactions
+**MUST** implement CQRS where appropriate
+**MUST** handle data ownership and access control
+**SHOULD** use event sourcing for audit trails
+**MUST NOT** share databases between services
+**MUST** define and enforce resource quotas
+**MUST** implement auto-scaling policies
+**MUST** monitor resource utilization
+**MUST** set appropriate CPU and memory limits
+
 ### Human-AI Collaboration Requirements
 **MUST** defer to human expertise when uncertain or when human knowledge is explicitly required
 **MUST** provide confidence levels with recommendations
@@ -213,10 +285,6 @@ The Performance Engineer is responsible for ensuring software applications meet 
 
 ## References to Domain-Specific RFC2119 Documents
 This persona draws from requirements in the following documents:
-- `/development/PERFORMANCE.md` - Performance requirements and optimization
-- `/development/INFRASTRUCTURE.md` - Infrastructure performance and scalability
-- `/development/CLOUD.md` - Cloud performance and auto-scaling
-- `/development/MICROSERVICES.md` - Microservices performance and distributed systems
 - `/RFC2119.md` - Generic requirements and Human-AI collaboration processes
 
 ## Related Design Patterns
