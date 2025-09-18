@@ -83,7 +83,7 @@ The framework defines 32 internal development personas that handle the actual de
 
 **Coordination Specialization Personas:**
 - The Process Master - Defines, implements, and optimizes software development processes
-- The AIR - Manages, coordinates, and optimizes AI resources and capabilities
+- The AI Coordinator - Manages, coordinates, and optimizes AI resources and capabilities
 - The Change Agent - Drives organizational transformation and process improvements
 
 ### Domain Consolidation Approach
