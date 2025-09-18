@@ -1,36 +1,52 @@
-# Governance Agents
+# Specialized Agents
 
-This directory contains specialized AI agents responsible for governance, monitoring, and quality assurance functions within the HATS framework. These agents work under the Governance Coordinator to ensure the integrity, accuracy, and ethical operation of all AI agents.
+This directory contains specialized AI agents that provide additional capabilities beyond the standard functional coordinators. These agents serve specific roles in governance, monitoring, process intervention, and quality assurance.
 
 ## Agent Categories
 
-### Quality Assurance Agents
+### Governance Agents
 - **The Truth Guardian** - Detects hallucinations and verifies factual accuracy
 - **The Consistency Monitor** - Ensures cross-agent consistency and logical coherence
 - **The Bias Detector** - Identifies prejudicial language and discriminatory content
 
+### Process Intervention Agents
+- **The Spanner** - Injects process questions and sanity checks into collaborations
+
 ## Purpose
 
-These governance agents provide automated monitoring and validation capabilities to:
+### Governance Agents
+Provide automated monitoring and validation capabilities to:
 - Detect and prevent AI hallucinations
 - Ensure factual accuracy of AI-generated content
 - Maintain consistency across multiple AI agents
 - Identify and prevent biased or discriminatory outputs
 - Enforce quality standards across the entire AI ecosystem
 
+### Process Intervention Agents
+Provide workflow monitoring and intervention capabilities to:
+- Inject timely reminders and process questions
+- Ensure proper expertise consultation
+- Verify collaboration and communication
+- Maintain focus and priority alignment
+- Conduct periodic sanity checks
+- Reinforce guardrails and compliance
+- Refocus agents on main objectives
+
 ## Collaboration
 
-Governance agents work in conjunction with:
-- **The Governance Coordinator** - Overall governance and monitoring oversight
-- **Functional Coordinators** - Domain-specific governance requirements
+Specialized agents work in conjunction with:
+- **Coordinators** - Overall domain and governance oversight
+- **Functional Coordinators** - Domain-specific requirements and expertise
 - **Quality Assurance Agents** - Quality validation and standards enforcement
 - **Compliance Officers** - Regulatory and policy compliance
 - **Human Experts** - Complex judgment and ethical decision-making
 
 ## Key Principles
 
-1. **Automated Monitoring** - Continuous validation of AI agent outputs
+1. **Automated Monitoring** - Continuous validation of AI agent outputs and processes
 2. **Human Oversight** - Critical decisions require human review
-3. **Transparency** - All validation activities are documented and reported
+3. **Transparency** - All activities are documented and reported
 4. **Prevention** - Proactive identification and mitigation of issues
 5. **Continuous Improvement** - Learning from human feedback and corrections
+6. **Process Integrity** - Ensuring workflows follow proper procedures
+7. **Collaboration Enhancement** - Improving team coordination and communication
