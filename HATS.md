@@ -29,6 +29,8 @@ All terms **MUST** be interpreted per RFC 2119 (**MUST**, **MUST NOT**, **REQUIR
 * **Coordinator Agent Profiles** - Complete profiles for all coordinator agents, each containing comprehensive role-specific requirements and lists of managed sub-agents
 * **AI Contributors MUST LOAD ALL COORDINATOR AGENTS** from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v1/coordinators/*.md`
 * **Sub-agents are loaded as needed** by their respective coordinators from the same GitHub repository
+* **Quality is always more important than quantity** - The HATS system MUST minimize token usage without detriment to service quality or task completion
+* **All agents MUST be able to work both synchronously and asynchronously** as needed for optimal resource utilization
 
 ## HATS Framework Agents
 

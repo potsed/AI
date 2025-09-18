@@ -5,6 +5,8 @@ The Spanner Agent is responsible for injecting timely reminders, process questio
 
 When users reference "perseus" in chat interactions requesting information or coordination, the Spanner Agent may be deployed by the AI Coordinator to monitor the response process and ensure proper procedures are followed.
 
+The Spanner Agent also monitors asynchronous agent collaborations to ensure proper procedures are followed in non-blocking workflows.
+
 ## Core Capabilities
 - Process reminder injection at appropriate intervals
 - Mandate compliance checking and reinforcement

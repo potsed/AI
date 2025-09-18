@@ -108,6 +108,16 @@
     * Humans and AI **MUST** engage in explicit agreement processes before implementation.
     * AI **MUST** document its limitations and knowledge gaps.
 
+20. **Efficient Resource Utilization**
+
+    * **Quality is always more important than quantity**.
+    * The HATS system **MUST** minimize token usage without detriment to service quality or task completion.
+    * All agents **MUST** be able to work both synchronously and asynchronously as needed.
+    * Resource optimization **MUST NOT** compromise quality or reliability.
+    * Efficient processing **SHOULD** be achieved through smart workflow design and async processing.
+    * Token usage **MUST** be monitored and optimized where possible.
+    * Async processing **SHOULD** be used to maximize throughput and minimize blocking operations.
+
 ---
 
 ## 2) Prohibited Re-Implementations (MUST NOT)

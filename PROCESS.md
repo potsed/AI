@@ -21,7 +21,7 @@ The HATS framework and this process can be applied to any software development p
 
 ## 0. Initialise
 
-- Scaffold .perseus tree structure in the project root directory
+- Scaffold .perseus tree structure
 
 ```tree
   .perseus
@@ -54,19 +54,12 @@ The HATS framework and this process can be applied to any software development p
   │   └── README.md
   ├── smes
   │   └── README.md
-  ├── OUTCOMES.yaml
-  ├── PLAN.md
-  ├── RUNBOOK.md
-  ├── PATTERNS.md
-  ├── ANTI-PATTERNS.md
-  ├── RFC2119_INVENTORY.md
-  ├── RISKS.md
-  ├── SUMMARY.md
-  └── README.md
+  ├── README.md
 ```
 
 - AI generates structure. Human confirms.
-- This structure **MUST** be created in any project applying the HATS framework
+- **Quality is always more important than quantity** - Ensure proper structure without excess
+- **Minimize token usage** - Generate only necessary content without sacrificing quality
 
 ---
 
@@ -76,6 +69,9 @@ The HATS framework and this process can be applied to any software development p
 - One-sentence purpose  
 - Success metric + target date  
 - Owner
+
+**Principle:** **Quality is always more important than quantity** - Ensure the purpose is clearly defined without unnecessary elaboration
+**Principle:** **Minimize token usage** - Define the purpose concisely while maintaining clarity and completeness
 
 ---
 
@@ -113,42 +109,50 @@ Format per outcome:
 - AI identifies potential failure modes (pre-mortem analysis)
 - Human approves or adjusts plan
 - AI and Human engage in explicit agreement process
+- **Consider async processing** where appropriate to maximize efficiency
 
 ### 4.2 Write Failing Tests
 - AI produces deterministic tests from acceptance cases
 - Tests fail initially
 - Human reviews test approach and coverage
+- **Consider parallel test execution** where appropriate to minimize wait time
 
 ### 4.3 Implement Minimal Code
 - AI writes code to pass tests
 - Human reviews patch + rationale
 - AI provides confidence levels with implementation
+- **Use async processing** for non-blocking operations and parallel execution where beneficial
 
 ### 4.4 Refactor
 - AI reduces complexity, applies standards
 - Human confirms readability and maintainability
 - AI and Human agree on refactoring approach
+- **Optimize for async compatibility** where appropriate
 
 ### 4.5 Observability & Docs
 - AI adds logs/metrics and updates README + runbook
 - AI documents key decisions in ADRs
 - Human verifies documentation accuracy
+- **Document async processing patterns** where used
 
 ### 4.6 Integrate Behind Flag
 - AI wires feature to flag
 - AI updates `.perseus/RUNBOOK.md` with canary + rollback steps
 - Human validates integration approach
+- **Consider async integration strategies** for non-blocking deployments
 
 ### 4.7 Demo & Measure
 - Human enables flag in non-prod
 - AI updates `.perseus/OUTCOMES.yaml` with progress vs targets
 - AI and Human review results together
+- **Measure async processing benefits** where implemented
 
 ### 4.8 Retrospective
 - Capture what worked well and what could be improved
 - Document successful patterns and anti-patterns encountered
 - Update process documentation as needed
 - Review Human-AI collaboration effectiveness
+- **Evaluate async processing effectiveness** and lessons learned
 
 ### Definition of Done for Slice
 - Tests green

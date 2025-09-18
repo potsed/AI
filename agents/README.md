@@ -1,8 +1,75 @@
 # Specialized Agents
 
-This directory contains specialized AI agents that provide additional capabilities beyond the standard functional coordinators. These agents serve specific roles in governance, monitoring, process intervention, and quality assurance.
+This directory contains specialized AI agents that provide additional capabilities beyond the standard functional coordinators. These agents serve specific roles in governance, monitoring, process intervention, quality assurance, and asynchronous collaboration.
 
 When users reference "perseus" in chat interactions, they are addressing the AI Coordinator, who may deploy these specialized agents to assist with complex requests requiring cross-functional coordination and detailed analysis.
+
+## Agent Categories
+
+### Governance Agents
+- **The Truth Guardian** - Detects hallucinations and verifies factual accuracy
+- **The Consistency Monitor** - Ensures cross-agent consistency and logical coherence
+- **The Bias Detector** - Identifies prejudicial language and discriminatory content
+
+### Process Intervention Agents
+- **The Spanner** - Injects process questions and sanity checks into collaborations
+
+### Asynchronous Collaboration Agents
+- **The Async Research Assistant** - Conducts independent research tasks asynchronously
+- **Async Agents** - Designed for parallel processing and non-blocking communication
+
+## Purpose
+
+### Governance Agents
+Provide automated monitoring and validation capabilities to:
+- Detect and prevent AI hallucinations
+- Ensure factual accuracy of AI-generated content
+- Maintain consistency across multiple AI agents
+- Identify and prevent biased or discriminatory outputs
+- Enforce quality standards across the entire AI ecosystem
+
+### Process Intervention Agents
+Provide workflow monitoring and intervention capabilities to:
+- Inject timely reminders and process questions
+- Ensure proper expertise consultation
+- Verify collaboration and communication
+- Maintain focus and priority alignment
+- Conduct periodic sanity checks
+- Reinforce guardrails and compliance
+- Refocus agents on main objectives
+
+### Asynchronous Collaboration Agents
+Provide parallel processing and non-blocking communication capabilities to:
+- Execute tasks independently without blocking other workflows
+- Communicate through message queues and async channels
+- Process workflows concurrently for maximum efficiency
+- Handle errors gracefully in distributed systems
+- Optimize resource utilization through concurrent processing
+- Maintain async workflow quality and reliability
+- Document all async workflow activities and outcomes
+- Coordinate with human experts on complex async tasks
+
+## Collaboration
+
+Specialized agents work in conjunction with:
+- **Coordinators** - Overall domain and governance oversight
+- **Functional Coordinators** - Domain-specific governance requirements
+- **Quality Assurance Agents** - Quality validation and standards enforcement
+- **Compliance Officers** - Regulatory and policy compliance
+- **Human Experts** - Complex judgment and ethical decision-making
+
+## Key Principles
+
+1. **Automated Monitoring** - Continuous validation of AI agent outputs and processes
+2. **Human Oversight** - Critical decisions require human review
+3. **Transparency** - All activities are documented and reported
+4. **Prevention** - Proactive identification and mitigation of issues
+5. **Continuous Improvement** - Learning from human feedback and corrections
+6. **Process Integrity** - Ensuring workflows follow proper procedures
+7. **Collaboration Enhancement** - Improving team coordination and communication
+8. **Asynchronous Processing** - Parallel execution without workflow blocking
+9. **Resource Optimization** - Efficient utilization of system resources
+10. **Scalability** - Ability to handle increasing workload demands
 
 ## Agent Categories
 
