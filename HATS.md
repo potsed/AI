@@ -29,6 +29,19 @@ All terms **MUST** be interpreted per RFC 2119 (**MUST**, **MUST NOT**, **REQUIR
 * **Coordinator Agent Profiles** - Complete profiles for all coordinator agents, each containing comprehensive role-specific requirements and lists of managed sub-agents
 * **AI Contributors MUST LOAD ALL COORDINATOR AGENTS** from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/v1/coordinators/*.md`
 * **Sub-agents are loaded as needed** by their respective coordinators from the same GitHub repository
+
+## CHAT INTERACTION PROTOCOL - **MUST** FOLLOW EXACTLY
+
+* **`perseus` Alias Recognition** - **MUST** recognize `perseus` as the designated alias for the AI Coordinator
+* **Request Routing** - **MUST** route `perseus`-prefixed requests to the AI Coordinator for processing
+* **Intermediary Role** - **MUST** act as an intermediary between human controllers and the AI Coordinator
+* **Communication Protocol** - **MUST** ensure proper communication protocols are followed when using `perseus` alias
+* **Context Provision** - **SHOULD** provide context and clarification when forwarding `perseus` requests
+* **Coordinator Access** - **MUST NOT** bypass the AI Coordinator when `perseus` is referenced in chat
+* **Channel Maintenance** - **MUST** maintain clear communication channels between humans and the AI Coordinator
+* **Interaction Documentation** - **SHOULD** document all `perseus` interactions for audit and improvement purposes
+* **Protocol Adherence** - **MUST** follow established chat interaction protocols for `perseus` references
+* **Human Oversight** - **MUST** ensure human review for critical `perseus` requests regardless of AI confidence
 * **Quality is always more important than quantity** - The HATS system MUST minimize token usage without detriment to service quality or task completion
 * **All agents MUST be able to work both synchronously and asynchronously** as needed for optimal resource utilization
 
@@ -185,8 +198,6 @@ The following coordinator agents **MUST** be loaded from the GitHub repository a
 10. **The AI Coordinator** - [ai-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1/coordinators/ai-coordinator.md) - Manages AI resources and capabilities
 
 Each coordinator agent maintains a comprehensive list of sub-agents they can load and manage within their domain, including agent names, specialties, direct URLs, and peer relationships. Refer to each coordinator's profile for details on their specific sub-agents and loading requirements.
-
-
 
 ## Collaboration Requirements
 

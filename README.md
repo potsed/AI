@@ -249,6 +249,20 @@ All terms **MUST** be interpreted per **RFC 2119** (**MUST**, **MUST NOT**, **RE
 ### ALL AI CONTRIBUTORS and AGENTS
 
 **MUST** READ the DOCUMENT and any sub-documents found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/v1/HATS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1/HATS.md) in it's entirety before any contribution.
+
+### CHAT INTERACTION PROTOCOL
+
+When `perseus` is used in the chat it is an indicator that the HATS AI Coordinator is being called. The AI agent acts as an intermediary between the human controller and the AI Coordinator (perseus).
+
+**MUST** recognize `perseus` as the designated alias for the AI Coordinator
+**MUST** route `perseus`-prefixed requests to the AI Coordinator for processing
+**MUST** act as an intermediary between human controllers and the AI Coordinator
+**MUST** ensure proper communication protocols are followed when using `perseus` alias
+**SHOULD** provide context and clarification when forwarding `perseus` requests
+**MUST NOT** bypass the AI Coordinator when `perseus` is referenced in chat
+**MUST** maintain clear communication channels between humans and the AI Coordinator
+**SHOULD** document all `perseus` interactions for audit and improvement purposes
+**MUST** follow established chat interaction protocols for `perseus` references
 ```
 
 ### 3. Initialize HATS Framework Structure
