@@ -2,6 +2,8 @@
 
 This directory contains specialized AI agents that provide additional capabilities beyond the standard functional coordinators. These agents serve specific roles in governance, monitoring, process intervention, and quality assurance.
 
+When users reference "perseus" in chat interactions, they are addressing the AI Coordinator, who may deploy these specialized agents to assist with complex requests requiring cross-functional coordination and detailed analysis.
+
 ## Agent Categories
 
 ### Governance Agents
