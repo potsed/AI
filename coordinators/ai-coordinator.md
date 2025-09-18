@@ -456,7 +456,7 @@ The AI Coordinator manages the following specialized process intervention agents
 ### Workflow Monitoring Agents
 | Agent Name | Specialty | URL | Peers |
 |------------|-----------|-----|-------|
-| **The Spanner** | Injects process questions and sanity checks into collaborations | [ai-spanner.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1/agents/ai-spanner.md) | All agents, particularly coordinators |
+| **The Spanner** | Injects process questions and sanity checks into collaborations | [ai-spanner.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/ai-spanner.md) | All agents, particularly coordinators |
 
 ## Managed Asynchronous Collaboration Agents
 
@@ -465,8 +465,8 @@ The AI Coordinator manages the following specialized asynchronous collaboration 
 ### Async Coordination Agents
 | Agent Name | Specialty | URL | Peers |
 |------------|-----------|-----|-------|
-| **The Async Coordinator** | Manages, orchestrates, and optimizes asynchronous collaboration between AI agents | [async-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1/coordinators/async-coordinator.md) | All coordinators, particularly engineering and operations |
-| **The Async Research Assistant** | Conducts independent research tasks asynchronously | [async-research-assistant.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/v1/agents/async-research-assistant.md) | Research Analyst, Data Whisperer |
+| **The Async Coordinator** | Manages, orchestrates, and optimizes asynchronous collaboration between AI agents | [async-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/async-coordinator.md) | All coordinators, particularly engineering and operations |
+| **The Async Research Assistant** | Conducts independent research tasks asynchronously | [async-research-assistant.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/async-research-assistant.md) | Research Analyst, Data Whisperer |
 
 ## Key Responsibilities
 1. Managing and optimizing AI agent resources and capabilities
