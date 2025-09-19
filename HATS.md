@@ -10,7 +10,7 @@ To quickly get started with the HATS framework and Perseus initialization:
 
 1. **Read All Core Documents**: HATS.md, GUARDRAILS.md, PROCESS.md, RFC2119.md
 2. **Initialize Perseus**: Once all sections have been added to the README, prompt the base LLM with `initialize perseus in this repo`
-3. **Load Coordinator Agents**: Load all coordinator agents from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/*.md`
+3. **Load Coordinator Agents**: Load all coordinator agents from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/*.md`
 4. **Follow the Human-AI Collaboration Process**: Use the workflow defined in PROCESS.md with vertical slicing approach
 5. **Apply Guardrails**: Ensure all contributions adhere to the requirements in GUARDRAILS.md
 
@@ -33,11 +33,11 @@ To quickly get started with the HATS framework and Perseus initialization:
 
 ## CORE DOCUMENTS - **MUST** READ AND FOLLOW EXACTLY
 
-* **[GUARDRAILS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/GUARDRAILS.md)** - Non-negotiable rules for all contributions
-* **[PROCESS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/PROCESS.md)** - Human-AI software delivery process
-* **[RFC2119.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/RFC2119.md)** - RFC 2119 formated requirements
+* **[GUARDRAILS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/GUARDRAILS.md)** - Non-negotiable rules for all contributions
+* **[PROCESS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/PROCESS.md)** - Human-AI software delivery process
+* **[RFC2119.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/RFC2119.md)** - RFC 2119 formated requirements
 * **Coordinator Agent Profiles** - Complete profiles for all coordinator agents, each containing comprehensive role-specific requirements and lists of managed sub-agents
-* **AI Contributors MUST LOAD ALL COORDINATOR AGENTS** from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/*.md`
+* **AI Contributors MUST LOAD ALL COORDINATOR AGENTS** from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/*.md`
 * **Sub-agents are loaded as needed** by their respective coordinators from the same GitHub repository
 
 ## CHAT INTERACTION PROTOCOL - **MUST** FOLLOW EXACTLY
@@ -68,7 +68,7 @@ The HATS framework defines 33 distinct agents that cover all critical aspects of
 
 ### Agent Loading Requirements
 
-AI agents **MUST** load all coordinator agents from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/*.md`. Sub-agents are loaded as needed by their respective coordinators from the same repository. This ensures:
+AI agents **MUST** load all coordinator agents from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/*.md`. Sub-agents are loaded as needed by their respective coordinators from the same repository. This ensures:
 
 1. **Consistency**: All agents are using the same, up-to-date profiles
 2. **Access to Latest Features**: Agents have access to the most recent improvements and updates
@@ -90,7 +90,7 @@ Each coordinator agent is responsible for managing and loading their domain-spec
 
 AI agents **MUST** follow this process to load agents:
 
-1. **Repository Access**: Access the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/*.md`
+1. **Repository Access**: Access the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/*.md`
 2. **Coordinator Loading**: Load all coordinator agents immediately upon initialization
 3. **Profile Loading**: Load the relevant coordinator agent profiles
 4. **Version Verification**: Ensure agents are loaded from the correct version/tag
@@ -195,18 +195,18 @@ The HATS framework can be applied to any project by following these steps:
 
 ### Required Coordinator Agents
 
-The following coordinator agents **MUST** be loaded from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/*.md`:
+The following coordinator agents **MUST** be loaded from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/*.md`:
 
-1. **The Product Compass** - [product-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/product-coordinator.md) - Defines product vision and prioritizes features
-2. **The Operator/Product Custodian** - [operations-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/operations-coordinator.md) - Serves as the central decision-maker in Human-AI collaboration
-3. **The Engineering Coordinator** - [engineering-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/engineering-coordinator.md) - Manages technical implementation and development teams
-4. **The Marketing Coordinator** - [marketing-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/marketing-coordinator.md) - Manages marketing strategy and customer engagement
-5. **The Design Coordinator** - [design-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/design-coordinator.md) - Manages user experience and visual design
-6. **The Project Coordinator** - [project-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/project-coordinator.md) - Manages project timelines and deliverables
-7. **The HR Coordinator** - [hr-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/hr-coordinator.md) - Manages team dynamics and human resources
-8. **The Finance Coordinator** - [finance-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/finance-coordinator.md) - Manages budget and financial planning
-9. **The Compliance Coordinator** - [compliance-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/compliance-coordinator.md) - Manages regulatory compliance and legal requirements
-10. **The AI Coordinator** - [ai-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/ai-coordinator.md) - Manages AI resources and capabilities
+1. **The Product Compass** - [product-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/product-coordinator.md) - Defines product vision and prioritizes features
+2. **The Operator/Product Custodian** - [operations-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/operations-coordinator.md) - Serves as the central decision-maker in Human-AI collaboration
+3. **The Engineering Coordinator** - [engineering-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/engineering-coordinator.md) - Manages technical implementation and development teams
+4. **The Marketing Coordinator** - [marketing-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/marketing-coordinator.md) - Manages marketing strategy and customer engagement
+5. **The Design Coordinator** - [design-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/design-coordinator.md) - Manages user experience and visual design
+6. **The Project Coordinator** - [project-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/project-coordinator.md) - Manages project timelines and deliverables
+7. **The HR Coordinator** - [hr-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/hr-coordinator.md) - Manages team dynamics and human resources
+8. **The Finance Coordinator** - [finance-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/finance-coordinator.md) - Manages budget and financial planning
+9. **The Compliance Coordinator** - [compliance-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/compliance-coordinator.md) - Manages regulatory compliance and legal requirements
+10. **The AI Coordinator** - [ai-coordinator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/coordinators/ai-coordinator.md) - Manages AI resources and capabilities
 
 Each coordinator agent maintains a comprehensive list of sub-agents they can load and manage within their domain, including agent names, specialties, direct URLs, and peer relationships. Refer to each coordinator's profile for details on their specific sub-agents and loading requirements.
 

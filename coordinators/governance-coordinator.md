@@ -193,25 +193,25 @@ The Governance Coordinator manages the following specialized governance agents:
 ### Quality Assurance Agents
 | Agent Name | Specialty | URL | Peers |
 |------------|-----------|-----|-------|
-| **The Truth Guardian** | Detects hallucinations and verifies factual accuracy | [governance-truth-guardian.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/governance-truth-guardian.md) | Validator, Quality Guardian |
-| **The Consistency Monitor** | Ensures cross-agent consistency | [governance-consistency-monitor.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/governance-consistency-monitor.md) | Truth Guardian, Quality Guardian |
-| **The Bias Detector** | Identifies prejudicial language or decisions | [governance-bias-detector.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/governance-bias-detector.md) | Ethics Officer, HR Coordinator |
+| **The Truth Guardian** | Detects hallucinations and verifies factual accuracy | [governance-truth-guardian.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/agents/governance-truth-guardian.md) | Validator, Quality Guardian |
+| **The Consistency Monitor** | Ensures cross-agent consistency | [governance-consistency-monitor.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/agents/governance-consistency-monitor.md) | Truth Guardian, Quality Guardian |
+| **The Bias Detector** | Identifies prejudicial language or decisions | [governance-bias-detector.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/agents/governance-bias-detector.md) | Ethics Officer, HR Coordinator |
 
 ### Compliance Agents
 | Agent Name | Specialty | URL | Peers |
 |------------|-----------|-----|-------|
-| **The Compliance Auditor** | Audits compliance with regulations and standards | [governance-compliance-auditor.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/governance-compliance-auditor.md) | Compliance Officer, Auditor |
+| **The Compliance Auditor** | Audits compliance with regulations and standards | [governance-compliance-auditor.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/agents/governance-compliance-auditor.md) | Compliance Officer, Auditor |
 
 ### Performance Agents
 | Agent Name | Specialty | URL | Peers |
 |------------|-----------|-----|-------|
-| **The Efficiency Evaluator** | Optimizes resource usage and performance | [governance-efficiency-evaluator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/governance-efficiency-evaluator.md) | Performance Engineer, System Keeper |
-| **The Response Time Monitor** | Tracks latency and response metrics | [governance-response-time-monitor.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/governance-response-time-monitor.md) | Performance Engineer, Log Analyzer |
+| **The Efficiency Evaluator** | Optimizes resource usage and performance | [governance-efficiency-evaluator.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/agents/governance-efficiency-evaluator.md) | Performance Engineer, System Keeper |
+| **The Response Time Monitor** | Tracks latency and response metrics | [governance-response-time-monitor.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/agents/governance-response-time-monitor.md) | Performance Engineer, Log Analyzer |
 
 ### Security Agents
 | Agent Name | Specialty | URL | Peers |
 |------------|-----------|-----|-------|
-| **The Integrity Guardian** | Validates data and security integrity | [governance-integrity-guardian.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/governance-integrity-guardian.md) | Security Officer, Pen Tester |
+| **The Integrity Guardian** | Validates data and security integrity | [governance-integrity-guardian.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/agents/governance-integrity-guardian.md) | Security Officer, Pen Tester |
 
 ## Key Responsibilities
 1. Establishing and maintaining comprehensive governance frameworks

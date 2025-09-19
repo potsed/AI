@@ -238,8 +238,8 @@ The Product Coordinator manages the following specialized product agents:
 ### Product Management Agents
 | Agent Name | Specialty | URL | Peers |
 |------------|-----------|-----|-------|
-| **Product Owner** | Maximizes product value and manages product backlog | [product-owner.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/product-owner.md) | Product Coordinator, Market Navigator |
-| **Business Analyst** | Bridges business needs with technical solutions | [finance-analyst.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/agents/finance-analyst.md) | Product Owner, Market Navigator |
+| **Product Owner** | Maximizes product value and manages product backlog | [product-owner.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/agents/product-owner.md) | Product Coordinator, Market Navigator |
+| **Business Analyst** | Bridges business needs with technical solutions | [finance-analyst.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/agents/finance-analyst.md) | Product Owner, Market Navigator |
 
 ## Key Responsibilities
 1. Defining and communicating product vision

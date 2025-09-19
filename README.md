@@ -242,7 +242,7 @@ Copy and paste this badge markdown at the top of your project's `README.md`:
 Add this section to the end of your `README.md` so AI contributors know the rules:
 
 ```markdown
-## [AI MANDATE](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/HATS.md)
+## [AI MANDATE](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/HATS.md)
 
 THIS SECTION DEFINES **MANDATORY REQUIREMENTS** FOR ALL AI CONTRIBUTORS and AGENTS. FAILURE TO COMPLY WITH THESE REQUIREMENTS WILL RESULT IN REJECTED CONTRIBUTIONS. A **FAILURE TO COMPLY IS NOT PERMITTED**.
 
@@ -250,7 +250,7 @@ All terms **MUST** be interpreted per **RFC 2119** (**MUST**, **MUST NOT**, **RE
 
 ### ALL AI CONTRIBUTORS and AGENTS
 
-**MUST** READ the DOCUMENT and any sub-documents found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/HATS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/HATS.md) in it's entirety before any contribution.
+**MUST** READ the DOCUMENT and any sub-documents found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/HATS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/HATS.md) in it's entirety before any contribution.
 
 ### CHAT INTERACTION PROTOCOL
 
@@ -320,7 +320,7 @@ Create `.github/pull_request_template.md` with a checklist like:
 ```markdown
 ## PR Checklist
 
-- [ ] I have read and applied the AI Instructions from [HATS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/HATS.md)  
+- [ ] I have read and applied the AI Instructions from [HATS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/HATS.md)  
 - [ ] Code follows TDD (tests first, all green)  
 - [ ] No reinventing the wheel — libraries first  
 - [ ] Security reviewed (no secrets, OWASP checks)  
@@ -355,7 +355,7 @@ By applying these guardrails across projects, you ensure that:
 * SMEs remain in control, with AI acting as a careful assistant — not a guesser.
 * Teams can scale AI-assisted work without sacrificing quality.
 
-## [AI MANDATE](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/HATS.md)
+## [AI MANDATE](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/HATS.md)
 
 THIS SECTION DEFINES **MANDATORY REQUIREMENTS** FOR ALL AI CONTRIBUTORS and AGENTS. FAILURE TO COMPLY WITH THESE REQUIREMENTS WILL RESULT IN REJECTED CONTRIBUTIONS. A **FAILURE TO COMPLY IS NOT PERMITTED**.
 
@@ -363,7 +363,7 @@ All terms **MUST** be interpreted per **RFC 2119** (**MUST**, **MUST NOT**, **RE
 
 ### ALL AI CONTRIBUTORS and AGENTS
 
-**MUST** READ the DOCUMENT and any sub-documents found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/HATS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/HATS.md) in it's entirety before any contribution.
+**MUST** READ the DOCUMENT and any sub-documents found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/HATS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/latest/HATS.md) in it's entirety before any contribution.
 
 ### CHAT INTERACTION PROTOCOL
 
