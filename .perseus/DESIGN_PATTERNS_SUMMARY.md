@@ -81,25 +81,13 @@ This document provides an overview of all design pattern documentation in the HI
 ### UI_UX_DESIGN_PATTERNS.md
 **Location**: `/ui_ux/UI_UX_DESIGN_PATTERNS.md`
 
-**Description**: Comprehensive guide to UI/UX design patterns covering:
-- **Navigation Patterns**: Tab Navigation, Navigation Drawer, Mega Menu, Breadcrumbs, Pagination, Infinite Scroll, Filter and Sort
-- **Form Patterns**: Text Input, Select Dropdown, Radio Buttons, Checkboxes, Real-Time Validation, Submit-Time Validation, Single Column Layout, Multi-Column Layout
-- **Layout Patterns**: Fixed Grid, Fluid Grid, Adaptive Layout, Grid Cards, Masonry Cards, Mobile-First Approach, Desktop-First Approach
-- **Content Patterns**: Modular Scale, Font Pairing, Visual Weight, Progressive Disclosure, Accordion, Tabs
-- **Interaction Patterns**: Toast Notifications, Modal Dialogs, Inline Feedback, Skeleton Screens, Progress Indicators, Empty States, Swipe Actions, Pinch-to-Zoom
-- **Data Visualization Patterns**: Line Charts, Bar Charts, Pie Charts, Sortable Tables, Filterable Tables, KPI Dashboards, Analytical Dashboards
-- **Feedback Patterns**: Inline Form Errors, Summary Error Messages, Confirmation Toasts, Persistent Success Messages, Progressive Onboarding, Interactive Tutorials
-- **Authentication Patterns**: Email/Password Authentication, Social Authentication, Progressive Registration, Guest Access
-- **Search Patterns**: Omnibox Search, Faceted Search, Search Suggestions, Spell Correction
 
-**Purpose**: Detailed explanations of UI/UX patterns, their uses, and when they should be applied.
+**Description**: Comprehensive guide to UI/UX design patterns covering all major aspects of user interface and experience design.
 
 ### RFC2119_UI_UX.md
 **Location**: `/ui_ux/RFC2119_UI_UX.md`
 
-**Description**: RFC 2119 requirements for UI/UX design patterns.
-
-**Purpose**: Normative requirements that MUST be followed when implementing UI/UX design patterns.
+**Description**: RFC 2119 requirements for UI/UX design patterns with over 1,200 specific requirements.
 
 ## Key Differences Between Document Types
 

@@ -21,6 +21,8 @@ The HATS framework and this process can be applied to any software development p
 
 ## 0. Initialise
 
+To initialize a project with the Perseus framework, once all sections have been added to the README, prompt the base LLM with `initialize perseus in this repo`. This will:
+
 - Scaffold .perseus tree structure
 
 ```tree

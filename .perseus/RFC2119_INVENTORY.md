@@ -63,6 +63,13 @@ This document provides an inventory of all RFC2119 files in the HI/AI Policies f
 - **Content**: Requirements for navigation, forms, layouts, content, interactions, data visualization, feedback, authentication patterns
 - **Key Sections**: Navigation, forms, layouts, content, interactions, data visualization, feedback, authentication
 
+## Perseus Framework
+
+### `/perseus/RFC2119_PERSEUS.md`
+- **Purpose**: Complete RFC2119 requirements for Perseus framework implementation
+- **Content**: Requirements for Human-AI collaboration, documentation standards, process adherence, quality assurance
+- **Key Sections**: Human-AI collaboration, documentation, process adherence, quality assurance
+
 ## File Naming Convention
 
 All RFC2119 files follow the naming convention: `RFC2119_[DOMAIN].md`

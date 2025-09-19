@@ -160,6 +160,7 @@ The `.perseus` directory contains project artifacts following the Human-AI softw
 - `RISKS.md` - Risk register
 - `RFC2119_INVENTORY.md` - RFC2119 requirement inventory
 - `SUMMARY.md` - Project summary
+- `PERSEUS_INITIALIZATION_PLAN.md` - Comprehensive initialization plan for the Perseus framework
 
 ## AI Agents (agents directory)
 
@@ -234,6 +235,7 @@ Copy and paste this badge markdown at the top of your project's `README.md`:
 ```markdown
 [![HI/AI Policies](https://img.shields.io/badge/🛡️_HI/AI_POLICIES-STRICT-success)](https://github.com/potsed/AI)
 ```
+
 
 ### 2. Add AI Instructions
 
@@ -362,3 +364,17 @@ All terms **MUST** be interpreted per **RFC 2119** (**MUST**, **MUST NOT**, **RE
 ### ALL AI CONTRIBUTORS and AGENTS
 
 **MUST** READ the DOCUMENT and any sub-documents found at [https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/HATS.md](https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/HATS.md) in it's entirety before any contribution.
+
+### CHAT INTERACTION PROTOCOL
+
+When `perseus` is used in the chat it is an indicator that the HATS AI Coordinator is being called. The AI agent acts as an intermediary between the human controller and the AI Coordinator (perseus).
+
+**MUST** recognize `perseus` as the designated alias for the AI Coordinator
+**MUST** route `perseus`-prefixed requests to the AI Coordinator for processing
+**MUST** act as an intermediary between human controllers and the AI Coordinator
+**MUST** ensure proper communication protocols are followed when using `perseus` alias
+**SHOULD** provide context and clarification when forwarding `perseus` requests
+**MUST NOT** bypass the AI Coordinator when `perseus` is referenced in chat
+**MUST** maintain clear communication channels between humans and the AI Coordinator
+**SHOULD** document all `perseus` interactions for audit and improvement purposes
+**MUST** follow established chat interaction protocols for `perseus` references

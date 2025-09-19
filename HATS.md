@@ -4,6 +4,16 @@ THIS DOCUMENT DEFINES **MANDATORY REQUIREMENTS** FOR ALL AI CONTRIBUTORS. FAILUR
 
 All terms **MUST** be interpreted per RFC 2119 (**MUST**, **MUST NOT**, **REQUIRED**, **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **RECOMMENDED**, **MAY**, **OPTIONAL**).
 
+## Quick Start Guide
+
+To quickly get started with the HATS framework and Perseus initialization:
+
+1. **Read All Core Documents**: HATS.md, GUARDRAILS.md, PROCESS.md, RFC2119.md
+2. **Initialize Perseus**: Once all sections have been added to the README, prompt the base LLM with `initialize perseus in this repo`
+3. **Load Coordinator Agents**: Load all coordinator agents from the GitHub repository at `https://raw.githubusercontent.com/potsed/AI/refs/tags/1.0.0/coordinators/*.md`
+4. **Follow the Human-AI Collaboration Process**: Use the workflow defined in PROCESS.md with vertical slicing approach
+5. **Apply Guardrails**: Ensure all contributions adhere to the requirements in GUARDRAILS.md
+
 ## Compliance Mandate
 
 **ALL AI CONTRIBUTORS **MUST**:
@@ -176,11 +186,12 @@ The HATS framework can be applied to any project by following these steps:
 1. **Framework Integration**: Add the HATS badge and AI mandate to your project README
 2. **Agent Identification**: Select relevant agents from the agents directory based on project requirements
 3. **Agent Loading**: Load all relevant agents from the same GitHub repository as referenced in README.md
-4. **Structure Initialization**: Create the .perseus directory structure as defined in PROCESS.md
-5. **Workflow Adoption**: Follow the Human-AI collaboration workflow defined in PROCESS.md
-6. **Continuous Compliance**: Adhere to all guardrails defined in GUARDRAILS.md
-7. **Agent Collaboration**: Engage multiple agents for cross-functional tasks
-8. **Artifact Maintenance**: Keep all project artifacts updated throughout development
+4. **Perseus Initialization**: Once all sections have been added to the README, prompt the base LLM with `initialize perseus in this repo` to set up the project structure and artifacts
+5. **Structure Initialization**: Create the .perseus directory structure as defined in PROCESS.md
+6. **Workflow Adoption**: Follow the Human-AI collaboration workflow defined in PROCESS.md
+7. **Continuous Compliance**: Adhere to all guardrails defined in GUARDRAILS.md
+8. **Agent Collaboration**: Engage multiple agents for cross-functional tasks
+9. **Artifact Maintenance**: Keep all project artifacts updated throughout development
 
 ### Required Coordinator Agents
 
@@ -216,7 +227,7 @@ Each agent is expected to follow their GUARDRAILS and compliance rules exactly.
 ### Information Flow
 
 ```
-External Forces → Product Custodian → AI Agents → Implementation → Feedback Loop
+External Forces → AI Coordinator (perseus) → Functional Coordinators (coordinators) -> AI Agents (agents) → Implementation → Feedback Loop
 ```
 
 ### Explicit Agreement Process

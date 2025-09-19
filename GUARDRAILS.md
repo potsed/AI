@@ -8,6 +8,8 @@
 > 
 > All terms MUST be interpreted per RFC 2119 (MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, OPTIONAL).
 
+This document is part of the HATS (Human-AI Teamwork System) framework and MUST be used in conjunction with the Perseus project initialization framework. When initializing a new project using Perseus, these guardrails MUST be applied to ensure quality, security, and maintainability of AI-assisted software development.
+
 ## 0) Scope & Audience
 
 * Applies to **all** code, configuration, documentation, tests, pipelines, and operational artefacts in this repository.
@@ -249,6 +251,8 @@ You **MUST NOT** hand-roll: HTTP servers/routers; authentication/OAuth/OIDC; cry
 
 ## 15) Workflow for AI & Contributors
 
+This workflow MUST be followed by all AI contributors and aligns with the Perseus initialization framework:
+
 1. **Clarify**: Read requirements; ask targeted questions; propose 1–2 options; obtain **explicit agreement** on approach.
 2. **Research**: Consult latest official documentation; record versions/links in PR.
 3. **TDD**: Write failing tests for business logic.
@@ -257,9 +261,13 @@ You **MUST NOT** hand-roll: HTTP servers/routers; authentication/OAuth/OIDC; cry
 6. **Document**: Update `/docs` in the same PR (setup, run, flags, endpoints, env, runbooks, compliance notes).
 7. **Verify**: All tests green; CI gates pass; SME can run locally using documented steps.
 
+When initializing a new project with Perseus, this workflow MUST be applied to each vertical slice as defined in the `.perseus/PLAN.md` file. The Perseus framework provides templates and structures to facilitate this workflow.
+
 ## 16) Subject Matter Expert (SME) Access for AI Agents
 
 AI agents **MAY** request specialized Subject Matter Experts (SMEs) for domains outside their core expertise. The AI Coordinator agent has the capability to create, update, and delete SMEs as needed.
+
+When using the Perseus framework, SMEs **MUST** be created and managed according to the procedures defined in `.perseus/smes/README.md`. All SMEs **MUST** follow the template provided in `.perseus/templates/sme-template.md`.
 
 ### SME Request Process
 - **Who Can Request**: Any AI agent can identify the need for specialized expertise
@@ -271,18 +279,7 @@ AI agents **MAY** request specialized Subject Matter Experts (SMEs) for domains 
   - Legal compliance guidance for regulatory requirements
   - Security best practices for specific threat models
 
-### SME Capabilities and Limitations
-- **Advisory Role**: SMEs provide expert advice and guidance only
-- **No Modification Rights**: SMEs cannot modify code, documentation, or project files
-- **Single Domain Focus**: Each SME is limited to a specific subject area
-- **Source Requirements**: SMEs use only official, well-referenced documentation
-- **Storage**: SMEs are stored in `.perseus/smes/` directory
-
-### When to Request an SME
-- **Complex Domain Questions**: When detailed expertise is needed beyond general knowledge
-- **Platform-Specific Guidance**: For specific tools, platforms, or technologies
-- **Regulatory Compliance**: When specialized compliance knowledge is required
-- **Optimization Needs**: For performance, security, or other specialized optimization
+When initializing a project with Perseus, the AI Coordinator **MUST** be initialized first by running the command `initialize perseus in this repo` as specified in HATS.md. This will set up the proper SME management framework.
 
 ---
 
@@ -292,6 +289,15 @@ AI agents **MAY** request specialized Subject Matter Experts (SMEs) for domains 
 * Any new endpoint, env var, flag, migration, or permission **MUST** be documented in the same PR.
 * Key decisions **MUST** be documented in ADRs.
 * Risks and mitigations **MUST** be documented.
+
+When using the Perseus framework, documentation **MUST** also be maintained in the `.perseus` directory structure. The following files are critical:
+* `.perseus/OUTCOMES.yaml` - Measurable project outcomes
+* `.perseus/PLAN.md` - Vertical slice plan
+* `.perseus/RUNBOOK.md` - Operational procedures
+* `.perseus/RISKS.md` - Risk register
+* `.perseus/SUMMARY.md` - Project summary
+
+All documentation updates **MUST** follow the templates provided in `.perseus/templates/` when using Perseus.
 
 ---
 
@@ -372,6 +378,8 @@ A merge **MUST** be blocked if **any** of the following fail:
 * **Identify and mitigate risks** proactively.
 * **Follow Human-AI collaboration framework** with explicit agreements.
 * **Adhere to code quality standards**; use linting and formatting tools; fully utilize type systems.
+
+When using the Perseus framework, all of these principles **MUST** be applied within the context of the vertical slicing approach defined in `.perseus/PLAN.md`. Each slice **MUST** satisfy these requirements before it can be considered complete.
 
 ---
 

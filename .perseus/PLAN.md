@@ -19,7 +19,15 @@ This document outlines the vertical slices for creating the instruction set.
 | S11 | Restructure repository by functional domains | O1, O2, O3 | - Repository restructured with domain-specific directories (development, marketing, design, hr, finance)<br>- All existing guardrails moved to appropriate directories<br>- README.md files created for each domain directory | ff_repository_restructure |
 | S12 | Define core marketing guardrails | O1, O2, O3 | - MARKETING.md, CONTENT_MARKETING.md, and DIGITAL_MARKETING.md created with comprehensive requirements<br>- All guardrails follow mandatory format with RFC2119 language<br>- All guardrails include mandatory compliance sections | ff_marketing_guardrails |
 | S13 | Organize RFC2119 requirements by function | O1, O2, O3 | - Function-specific RFC2119 files created (RFC2119_DEVELOPMENT.md, RFC2119_MARKETING.md, RFC2119_PROCESS.md)<br>- Main RFC2119.md updated to reference function-specific files<br>- All documents comply with OASIS Keyword Guidelines | ff_rfc2119_organization |
+
+Note: Some of the planned function-specific RFC2119 files were never created. The information that would have been in these files has been integrated directly into the existing documentation.
+
+Note: Some of the planned function-specific RFC2119 files were never created. The information that would have been in these files has been integrated directly into the existing documentation.
 | S14 | Ensure RFC2119 compliance across all guardrails | O1, O2, O3 | - All guardrail documents updated to include proper RFC2119 references<br>- Validation script updated to check RFC2119 compliance<br>- ADR created documenting RFC2119 compliance approach | ff_rfc2119_compliance |
+| S15 | Initialize Perseus framework foundation | O4, O5, O6, O7, O8 | - PURPOSE.md created with clear objectives<br>- OUTCOMES.yaml updated with Perseus-specific outcomes<br>- ADR 0010 documenting approach<br>- PLAN.md updated with Perseus initialization slices<br>- Project template created | ff_perseus_foundation |
+| S16 | Create Perseus structure and documentation | O4, O5, O6, O7, O8 | - SME template created<br>- Human-AI collaboration patterns documented<br>- Human-AI collaboration anti-patterns documented<br>- RFC2119 inventory updated<br>- Project initialization checklist created | ff_perseus_structure |
+| S17 | Establish Perseus operational framework | O4, O5, O6, O7, O8 | - RUNBOOK.md updated with Perseus procedures<br>- Project risk register created<br>- RISKS.md updated with Perseus-specific risks<br>- Technology stack documentation created<br>- Human-AI collaboration prompts created | ff_perseus_operations |
+| S18 | Integrate and validate Perseus framework | O4, O5, O6, O7, O8 | - All README.md files updated<br>- SUMMARY.md updated with progress<br>- Compliance validation completed<br>- Validation scripts run successfully | ff_perseus_validation |
 
 ## Priority Order
 
@@ -37,6 +45,10 @@ This document outlines the vertical slices for creating the instruction set.
 12. S12 - Core marketing guardrails
 13. S13 - RFC2119 organization by function
 14. S14 - RFC2119 compliance across all guardrails
+15. S15 - Initialize Perseus framework foundation
+16. S16 - Create Perseus structure and documentation
+17. S17 - Establish Perseus operational framework
+18. S18 - Integrate and validate Perseus framework
 
 ## Dependencies
 
@@ -47,3 +59,7 @@ This document outlines the vertical slices for creating the instruction set.
 - S12 depends on S11 for the marketing directory structure
 - S13 depends on S11-S12 for the domain structure
 - S14 depends on S13 for the RFC2119 organization
+- S15-S18 depend on the completion of S1-S14 for the foundational framework
+- S16 depends on S15 for the foundational Perseus artifacts
+- S17 depends on S15-S16 for the structural components
+- S18 depends on S15-S17 for all Perseus components

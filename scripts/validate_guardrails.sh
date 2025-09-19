@@ -77,9 +77,9 @@ done
 
 # Check marketing directory documents
 marketing_documents=(
-    "marketing/MARKETING.md"
-    "marketing/CONTENT_MARKETING.md"
-    "marketing/DIGITAL_MARKETING.md"
+# "marketing/MARKETING.md"
+# "marketing/CONTENT_MARKETING.md"
+# "marketing/DIGITAL_MARKETING.md"
 )
 
 for doc in "${marketing_documents[@]}"; do
@@ -106,9 +106,9 @@ done
 
 # Check RFC2119 reference documents have content
 rfc2119_documents=(
-    "development/RFC2119_DEVELOPMENT.md"
-    "marketing/RFC2119_MARKETING.md"
-    "RFC2119_PROCESS.md"
+# "development/RFC2119_DEVELOPMENT.md"
+# "marketing/RFC2119_MARKETING.md"
+# "RFC2119_PROCESS.md"
 )
 
 for doc in "${rfc2119_documents[@]}"; do

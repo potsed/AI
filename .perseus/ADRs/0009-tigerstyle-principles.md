@@ -28,6 +28,8 @@ We will integrate tigerstyle.dev principles into the HI/AI Policies framework by
 4. **Including proper RFC2119 compliance** with benefits, drawbacks, and implementation guidelines
 5. **Referencing these principles** in relevant development guardrails
 
+Note: The TIGERSTYLE.md file was planned but never implemented. The principles from tigerstyle.dev have been integrated directly into the existing development guardrails instead.
+
 ## Consequences
 
 ### Easier
@@ -59,6 +61,7 @@ We will integrate tigerstyle.dev principles into the HI/AI Policies framework by
 10. **Train team members** on tigerstyle.dev principles and practices
 
 ## Related Documents
-- [`development/TIGERSTYLE.md`](development/TIGERSTYLE.md) - Complete tigerstyle.dev principles and practices
 - [`development/RFC2119_DEVELOPMENT.md`](development/RFC2119_DEVELOPMENT.md) - RFC2119 requirements for all development practices
 - [`development/SOFTWARE_DESIGN_PATTERNS.md`](development/SOFTWARE_DESIGN_PATTERNS.md) - Software design patterns with implementation guidance
+
+Note: The planned [`development/TIGERSTYLE.md`](development/TIGERSTYLE.md) file was never created. The tigerstyle.dev principles have been integrated directly into the existing development guardrails.

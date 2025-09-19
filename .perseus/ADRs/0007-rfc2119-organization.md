@@ -19,6 +19,7 @@ We have reorganized the RFC2119 requirements into function-specific files:
 3. **marketing/RFC2119_MARKETING.md** - Contains all RFC2119 requirements specific to marketing
 4. **RFC2119_PROCESS.md** - Contains all RFC2119 requirements specific to the Human-AI collaboration process
 
+
 Each function-specific RFC2119 file contains only the requirements relevant to that function, organized by logical categories. This makes it easier for practitioners to find the requirements that apply to their specific work.
 
 ## Consequences

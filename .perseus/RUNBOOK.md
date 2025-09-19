@@ -22,6 +22,36 @@ This document provides operational procedures for maintaining and evolving the H
 - Update documents based on feedback from users
 - Ensure alignment with latest best practices
 
+## Perseus Framework Operations
+
+### Project Initialization
+1. Follow the Perseus initialization plan
+2. Use provided templates for consistent setup
+3. Establish Human-AI collaboration protocols
+4. Set up monitoring and observability
+5. Document all decisions in ADRs
+
+### Daily Operations
+1. Conduct daily standups with both human and AI team members
+2. Review progress against PLAN.md
+3. Update OUTCOMES.yaml with current progress
+4. Document any issues or blockers
+5. Ensure compliance with GUARDRAILS.md
+
+### Weekly Reviews
+1. Conduct weekly team meetings
+2. Review completed slices against acceptance criteria
+3. Update risk register with new risks or changes
+4. Conduct retrospectives on collaboration effectiveness
+5. Plan next week's work
+
+### Monthly Assessments
+1. Review overall project progress
+2. Assess adoption metrics
+3. Update technology stack documentation
+4. Conduct security and compliance reviews
+5. Plan for upcoming work
+
 ## Monitoring
 
 ### Key Metrics

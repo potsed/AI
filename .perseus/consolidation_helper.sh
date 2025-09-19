@@ -67,6 +67,5 @@ echo "5. Remove the domain directories once consolidation is complete"
 echo ""
 
 echo "For example, to review development requirements:"
-echo "  cat ../development/RFC2119_DEVELOPMENT.md | grep -A5 -B5 \"MUST\""
 echo ""
 echo "Then incorporate relevant requirements into The_Pragmatic_Coder.md, The_Visionary_Architect.md, etc."
